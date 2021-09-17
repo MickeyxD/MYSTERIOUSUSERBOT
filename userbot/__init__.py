@@ -19,7 +19,9 @@ else:
     bot = TelegramClient(session_name, Var.APP_ID, Var.API_HASH)
 
 #MYSTERIOUS = bot
-DEVS = [1938996006]
+DEVS = [
+    "1938996006"
+]
 CMD_LIST = {}
 # for later purposes
 CMD_HELP = {}
@@ -31,7 +33,9 @@ LOAD_PLUG = {}
 # PaperPlaneExtended Support Vars
 ENV = os.environ.get("ENV", False)
 
-MYSTERIOUS_ID = ["1938996006"]
+MYSTERIOUS_ID = [
+    "1938996006"
+]
 
 """ PPE initialization. """
 
