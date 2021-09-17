@@ -21,7 +21,7 @@ async def send(event):
     message_id = event.message.id
     thumb = MYSTERIOUS_logo
     input_str = event.pattern_match.group(1)
-    omk = f"**⍟ 𝙿𝚕𝚞𝚐𝚒𝚗 𝚗𝚊𝚖𝚎 ≈** `{input_str}`\n**⍟ 𝚄𝚙𝚕𝚘𝚊𝚍𝚎𝚍 𝙱𝚢 ≈** {legend_mention}\n\n⚡ **[Lêɠêɳ̃dẞø†](https://t.me/Legend_Userbot)** ⚡"
+    omk = f"**⍟ 𝙿𝚕𝚞𝚐𝚒𝚗 𝚗𝚊𝚖𝚎 ≈** `{input_str}`\n**⍟ 𝚄𝚙𝚕𝚘𝚊𝚍𝚎𝚍 𝙱𝚢 ≈** {legend_mention}\n\n⚡ **[Lêɠêɳ̃dẞø†](https://t.me/MYSTERIOUS_EMPIRE)** ⚡"
     the_plugin_file = "./userbot/plugins/{}.py".format(input_str)
     if os.path.exists(the_plugin_file):
         lauda = await event.client.send_file(
@@ -69,7 +69,7 @@ async def install(event):
                             a = "__𝙸𝚗𝚜𝚝𝚊𝚕𝚕𝚒𝚗𝚐...__"
                             b = 1
                         await event.edit(a)
-                    return await event.edit(f"✅ **𝙸𝚗𝚜𝚝𝚊𝚕𝚕𝚎𝚍 𝙼𝚘𝚍𝚞𝚕𝚎** :- `{shortname}` \n✨ BY :- {legend_mention}\n\n{string}\n\n        ⚡ **[『Lêɠêɳ̃dẞø†』](t.me/Legend_Userbot)** ⚡", link_preview=False)
+                    return await event.edit(f"✅ **𝙸𝚗𝚜𝚝𝚊𝚕𝚕𝚎𝚍 𝙼𝚘𝚍𝚞𝚕𝚎** :- `{shortname}` \n✨ BY :- {legend_mention}\n\n{string}\n\n        ⚡ **[『Lêɠêɳ̃dẞø†』](t.me/MYSTERIOUS_EMPIRE)** ⚡", link_preview=False)
                 return await event.edit(f"Installed module `{os.path.basename(downloaded_file_name)}`")
             else:
                 os.remove(downloaded_file_name)
@@ -146,7 +146,7 @@ async def install(event):
     o = stdout.decode()
     _o = o.split("\n")
     o = "\n".join(_o)
-    OUTPUT = f"♥️List Of Plugins In 𝖑𝖊ɠêɳ̃dẞø✞︎ 🇮🇳 :- \n\n{o}\n\n<><><><><><><><><><><><><><><><><><><><><><><><>\nHELP:- If you want to know the commands for a plugin, do :- \n.plinfo <plugin name> without the < > brackets. \nJoin https://t.me/Legend_Userbot for help."
+    OUTPUT = f"♥️List Of Plugins In 𝖑𝖊ɠêɳ̃dẞø✞︎ 🇮🇳 :- \n\n{o}\n\n<><><><><><><><><><><><><><><><><><><><><><><><>\nHELP:- If you want to know the commands for a plugin, do :- \n.plinfo <plugin name> without the < > brackets. \nJoin https://t.me/MYSTERIOUS_EMPIRE for help."
     if len(OUTPUT) > 69:
         with io.BytesIO(str.encode(OUTPUT)) as out_file:
             out_file.name = "cmnds_list.text"

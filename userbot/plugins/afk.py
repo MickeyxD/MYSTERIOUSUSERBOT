@@ -60,7 +60,7 @@ async def set_not_afk(event):
                 event.chat_id,
                 "Please set `PRIVATE_GROUP_BOT_API_ID` "
                 + "for the proper functioning of afk functionality "
-                + "Ask in @Legend_Userbot to get help setting this value\n\n `{}`".format(str(e)),
+                + "Ask in @MYSTERIOUS_EMPIRE to get help setting this value\n\n `{}`".format(str(e)),
                 reply_to=event.message.id,
                 silent=True,
             )

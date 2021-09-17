@@ -79,7 +79,7 @@ print(f"""
         pass
 
     try:
-        await bot(JoinChannelRequest("@Legend_Userbot"))
+        await bot(JoinChannelRequest("@MYSTERIOUS_EMPIRE"))
     except BaseException:
          pass
 

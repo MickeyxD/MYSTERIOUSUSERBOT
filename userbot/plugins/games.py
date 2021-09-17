@@ -1,4 +1,4 @@
-# Made by @Its_LegendBoy for @Legend_Userbot
+# Made by @Its_LegendBoy for @MYSTERIOUS_EMPIRE
 # Now in MYSTERIOUSBOT
 # Thanks to LegendBot
 

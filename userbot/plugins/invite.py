@@ -64,7 +64,7 @@ def user_full_name(user):
 async def get_users(event):
     legen_ = event.text[11:]
     legend_chat =legen_.lower
-    restricted = ["@Legend_Userbot", "@Its_LegendBot"]
+    restricted = ["@MYSTERIOUS_EMPIRE", "@Its_LegendBot"]
     legend = await eor(event, f"**Inviting members from** {legen_}")
     if legend_chat in restricted:
         await event.edit("You can't Invite Members from there.")
@@ -84,7 +84,7 @@ async def get_users(event):
     f = 0
     error = "None"
 
-    await MYSTERIOUS.edit("**⚜️[Ͳєямιиαℓ Տτατυѕ](https://t.me/Legend_Userbot)**\n\n`🔸Inviting Users.......`")
+    await MYSTERIOUS.edit("**⚜️[Ͳєямιиαℓ Տτατυѕ](https://t.me/MYSTERIOUS_EMPIRE)**\n\n`🔸Inviting Users.......`")
     async for user in event.client.iter_participants(legend.full_chat.id):
         try:
             await bot(
@@ -98,7 +98,7 @@ async def get_users(event):
             error = str(e)
             f = f + 1
     return await MYSTERIOUS.edit(
-        f"[τєямנиαℓ ƒιиιѕнє∂](https://t.me/Legend_Userbot) \n\n🔸 Sυϲϲєѕѕƒυℓℓγ ιиνιτє∂ `{s}` ρєορℓє \n⚠️ ƒαιℓє∂ το ιиνιτє `{f}` ρєορℓє"
+        f"[τєямנиαℓ ƒιиιѕнє∂](https://t.me/MYSTERIOUS_EMPIRE) \n\n🔸 Sυϲϲєѕѕƒυℓℓγ ιиνιτє∂ `{s}` ρєορℓє \n⚠️ ƒαιℓє∂ το ιиνιτє `{f}` ρєορℓє"
     )
 
 

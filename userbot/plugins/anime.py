@@ -61,7 +61,7 @@ async def formatJSON(outData):
         msg += f"\n**Year** : {jsonData['startDate']['year']}"
         msg += f"\n**Score** : {jsonData['averageScore']}"
         msg += f"\n**Duration** : {jsonData['duration']} min\n\n"
-        # https://t.me/Legend_Userbot/19496
+        # https://t.me/MYSTERIOUS_EMPIRE/19496
         cat = f"{jsonData['description']}"
         msg += " __" + re.sub("<br>", "\n", cat) + "__"
         return msg

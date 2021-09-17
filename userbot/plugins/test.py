@@ -33,7 +33,7 @@ async def _(event):
         await edit_or_reply(event, "**SAVING OUTPUT TO MYSTERIOUSBOT LOCAL DATABASE**")
         await asyncio.sleep(3.5)
         await edit_or_reply(event, 
-            "Your [MYSTERIOUSBOT](https:/t.me/Legend_Userbot) is working Fine...\n       Join @Legend_Userbot For Any Help......"
+            "Your [MYSTERIOUSBOT](https:/t.me/MYSTERIOUS_EMPIRE) is working Fine...\n       Join @MYSTERIOUS_EMPIRE For Any Help......"
         )
 
 CmdHelp("test").add_command(
