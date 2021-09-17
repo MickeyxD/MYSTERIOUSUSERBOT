@@ -222,7 +222,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
 
         else:
             result = builder.article(
-                "@LEGEND_Userbot",
+                "@MYSTERIOUS_EMPIRE",
                 text="""**Hey! This is [Lêɠêɳ̃dẞø†](https://t.me/its_LegendBot) \nYou can know more about me from the links given below 👇**""",
                 buttons=[
                     [

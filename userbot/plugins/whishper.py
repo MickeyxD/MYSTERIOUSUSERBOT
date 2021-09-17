@@ -1,4 +1,4 @@
-# Made by @MY5T3R10U5_X for @LEGEND_Userbot
+# Made by @MY5T3R10U5_X for @MYSTERIOUS_EMPIRE
 
 from MYSTERIOUSBOT.utils import *
 from userbot.cmdhelp import CmdHelp
