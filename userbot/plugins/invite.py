@@ -64,7 +64,7 @@ def user_full_name(user):
 async def get_users(event):
     legen_ = event.text[11:]
     legend_chat =legen_.lower
-    restricted = ["@MYSTERIOUS_EMPIRE", "@Its_LegendBot"]
+    restricted = ["@MYSTERIOUS_EMPIRE", "@MYSTERIOUS_SUPPORT"]
     legend = await eor(event, f"**Inviting members from** {legen_}")
     if legend_chat in restricted:
         await event.edit("You can't Invite Members from there.")

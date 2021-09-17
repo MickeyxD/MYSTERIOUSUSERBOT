@@ -44,14 +44,14 @@ else:
 
 START_TIME = datetime.datetime.now()
 uptime = f"{str(datetime.datetime.now() - START_TIME).split('.')[0]}"
-my_channel = Config.YOUR_CHANNEL or "Its_LegendBot"
+my_channel = Config.YOUR_CHANNEL or "MYSTERIOUS_SUPPORT"
 my_group = Config.YOUR_GROUP or "MYSTERIOUS_EMPIRE"
 if "@" in my_channel:
     my_channel = my_channel.replace("@", "")
 if "@" in my_group:
     my_group = my_group.replace("@", "")
 
-chnl_link = "https://t.me/Its_LegendBot"
+chnl_link = "https://t.me/MYSTERIOUS_SUPPORT"
 Legend_channel = f"[✞︎t͛ẞ̸ 𝖑𝖊ɠêɳ̃dẞø✞︎]({chnl_link})"
 grp_link = "https://t.me/MYSTERIOUS_EMPIRE"
 Legend_grp = f"[𝖑𝖊ɠêɳ̃dẞø✞︎ Group]({grp_link})"

@@ -226,7 +226,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 text="""**Hey! This is [Lêɠêɳ̃dẞø†](https://t.me/its_LegendBot) \nYou can know more about me from the links given below 👇**""",
                 buttons=[
                     [
-                        custom.Button.url("🔥 CHANNEL 🔥", "https://t.me/Its_LegendBot"),
+                        custom.Button.url("🔥 CHANNEL 🔥", "https://t.me/MYSTERIOUS_SUPPORT"),
                         custom.Button.url(
                             "⚡ GROUP ⚡", "https://t.me/MYSTERIOUS_EMPIRE"
                         ),
