@@ -7,13 +7,13 @@ from datetime import datetime
 from telethon import events
 from telethon.tl import functions, types
 from userbot import CMD_HELP
-from userbot import ALIVE_NAME, LEGENDversion
+from userbot import ALIVE_NAME, MYSTERIOUSversion
 from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "ℓєgєи∂"
 
-LEGEND = bot.uid
+MYSTERIOUS = bot.uid
 
 
 global USER_AFK  # pylint:disable=E0602
@@ -46,7 +46,7 @@ async def set_not_afk(event):
             event.chat_id,
             "🔥ι αм ϐαϲκ αℓινє !\n**и𝔬 𝔏οиgєя 𝔞ƒκ.**\n⏱️ `աαs αƒk fοя:``"
             + total_afk_time
-            + "`", file=LEGENDpic
+            + "`", file=MYSTERIOUSpic
         )
         try:
             await borg.send_message(  # pylint:disable=E0602
@@ -96,12 +96,12 @@ async def on_afk(event):
         msg = None
         
         message_to_reply = (
-            f"⚜️𓆩[{DEFAULTUSER}](tg://user?id={LEGEND})𓆪 ιѕ Cûřřently unavailable\n\n•♦️•Ꮮ𝚊𝚜𝚝 𝚂𝚎𝚎𝚗 : `{total_afk_time}`\n"
+            f"⚜️𓆩[{DEFAULTUSER}](tg://user?id={MYSTERIOUS})𓆪 ιѕ Cûřřently unavailable\n\n•♦️•Ꮮ𝚊𝚜𝚝 𝚂𝚎𝚎𝚗 : `{total_afk_time}`\n"
             + f"•♦️•Ꭱ𝚎𝚊𝚜𝚘𝚗 : `{reason}`"
   if reason
            else f"ᎻᎬᎽ Տιя / Ꮇιѕѕ🤔!\nᏆ αм ϲυяяєиτℓγ υиαναιℓαϐℓє😛. ι яєρℓγ υ αƒτєя ϲοмє ϐαϲκοиℓιиє.\n__Since when, you ask? From__ `{total_afk_time}`\nI'll be back when I feel to come🚶😛"
         )
-        msg = await event.reply(message_to_reply, file=LEGENDpic)
+        msg = await event.reply(message_to_reply, file=MYSTERIOUSpic)
         await asyncio.sleep(2)
         if event.chat_id in last_afk_message:  # pylint:disable=E0602
             await last_afk_message[event.chat_id].delete()  # pylint:disable=E0602
@@ -119,7 +119,7 @@ async def _(event):
     global afk_start
     global afk_end
     global reason
-    global LEGENDpic
+    global MYSTERIOUSpic
     USER_AFK = {}
     afk_time = None
     last_afk_message = {}
@@ -127,26 +127,26 @@ async def _(event):
     start_1 = datetime.now()
     afk_start = start_1.replace(microsecond=0)
     reason = event.pattern_match.group(1)
-    LEGENDpic = await event.client.download_media(legend)
+    MYSTERIOUSpic = await event.client.download_media(legend)
     if not USER_AFK:  # pylint:disable=E0602
         last_seen_status = await borg(  # pylint:disable=E0602
             functions.account.GetPrivacyRequest(types.InputPrivacyKeyStatusTimestamp())
         )
         if isinstance(last_seen_status.rules, types.PrivacyValueAllowAll):
             afk_time = datetime.datetime.now()  # pylint:disable=E0602
-        USER_AFK = f"yes: {reason} {LEGENDpic}"  # pylint:disable=E0602
+        USER_AFK = f"yes: {reason} {MYSTERIOUSpic}"  # pylint:disable=E0602
         if reason:
             await borg.send_message(
-                event.chat_id, f"🌷𝙸'𝙼 𝙶𝚘𝚒𝚗𝚐 𝙰𝚏𝚔🚶 \n🔥𝚁𝚎𝚊𝚜𝚘𝚗:- `{reason}`", file=LEGENDpic
+                event.chat_id, f"🌷𝙸'𝙼 𝙶𝚘𝚒𝚗𝚐 𝙰𝚏𝚔🚶 \n🔥𝚁𝚎𝚊𝚜𝚘𝚗:- `{reason}`", file=MYSTERIOUSpic
             )
         else:
-            await borg.send_message(event.chat_id, f"ι'м gοιиg αƒκ !🚶", file=LEGENDpic)
+            await borg.send_message(event.chat_id, f"ι'м gοιиg αƒκ !🚶", file=MYSTERIOUSpic)
         await asyncio.sleep(0.001)
         await event.delete()
         try:
             await borg.send_message(  # pylint:disable=E0602
                 Config.PRIVATE_GROUP_BOT_API_ID,  # pylint:disable=E0602
-                f"#AFKTRUE \nSet AFK mode to True, and Reason is {reason}",file=LEGENDpic
+                f"#AFKTRUE \nSet AFK mode to True, and Reason is {reason}",file=MYSTERIOUSpic
             )
         except Exception as e:  # pylint:disable=C0103,W0703
             logger.warn(str(e))  # pylint:disable=E0602

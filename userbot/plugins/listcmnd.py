@@ -4,8 +4,8 @@ from userbot import ALIVE_NAME
 from . import *
 from userbot import bot as MYSTERIOUSBOT
 from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND"
-LEGEND_logo = "LEGEND_logo1"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "MYSTERIOUS"
+MYSTERIOUS_logo = "MYSTERIOUS_logo1"
 @MYSTERIOUSBOT.on(admin_cmd(pattern=r"listcmnd"))
 @MYSTERIOUSBOT.on(sudo_cmd(pattern=r"listcmnd", allow_sudo=True))
 async def install(event):
@@ -15,7 +15,7 @@ async def install(event):
     if event.reply_to_msg_id:
         reply_to_id = event.reply_to_msg_id
     cmd = "ls userbot/plugins"
-    thumb = LEGEND_logo
+    thumb = MYSTERIOUS_logo
     process = await asyncio.create_subprocess_shell(
         cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )
@@ -23,11 +23,11 @@ async def install(event):
     o = stdout.decode()
     _o = o.split("\n")
     o = "\n".join(_o)
-    OUTPUT = f"List of Plugins in MYSTERIOUSBOT :- \n\n{o}\n\n<><><><><><><><><><><><><><><><><><><><><><><><>\nHELP:- If you want to know the commands for a plugin, do :- \n.plinfo <plugin name> without the < > brackets. \nJoin https://t.me/LEGENDSupport for help."
+    OUTPUT = f"List of Plugins in MYSTERIOUSBOT :- \n\n{o}\n\n<><><><><><><><><><><><><><><><><><><><><><><><>\nHELP:- If you want to know the commands for a plugin, do :- \n.plinfo <plugin name> without the < > brackets. \nJoin https://t.me/MYSTERIOUSSupport for help."
     if len(OUTPUT) > 69:
         with io.BytesIO(str.encode(OUTPUT)) as out_file:
             out_file.name = "cmd_list.text"
-            LEGEND_file = await bot.send_file(
+            MYSTERIOUS_file = await bot.send_file(
                 event.chat_id,
                 out_file,
                 force_document=True,
@@ -35,7 +35,7 @@ async def install(event):
                 thumb=thumb,
                 reply_to=reply_to_id,
             )
-            await edit_or_reply(LEGEND_file, f"Output Too Large. This is the file for the list of plugins in MYSTERIOUSBOT.\n\n**BY :-** {DEFAULTUSER}")
+            await edit_or_reply(MYSTERIOUS_file, f"Output Too Large. This is the file for the list of plugins in MYSTERIOUSBOT.\n\n**BY :-** {DEFAULTUSER}")
             await event.delete()
 
 from userbot.cmdhelp import CmdHelp

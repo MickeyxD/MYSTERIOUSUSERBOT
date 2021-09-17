@@ -101,9 +101,9 @@ async def _(event):
         
 @bot.on(admin_cmd(pattern="istar$", outgoing=True))
 @bot.on(sudo_cmd(pattern="istar$", allow_sudo=True))
-async def ammastar(LEGENDstar):
+async def ammastar(MYSTERIOUSstar):
   
-    if LEGENDstar.fwd_from:
+    if MYSTERIOUSstar.fwd_from:
       
         return
       
@@ -111,7 +111,7 @@ async def ammastar(LEGENDstar):
     
     animation_ttl = range(0, 11)
     
-    await edit_or_reply(LEGENDstar, "I am A Star")
+    await edit_or_reply(MYSTERIOUSstar, "I am A Star")
     
     animation_chars = [
         "I Party like a rockstar",
@@ -125,7 +125,7 @@ async def ammastar(LEGENDstar):
       
         await asyncio.sleep(animation_interval)
         
-        await LEGENDstar.edit(animation_chars[i % 11])
+        await MYSTERIOUSstar.edit(animation_chars[i % 11])
     
         
 @bot.on(admin_cmd(pattern=r"lmoon", outgoing=True))

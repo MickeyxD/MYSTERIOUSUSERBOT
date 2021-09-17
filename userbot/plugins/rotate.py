@@ -11,7 +11,7 @@ from userbot import bot as bot
 import os , shutil
 
 from PIL import Image
-sedpath = "./LEGEND_Logo/"
+sedpath = "./MYSTERIOUS_Logo/"
 if not os.path.isdir(sedpath):
     os.makedirs(sedpath)
 @bot.on(admin_cmd(pattern=r"rotate"))

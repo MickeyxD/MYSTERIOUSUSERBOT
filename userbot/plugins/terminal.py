@@ -9,7 +9,7 @@ from sys import executable
 from userbot.cmdhelp import CmdHelp
 from userbot import ALIVE_NAME, BOTLOG, BOTLOG_CHATID, bot
 from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd 
-LEGEND = str(ALIVE_NAME) if ALIVE_NAME else "Du"
+MYSTERIOUS = str(ALIVE_NAME) if ALIVE_NAME else "Du"
 
 import inspect
 running_processes: dict = {}
@@ -17,7 +17,7 @@ running_processes: dict = {}
 
 @bot.on(admin_cmd(pattern="term(?: |$|\n)([\s\S]*)"))
 async def dc(event):  
-    await event.edit(f"{LEGEND}: Running Terminal.....")
+    await event.edit(f"{MYSTERIOUS}: Running Terminal.....")
     message = (str(event.chat_id) + ':' + str(event.message.id))
     if running_processes.get(message, False):
         await event.edit("A process for this event is already running!")
@@ -27,7 +27,7 @@ async def dc(event):
         await event.edit(" Give a command or use .help terminal.")
         return
     if cmd in ("userbot.session", "env", "printenv"):
-        return await event.edit(f"{LEGEND}: Privacy Error, This command not permitted")
+        return await event.edit(f"{MYSTERIOUS}: Privacy Error, This command not permitted")
     process = await asyncio.create_subprocess_shell(
         cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
     running_processes.update({message: process})
@@ -46,7 +46,7 @@ async def dc(event):
     output = open("term.txt", "w+")
     output.write(text)
     output.close()
-    await event.client.send_file(event.chat_id, "term.txt", reply_to=event.id, caption=f"{LEGEND}: Output too large, sending as file")
+    await event.client.send_file(event.chat_id, "term.txt", reply_to=event.id, caption=f"{MYSTERIOUS}: Output too large, sending as file")
     os.remove("term.txt")           
     return
 

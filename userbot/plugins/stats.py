@@ -15,7 +15,7 @@ async def stats(
     event: NewMessage.Event,
 ) -> None:  # pylint: disable = R0912, R0914, R0915
     """Command to get stats about the account"""
-    LEGEND = await edit_or_reply(event, "`Collecting stats...`")
+    MYSTERIOUS = await edit_or_reply(event, "`Collecting stats...`")
     start_time = time.time()
     private_chats = 0
     bots = 0
@@ -83,7 +83,7 @@ async def stats(
     response += (
         f"ƒɾσɱ ƭɦε ∂αƭαɓαรε σƒ:-[♥️✞︎t͛ẞ̸ 𝖑𝖊ɠêɳ̃dẞø✞︎♥️](https://t.me/MYSTERIOUS_EMPIRE)"
     )
-    await LEGEND.edit(response)
+    await MYSTERIOUS.edit(response)
 
 
 def make_mention(user):

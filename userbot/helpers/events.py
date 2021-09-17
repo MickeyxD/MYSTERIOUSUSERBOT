@@ -5,7 +5,7 @@ from telethon.tl.types import MessageEntityMentionName
 
 from userbot.Config import Config
 from userbot.helper.logger import logging
-from userbot.utils import delete_LEGEND
+from userbot.utils import delete_MYSTERIOUS
 
 LOGS = logging.getLogger(__name__)
 

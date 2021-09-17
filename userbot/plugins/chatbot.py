@@ -4,7 +4,7 @@ from telethon.utils import get_display_name
 
 from userbot import bot
 from userbot.cmdhelp import CmdHelp
-from userbot.utils import edit_or_reply, admin_cmd, eor, delete_LEGEND
+from userbot.utils import edit_or_reply, admin_cmd, eor, delete_MYSTERIOUS
 
 from userbot.helpers.events import get_user_from_event
 from userbot.plugins.sql_helper.chatbot_sql import (

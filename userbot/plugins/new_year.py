@@ -15,7 +15,7 @@ from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 # credits to legend, john snow
 from userbot.cmdhelp import CmdHelp
 # credits to legend, john snow
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "MYSTERIOUS User"
 # credits to legend, john snow
 legend = bot.uid
 # credits to legend, john snow

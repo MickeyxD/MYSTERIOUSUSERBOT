@@ -33,16 +33,16 @@ async def spammer(e):
         )
 @bot.on(admin_cmd(pattern="bigspam"))
 @bot.on(sudo_cmd(pattern="bigspam", allow_sudo=True))
-async def bigspam(LEGEND):
-    if not LEGEND.text[0].isalpha() and LEGEND.text[0] not in ("/", "#", "@", "!"):
-        LEGEND_msg = LEGEND.text
-        MYSTERIOUSBOT_count = int(LEGEND_msg[9:13])
-        LEGEND_spam = str(LEGEND.text[13:])
+async def bigspam(MYSTERIOUS):
+    if not MYSTERIOUS.text[0].isalpha() and MYSTERIOUS.text[0] not in ("/", "#", "@", "!"):
+        MYSTERIOUS_msg = MYSTERIOUS.text
+        MYSTERIOUSBOT_count = int(MYSTERIOUS_msg[9:13])
+        MYSTERIOUS_spam = str(MYSTERIOUS.text[13:])
         for i in range(1, MYSTERIOUSBOT_count):
-            await LEGEND.respond(LEGEND_spam)
-        await LEGEND.delete()
+            await MYSTERIOUS.respond(MYSTERIOUS_spam)
+        await MYSTERIOUS.delete()
         if LOGGER:
-            await LEGEND.client.send_message(
+            await MYSTERIOUS.client.send_message(
                 LOGGER_GROUP, "#BIGSPAM \n\n" "Bigspam was executed successfully"
             )
 

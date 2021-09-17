@@ -11,7 +11,7 @@ from telethon import functions
 from userbot.plugins.sql_helper import pmpermit_sql as pmpermit_sql
 from userbot import ALIVE_NAME
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "MYSTERIOUS"
 PREV_REPLY_MESSAGE = {}
 
 

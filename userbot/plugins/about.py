@@ -7,10 +7,10 @@ from userbot.cmdhelp import CmdHelp
 from userbot import ALIVE_NAME
 from telethon.tl.types import ChannelParticipantsAdmins
 # 🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "MYSTERIOUS"
 from userbot.Config import Config
 CUSTOM_ALIVE_TEXT = Config.ALIVE_MSG
-# Thanks to LEGEND BRO.. 
+# Thanks to MYSTERIOUS BRO.. 
 # animation Idea by @MY5T3R10U5_X (op coder)
 # Kang with credits else gay...
 # alive.py for

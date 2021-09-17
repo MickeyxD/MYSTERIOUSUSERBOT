@@ -154,7 +154,7 @@ CHASE_STR = [
 ]
 
 
-LEGENDOSTR = [
+MYSTERIOUSOSTR = [
     "Hi !",
     "‘Ello, gov'nor!",
     "What’s crackin’?",
@@ -321,7 +321,7 @@ async def Sahih(e):
 @bot.on(admin_cmd(pattern=f"qhi$", outgoing=True))
 @bot.on(sudo_cmd(pattern=f"qhi$", allow_sudo=True))
 async def hoi(e):
-    txt = random.choice(LEGENDOSTR)
+    txt = random.choice(MYSTERIOUSOSTR)
     await edit_or_reply(e, txt)
 
 @bot.on(admin_cmd(pattern=f"gdbye$", outgoing=True))

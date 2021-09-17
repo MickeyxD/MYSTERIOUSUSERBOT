@@ -17,8 +17,8 @@ from userbot.helpers.functions import deEmojify
 @bot.on(admin_cmd(pattern="lyrics(?: |$)(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="lyrics(?: |$)(.*)", allow_sudo=True))
 async def nope(aura):
-    LEGEND = aura.pattern_match.group(1)
-    if not LEGEND:
+    MYSTERIOUS = aura.pattern_match.group(1)
+    if not MYSTERIOUS:
         if aura.is_reply:
             (await aura.get_reply_message()).message
         else:
@@ -27,7 +27,7 @@ async def nope(aura):
             )
             return
 
-    troll = await bot.inline_query("iLyricsBot", f"{(deEmojify(LEGEND))}")
+    troll = await bot.inline_query("iLyricsBot", f"{(deEmojify(MYSTERIOUS))}")
 
     await troll[0].click(
         aura.chat_id,
@@ -497,7 +497,7 @@ async def _(event):
             await borg.send_file(
                 event.chat_id,
                 songh,
-                caption="🔆**Here's the requested song!**🔆\n`Check out` [MYSTERIOUSBOT](https://t.me/LEGENDSupport)",
+                caption="🔆**Here's the requested song!**🔆\n`Check out` [MYSTERIOUSBOT](https://t.me/MYSTERIOUSSupport)",
             )
             await event.delete()
         except YouBlockedUserError:

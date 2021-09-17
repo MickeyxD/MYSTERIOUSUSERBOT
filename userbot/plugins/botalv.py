@@ -8,7 +8,7 @@ from telethon.tl.types import Channel, Chat, User
 
 #-------------------------------------------------------------------------------
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "MYSTERIOUS"
 
 ludosudo = Config.SUDO_USERS
 
@@ -28,7 +28,7 @@ pm_caption ="**𝖑𝖊ɠêɳ̃dẞø✞︎ 𝙸𝚜 𝙾𝚗𝚕𝚒𝚗𝚎**\
 pm_caption += f"**┏━━︎♠️✞t͛ẞ̸ 𝖑𝖊ɠêɳ̃dẞø✞︎♠️━━┓**\n"
 pm_caption += f"**┣🌷 𝙼𝚢 𝙼𝚊𝚜𝚝𝚎𝚛    : {mention}**\n"
 pm_caption += f"**┣🌷 𝚃𝚎𝚕𝚎𝚝𝚑𝚘𝚗 : `{version.__version__}`**\n"
-pm_caption += f"**┣🌷 𝖑𝖊ɠêɳ̃dẞø✞︎ : {LEGENDversion}**\n"
+pm_caption += f"**┣🌷 𝖑𝖊ɠêɳ̃dẞø✞︎ : {MYSTERIOUSversion}**\n"
 pm_caption += f"**┣🌷 𝚂𝚞𝚍𝚘     : `{sudou}`**\n"
 pm_caption += f"**┣🌷 𝙾𝚠𝚗𝚎𝚛     : [𝖑𝖊ɠêɳ̃d](https://t.me/MY5T3R10U5_X)**\n"
 pm_caption += f"**┗━━━━━[♠️𝙶𝚛𝚘𝚞𝚙♠️](https://t.me/MYSTERIOUS_EMPIRE)━━━━━━━━┛**\n"

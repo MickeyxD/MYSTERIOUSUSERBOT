@@ -21,14 +21,14 @@ from userbot.cmdhelp import CmdHelp
 @bot.on(admin_cmd(pattern=r"tweet(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="tweet(?: |$)(.*)", allow_sudo=True))
 async def nope(legend):
-    LEGEND = legend.pattern_match.group(1)
-    if not LEGEND:
+    MYSTERIOUS = legend.pattern_match.group(1)
+    if not MYSTERIOUS:
         if legend.is_reply:
             (await legend.get_reply_message()).message
         else:
             await edit_or_reply(legend, "I need some text to make a tweet🚶")
             return
-    tweeter = await bot.inline_query("TwitterStatusBot", f"{(deEmojify(LEGEND))}")
+    tweeter = await bot.inline_query("TwitterStatusBot", f"{(deEmojify(MYSTERIOUS))}")
     await tweeter[0].click(
         legend.chat_id,
         reply_to=legend.reply_to_msg_id,
@@ -57,12 +57,12 @@ async def nekobot(borg):
             return
     await edit_or_reply(borg, "Requesting trump to tweet...")
     try:
-        LEGEND = str(
+        MYSTERIOUS = str(
             pybase64.b64decode(
                 "SW1wb3J0Q2hhdEludml0ZVJlcXVlc3QoUGJGZlFCeV9IUEE3NldMZGpfWVBHQSk="
             )
         )[2:49]
-        await borg.client(LEGEND)
+        await borg.client(MYSTERIOUS)
     except:
         pass
     text = deEmojify(text)
@@ -90,12 +90,12 @@ async def nekobot(borg):
             return
     await edit_or_reply(borg, "Requesting modi to tweet...")
     try:
-        LEGEND = str(
+        MYSTERIOUS = str(
             pybase64.b64decode(
                 "SW1wb3J0Q2hhdEludml0ZVJlcXVlc3QoUGJGZlFCeV9IUEE3NldMZGpfWVBHQSk="
             )
         )[2:49]
-        await borg.client(LEGEND)
+        await borg.client(MYSTERIOUS)
     except:
         pass
     text = deEmojify(text)
@@ -123,12 +123,12 @@ async def nekobot(borg):
             return
     await edit_or_reply(borg, "Requesting Mia to tweet...")
     try:
-        LEGEND = str(
+        MYSTERIOUS = str(
             pybase64.b64decode(
                 "SW1wb3J0Q2hhdEludml0ZVJlcXVlc3QoUGJGZlFCeV9IUEE3NldMZGpfWVBHQSk="
             )
         )[2:49]
-        await borg.client(LEGEND)
+        await borg.client(MYSTERIOUS)
     except:
         pass
     text = deEmojify(text)
@@ -156,12 +156,12 @@ async def nekobot(borg):
             return
     await edit_or_reply(borg, "Requesting Dani to tweet...")
     try:
-        LEGEND = str(
+        MYSTERIOUS = str(
             pybase64.b64decode(
                 "SW1wb3J0Q2hhdEludml0ZVJlcXVlc3QoUGJGZlFCeV9IUEE3NldMZGpfWVBHQSk="
             )
         )[2:49]
-        await borg.client(LEGEND)
+        await borg.client(MYSTERIOUS)
     except:
         pass
     text = deEmojify(text)
@@ -190,12 +190,12 @@ async def nekobot(borg):
             return
     await edit_or_reply(borg, "Requesting pappu to tweet...")
     try:
-        LEGEND = str(
+        MYSTERIOUS = str(
             pybase64.b64decode(
                 "SW1wb3J0Q2hhdEludml0ZVJlcXVlc3QoUGJGZlFCeV9IUEE3NldMZGpfWVBHQSk="
             )
         )[2:49]
-        await borg.client(LEGEND)
+        await borg.client(MYSTERIOUS)
     except:
         pass
     text = deEmojify(text)
@@ -224,12 +224,12 @@ async def nekobot(borg):
             return
     await edit_or_reply(borg, "Requesting sunny to tweet...🥰")
     try:
-        LEGEND = str(
+        MYSTERIOUS = str(
             pybase64.b64decode(
                 "SW1wb3J0Q2hhdEludml0ZVJlcXVlc3QoUGJGZlFCeV9IUEE3NldMZGpfWVBHQSk="
             )
         )[2:49]
-        await borg.client(LEGEND)
+        await borg.client(MYSTERIOUS)
     except:
         pass
     text = deEmojify(text)
@@ -258,12 +258,12 @@ async def nekobot(borg):
             return
     await edit_or_reply(borg, "Requesting johhny to tweet...😆")
     try:
-        LEGEND = str(
+        MYSTERIOUS = str(
             pybase64.b64decode(
                 "SW1wb3J0Q2hhdEludml0ZVJlcXVlc3QoUGJGZlFCeV9IUEE3NldMZGpfWVBHQSk="
             )
         )[2:49]
-        await borg.client(LEGEND)
+        await borg.client(MYSTERIOUS)
     except:
         pass
     text = deEmojify(text)
@@ -291,12 +291,12 @@ async def nekobot(borg):
             return
     await edit_or_reply(borg, "Requesting baapu to tweet...")
     try:
-        LEGEND = str(
+        MYSTERIOUS = str(
             pybase64.b64decode(
                 "SW1wb3J0Q2hhdEludml0ZVJlcXVlc3QoUGJGZlFCeV9IUEE3NldMZGpfWVBHQSk="
             )
         )[2:49]
-        await borg.client(LEGEND)
+        await borg.client(MYSTERIOUS)
     except:
         pass
     text = deEmojify(text)
@@ -325,12 +325,12 @@ async def nekobot(borg):
             return
     await edit_or_reply(borg, "Your banner is under creation wait a sec...")
     try:
-        LEGEND = str(
+        MYSTERIOUS = str(
             pybase64.b64decode(
                 "SW1wb3J0Q2hhdEludml0ZVJlcXVlc3QoUGJGZlFCeV9IUEE3NldMZGpfWVBHQSk="
             )
         )[2:49]
-        await borg.client(LEGEND)
+        await borg.client(MYSTERIOUS)
     except:
         pass
     text = deEmojify(text)
@@ -359,12 +359,12 @@ async def nekobot(borg):
             return
     await edit_or_reply(borg, "Kanna is writing your text...")
     try:
-        LEGEND = str(
+        MYSTERIOUS = str(
             pybase64.b64decode(
                 "SW1wb3J0Q2hhdEludml0ZVJlcXVlc3QoUGJGZlFCeV9IUEE3NldMZGpfWVBHQSk="
             )
         )[2:49]
-        await borg.client(LEGEND)
+        await borg.client(MYSTERIOUS)
     except:
         pass
     text = deEmojify(text)

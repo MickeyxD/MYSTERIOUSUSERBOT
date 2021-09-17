@@ -104,10 +104,10 @@ async def make_gif(event, file):
             if response.text.startswith("Send me an animated sticker!"):
                 return "`This file is not supported`"
             response = response if response.media else await conv.get_response()
-            LEGENDresponse = response if response.media else await conv.get_response()
+            MYSTERIOUSresponse = response if response.media else await conv.get_response()
             await event.client.send_read_acknowledge(conv.chat_id)
-            LEGENDfile = await event.client.download_media(LEGENDresponse, "./temp")
-            return await unzip(LEGENDfile)
+            MYSTERIOUSfile = await event.client.download_media(MYSTERIOUSresponse, "./temp")
+            return await unzip(MYSTERIOUSfile)
         except YouBlockedUserError:
             return "Unblock @tgstogifbot"
 
@@ -237,8 +237,8 @@ async def solarize(imagefile, endname):
 async def iphonex(text):
     r = requests.get(f"https://nekobot.xyz/api/imagegen?type=iphonex&url={text}").json()
     legend = r.get("message")
-    LEGENDurl = url(legend)
-    if not LEGENDurl:
+    MYSTERIOUSurl = url(legend)
+    if not MYSTERIOUSurl:
         return "check syntax once more"
     with open("temp.png", "wb") as f:
         f.write(requests.get(legend).content)
@@ -252,8 +252,8 @@ async def baguette(text):
         f"https://nekobot.xyz/api/imagegen?type=baguette&url={text}"
     ).json()
     legend = r.get("message")
-    LEGENDurl = url(legend)
-    if not LEGENDurl:
+    MYSTERIOUSurl = url(legend)
+    if not MYSTERIOUSurl:
         return "check syntax once more"
     with open("temp.png", "wb") as f:
         f.write(requests.get(legend).content)
@@ -265,8 +265,8 @@ async def baguette(text):
 async def threats(text):
     r = requests.get(f"https://nekobot.xyz/api/imagegen?type=threats&url={text}").json()
     legend = r.get("message")
-    LEGENDurl = url(legend)
-    if not LEGENDurl:
+    MYSTERIOUSurl = url(legend)
+    if not MYSTERIOUSurl:
         return "check syntax once more"
     with open("temp.png", "wb") as f:
         f.write(requests.get(legend).content)
@@ -280,8 +280,8 @@ async def threats(text):
 async def lolice(text):
     r = requests.get(f"https://nekobot.xyz/api/imagegen?type=lolice&url={text}").json()
     legend = r.get("message")
-    LEGENDurl = url(legend)
-    if not LEGENDurl:
+    MYSTERIOUSurl = url(legend)
+    if not MYSTERIOUSurl:
         return "check syntax once more"
     with open("temp.png", "wb") as f:
         f.write(requests.get(legend).content)
@@ -295,8 +295,8 @@ async def lolice(text):
 async def trash(text):
     r = requests.get(f"https://nekobot.xyz/api/imagegen?type=trash&url={text}").json()
     legend = r.get("message")
-    LEGENDurl = url(legend)
-    if not LEGENDurl:
+    MYSTERIOUSurl = url(legend)
+    if not MYSTERIOUSurl:
         return "check syntax once more"
     with open("temp.png", "wb") as f:
         f.write(requests.get(legend).content)
@@ -310,8 +310,8 @@ async def trash(text):
 async def awooify(text):
     r = requests.get(f"https://nekobot.xyz/api/imagegen?type=awooify&url={text}").json()
     legend = r.get("message")
-    LEGENDurl = url(legend)
-    if not LEGENDurl:
+    MYSTERIOUSurl = url(legend)
+    if not MYSTERIOUSurl:
         return "check syntax once more"
     with open("temp.png", "wb") as f:
         f.write(requests.get(legend).content)
@@ -327,8 +327,8 @@ async def trap(text1, text2, text3):
         f"https://nekobot.xyz/api/imagegen?type=trap&name={text1}&author={text2}&image={text3}"
     ).json()
     legend = r.get("message")
-    LEGENDurl = url(legend)
-    if not LEGENDurl:
+    MYSTERIOUSurl = url(legend)
+    if not MYSTERIOUSurl:
         return "check syntax once more"
     with open("temp.png", "wb") as f:
         f.write(requests.get(legend).content)
@@ -344,8 +344,8 @@ async def phcomment(text1, text2, text3):
         f"https://nekobot.xyz/api/imagegen?type=phcomment&image={text1}&text={text2}&username={text3}"
     ).json()
     legend = r.get("message")
-    LEGENDurl = url(legend)
-    if not LEGENDurl:
+    MYSTERIOUSurl = url(legend)
+    if not MYSTERIOUSurl:
         return "check syntax once more"
     with open("temp.png", "wb") as f:
         f.write(requests.get(legend).content)

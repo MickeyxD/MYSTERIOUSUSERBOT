@@ -21,13 +21,13 @@ if not os.path.isdir("./temp"):
 
 @bot.on(admin_cmd(pattern="stoi$"))
 @bot.on(sudo_cmd(pattern="stoi$", allow_sudo=True))
-async def _(LEGEND):
-    if LEGEND.fwd_from:
+async def _(MYSTERIOUS):
+    if MYSTERIOUS.fwd_from:
         return
-    reply_to_id = LEGEND.message.id
-    if LEGEND.reply_to_msg_id:
-        reply_to_id = LEGEND.reply_to_msg_id
-    event = await edit_or_reply(LEGEND, "Converting.....")
+    reply_to_id = MYSTERIOUS.message.id
+    if MYSTERIOUS.reply_to_msg_id:
+        reply_to_id = MYSTERIOUS.reply_to_msg_id
+    event = await edit_or_reply(MYSTERIOUS, "Converting.....")
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
     if event.reply_to_msg_id:
@@ -36,11 +36,11 @@ async def _(LEGEND):
         reply_message = await event.get_reply_message()
         to_download_directory = Config.TMP_DOWNLOAD_DIRECTORY
         downloaded_file_name = os.path.join(to_download_directory, file_name)
-        downloaded_file_name = await LEGEND.client.download_media(
+        downloaded_file_name = await MYSTERIOUS.client.download_media(
             reply_message, downloaded_file_name
         )
         if os.path.exists(downloaded_file_name):
-            caat = await LEGEND.client.send_file(
+            caat = await MYSTERIOUS.client.send_file(
                 event.chat_id,
                 downloaded_file_name,
                 force_document=False,
@@ -56,13 +56,13 @@ async def _(LEGEND):
 
 @bot.on(admin_cmd(pattern="itos$"))
 @bot.on(sudo_cmd(pattern="itos$", allow_sudo=True))
-async def _(LEGEND):
-    if LEGEND.fwd_from:
+async def _(MYSTERIOUS):
+    if MYSTERIOUS.fwd_from:
         return
-    reply_to_id = LEGEND.message.id
-    if LEGEND.reply_to_msg_id:
-        reply_to_id = LEGEND.reply_to_msg_id
-    event = await edit_or_reply(LEGEND, "Converting.....")
+    reply_to_id = MYSTERIOUS.message.id
+    if MYSTERIOUS.reply_to_msg_id:
+        reply_to_id = MYSTERIOUS.reply_to_msg_id
+    event = await edit_or_reply(MYSTERIOUS, "Converting.....")
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
     if event.reply_to_msg_id:
@@ -71,11 +71,11 @@ async def _(LEGEND):
         reply_message = await event.get_reply_message()
         to_download_directory = Config.TMP_DOWNLOAD_DIRECTORY
         downloaded_file_name = os.path.join(to_download_directory, file_name)
-        downloaded_file_name = await LEGEND.client.download_media(
+        downloaded_file_name = await MYSTERIOUS.client.download_media(
             reply_message, downloaded_file_name
         )
         if os.path.exists(downloaded_file_name):
-            caat = await LEGEND.client.send_file(
+            caat = await MYSTERIOUS.client.send_file(
                 event.chat_id,
                 downloaded_file_name,
                 force_document=False,
@@ -157,31 +157,31 @@ async def on_file_to_photo(event):
 async def _(event):
     if event.fwd_from:
         return
-    LEGENDreply = await event.get_reply_message()
-    if not LEGENDreply or not LEGENDreply.media or not LEGENDreply.media.document:
+    MYSTERIOUSreply = await event.get_reply_message()
+    if not MYSTERIOUSreply or not MYSTERIOUSreply.media or not MYSTERIOUSreply.media.document:
         return await edit_or_reply(event, "`Stupid!, This is not animated sticker.`")
-    if LEGENDreply.media.document.mime_type != "application/x-tgsticker":
+    if MYSTERIOUSreply.media.document.mime_type != "application/x-tgsticker":
         return await edit_or_reply(event, "`Stupid!, This is not animated sticker.`")
     reply_to_id = event.message
     if event.reply_to_msg_id:
         reply_to_id = await event.get_reply_message()
     chat = "@tgstogifbot"
-    LEGENDevent = await edit_or_reply(event, "`Converting to gif ...`")
+    MYSTERIOUSevent = await edit_or_reply(event, "`Converting to gif ...`")
     async with event.client.conversation(chat) as conv:
         try:
             await silently_send_message(conv, "/start")
-            await event.client.send_file(chat, LEGENDreply.media)
+            await event.client.send_file(chat, MYSTERIOUSreply.media)
             response = await conv.get_response()
             await event.client.send_read_acknowledge(conv.chat_id)
             if response.text.startswith("Send me an animated sticker!"):
-                return await LEGENDevent.edit("`This file is not supported`")
-            LEGENDresponse = response if response.media else await conv.get_response()
+                return await MYSTERIOUSevent.edit("`This file is not supported`")
+            MYSTERIOUSresponse = response if response.media else await conv.get_response()
             await event.client.send_read_acknowledge(conv.chat_id)
-            LEGENDfile = Path(await event.client.download_media(LEGENDresponse, "./temp/"))
-            LEGENDgif = Path(await unzip(LEGENDfile))
+            MYSTERIOUSfile = Path(await event.client.download_media(MYSTERIOUSresponse, "./temp/"))
+            MYSTERIOUSgif = Path(await unzip(MYSTERIOUSfile))
             legend = await event.client.send_file(
                 event.chat_id,
-                LEGENDgif,
+                MYSTERIOUSgif,
                 support_streaming=True,
                 force_document=False,
                 reply_to=reply_to_id,
@@ -196,12 +196,12 @@ async def _(event):
                     unsave=True,
                 )
             )
-            await LEGENDevent.delete()
-            for files in (LEGENDgif, LEGENDfile):
+            await MYSTERIOUSevent.delete()
+            for files in (MYSTERIOUSgif, MYSTERIOUSfile):
                 if files and os.path.exists(files):
                     os.remove(files)
         except YouBlockedUserError:
-            await LEGENDevent.edit("Unblock @tgstogifbot")
+            await MYSTERIOUSevent.edit("Unblock @tgstogifbot")
             return
 
 

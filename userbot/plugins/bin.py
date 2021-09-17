@@ -17,7 +17,7 @@ async def _(event):
     async with event.client.conversation(chat) as conv:
           try:     
               response = conv.wait_event(events.NewMessage(incoming=True,from_users=1247032902))
-              await event.client.send_message(chat, "/bin {}".format(LEGEND))
+              await event.client.send_message(chat, "/bin {}".format(MYSTERIOUS))
               respond = await response 
           except YouBlockedUserError: 
               await event.reply("Boss! Please Unblock @Carol5_bot ")
@@ -41,7 +41,7 @@ async def _(event):
     async with event.client.conversation(chat) as conv:
           try:     
               response = conv.wait_event(events.NewMessage(incoming=True,from_users=1247032902))
-              await event.client.send_message(chat, "/vbv {}".format(LEGEND))
+              await event.client.send_message(chat, "/vbv {}".format(MYSTERIOUS))
               respond = await response 
           except YouBlockedUserError: 
               await event.reply("Boss! Please Unblock @Carol5_bot ")

@@ -445,7 +445,7 @@ async def _(event):
         "😧",
         "😡",
         "😢",
-        "‎**Repo of LEGEND**",
+        "‎**Repo of MYSTERIOUS**",
         "😁",
         "😧",
         "😡",

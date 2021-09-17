@@ -74,7 +74,7 @@ HIT = [
     "bashes",
 ]
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "MYSTERIOUS User"
 
 
 @bot.on(admin_cmd(pattern="slap ?(.*)", outgoing=True))

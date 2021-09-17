@@ -8,7 +8,7 @@ from telethon import events, functions, Button, custom
 from telethon.tl.functions.users import GetFullUserRequest
 
 from . import *
-from userbot import ALIVE_NAME, PM_MSG, LEGEND_ID
+from userbot import ALIVE_NAME, PM_MSG, MYSTERIOUS_ID
 from userbot.Config import Config
 from MYSTERIOUSBOT.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
@@ -20,8 +20,8 @@ PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
 PM_ON_OFF = Config.PM_DATA
 CSTM_PMP = Config.PM_MSG or "**You Have Trespassed To My Master's PM!\nThis Is Illegal And Regarded As Crime.**"
-LEGEND_ZERO = "Go get some sleep retard. \n\n**Blocked !!**"
-LEGEND_FIRST = (
+MYSTERIOUS_ZERO = "Go get some sleep retard. \n\n**Blocked !!**"
+MYSTERIOUS_FIRST = (
     "**🔥 LegendBo† Prîvã†é Sêçürïty Prø†öçõl 🔥**\n\nThis is to inform you that "
     "{} is currently unavailable.\nThis is an automated message.\n\n"
     "{}\n\n**Please Choose Why You Are Here!!**".format(legend_mention, CSTM_PMP)
@@ -224,7 +224,7 @@ if PM_ON_OFF != "DISABLE":
             return
         message_text = event.message.raw_text
         chat_id = event.sender_id
-        if LEGEND_FIRST == message_text:
+        if MYSTERIOUS_FIRST == message_text:
             return
         sender = await bot.get_entity(chat_id)
         if chat_id == bot.uid:
@@ -244,7 +244,7 @@ if PM_ON_OFF != "DISABLE":
         if chat_id not in PM_WARNS:
             PM_WARNS.update({chat_id: 0})
         if PM_WARNS[chat_id] == Config.MAX_FLOOD_IN_PM:
-            r = await event.reply(LEGEND_ZERO)
+            r = await event.reply(MYSTERIOUS_ZERO)
             await asyncio.sleep(3)
             await event.client(functions.contacts.BlockRequest(chat_id))
             if chat_id in PREV_REPLY_MESSAGE:

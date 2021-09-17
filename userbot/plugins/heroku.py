@@ -187,8 +187,8 @@ async def _(event):
     except BaseException:
         return await event.reply(f"Make Sure Your Heroku AppName & API Key are filled correct. Visit {my_group} for help.", link_preview=False)
    # event = await eor(dyno, "Downloading Logs...")
-    LEGEND_data = app.get_log()
-    await eor(event, LEGEND_data)
+    MYSTERIOUS_data = app.get_log()
+    await eor(event, MYSTERIOUS_data)
     
 
 

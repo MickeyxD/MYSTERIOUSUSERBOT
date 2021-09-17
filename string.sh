@@ -20,7 +20,7 @@ echo """
 
 
 Legendary MYSTERIOUSBOT
-@LEGENDSupport
+@MYSTERIOUSSupport
 """
 
 python3 string_session.py

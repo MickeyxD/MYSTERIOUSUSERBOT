@@ -8,9 +8,9 @@ from userbot import ALIVE_NAME, BIO_MSG, CMD_HELP
 from MYSTERIOUSBOT.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "MYSTERIOUS User"
 
-DEFAULTUSERBIO = str(BIO_MSG) if BIO_MSG else "Legendary LEGENDBOY"
+DEFAULTUSERBIO = str(BIO_MSG) if BIO_MSG else "Legendary MYSTERIOUSBOY"
 BOTLOG_CHATID = Config.PRIVATE_GROUP_BOT_API_ID
 BOTLOG = True
 

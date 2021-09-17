@@ -24,7 +24,7 @@ from MYSTERIOUSBOT.plugins.sql_helper.fban_sql import (
 
 logs_id = Config.FBAN_LOGGER_GROUP
 bot = "@MissRose_bot"
-LEGEND_logo = "./LEGEND_logo.jpg"
+MYSTERIOUS_logo = "./MYSTERIOUS_logo.jpg"
 # Keep all credits pls
 # madewith great effort by @MY5T3R10U5_X
 # modified by @MY5T3R10U5_X for fbans
@@ -382,7 +382,7 @@ async def search(event):
 async def _(event):
     if event.fwd_from:
         return
-    LEGEND_input = event.pattern_match.group(1)
+    MYSTERIOUS_input = event.pattern_match.group(1)
     chat = "@MissRose_Bot"
     await eor(event, "`Making new fed...`")
     async with borg.conversation(chat) as conv:
@@ -390,7 +390,7 @@ async def _(event):
             response = conv.wait_event(
                 events.NewMessage(incoming=True, from_users=609517172)
             )
-            await event.client.send_message(chat, f"/newfed {LEGEND_input}")
+            await event.client.send_message(chat, f"/newfed {MYSTERIOUS_input}")
             response = await response
         except YouBlockedUserError:
             await eor(event, "`Please unblock` @MissRose_Bot `and try again`")
@@ -408,13 +408,13 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return 
-    LEGEND_input = event.pattern_match.group(1)
+    MYSTERIOUS_input = event.pattern_match.group(1)
     chat = "@MissRose_Bot"
     await event.edit("`Trying to rename your fed...`")
     async with event.client.conversation(chat) as conv:
           try:     
               response = conv.wait_event(events.NewMessage(incoming=True,from_users=609517172))
-              await event.client.send_message(chat, f"/renamefed {LEGEND_input}")
+              await event.client.send_message(chat, f"/renamefed {MYSTERIOUS_input}")
               response = await response 
           except YouBlockedUserError: 
               await event.reply("Please Unblock @MissRose_Bot")
@@ -429,8 +429,8 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    LEGEND = await event.edit("`Collecting fstat....`")
-    thumb = LEGEND_logo
+    MYSTERIOUS = await event.edit("`Collecting fstat....`")
+    thumb = MYSTERIOUS_logo
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         lavde = str(previous_message.sender_id)
@@ -439,7 +439,7 @@ async def _(event):
         lavde = event.pattern_match.group(1)
         user = lavde
     if lavde == "":
-        await LEGEND.edit(
+        await MYSTERIOUS.edit(
             "`Need username/id to check fstat`"
         )
         return
@@ -464,7 +464,7 @@ async def _(event):
                     await borg.send_message(event.chat_id, massive.text)
                 await event.delete()
             except YouBlockedUserError:
-                await LEGEND.edit("`Please Unblock` @MissRose_Bot")
+                await MYSTERIOUS.edit("`Please Unblock` @MissRose_Bot")
 
 
 @MYSTERIOUSBOT.on(admin_cmd(pattern="fedinfo ?(.*)"))
@@ -472,7 +472,7 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    LEGEND = await eor(event, "`Fetching fed info.... please wait`")
+    MYSTERIOUS = await eor(event, "`Fetching fed info.... please wait`")
     lavde = event.pattern_match.group(1)
     async with borg.conversation(bot) as conv:
         try:
@@ -480,9 +480,9 @@ async def _(event):
             await conv.get_response()
             await conv.send_message("/fedinfo " + lavde)
             massive = await conv.get_response()
-            await LEGEND.edit(massive.text + "\n\n**LEGENDARY_AF_MYSTERIOUSBOT**")
+            await MYSTERIOUS.edit(massive.text + "\n\n**MYSTERIOUSARY_AF_MYSTERIOUSBOT**")
         except YouBlockedUserError:
-            await LEGEND.edit("`Please Unblock` @MissRose_Bot")
+            await MYSTERIOUS.edit("`Please Unblock` @MissRose_Bot")
             
 
 CmdHelp("fed_bot").add_command(

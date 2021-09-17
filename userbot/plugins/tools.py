@@ -35,7 +35,7 @@ async def _(event):
     if reply_message.sender.bot:
         await edit_or_reply(event, "Reply to actual users message.")
         return
-    LEGENDevent = await edit_or_reply(event, " `Scanning This media..... wait👀`")
+    MYSTERIOUSevent = await edit_or_reply(event, " `Scanning This media..... wait👀`")
     async with event.client.conversation(chat) as conv:
         try:
             response = conv.wait_event(
@@ -44,19 +44,19 @@ async def _(event):
             await event.client.forward_messages(chat, reply_message)
             response = await response
         except YouBlockedUserError:
-            await LEGENDevent.edit("`Please unblock `@DrWebBot `and try again`")
+            await MYSTERIOUSevent.edit("`Please unblock `@DrWebBot `and try again`")
             return
         if response.text.startswith("Forward"):
-            await LEGENDevent.edit(
+            await MYSTERIOUSevent.edit(
                 "Can you kindly disable your forward privacy settings for good?"
             )
         else:
             if response.text.startswith("Select"):
-                await LEGENDevent.edit(
+                await MYSTERIOUSevent.edit(
                     "`Please go to` @DrWebBot `and select your language.`"
                 )
             else:
-                await LEGENDevent.edit(
+                await MYSTERIOUSevent.edit(
                     f"**Antivirus scan was completed. I got the final results.**\n {response.message.message}"
                 )
 
@@ -103,7 +103,7 @@ async def parseqr(qr_e):
 async def _(event):
     if event.fwd_from:
         return
-    LEGENDevent = await edit_or_reply(event, "...")
+    MYSTERIOUSevent = await edit_or_reply(event, "...")
     start = datetime.now()
     input_str = event.pattern_match.group(1)
     message = "SYNTAX: `.barcode <long text to include>`"
@@ -141,13 +141,13 @@ async def _(event):
         )
         os.remove(filename)
     except Exception as e:
-        await LEGENDevent.edit(str(e))
+        await MYSTERIOUSevent.edit(str(e))
         return
     end = datetime.now()
     ms = (end - start).seconds
-    await LEGENDevent.edit("Created BarCode in {} seconds🤓".format(ms))
+    await MYSTERIOUSevent.edit("Created BarCode in {} seconds🤓".format(ms))
     await asyncio.sleep(5)
-    await LEGENDevent.delete()
+    await MYSTERIOUSevent.delete()
 
 
 @bot.on(admin_cmd(pattern=r"makeqr(?: |$)([\s\S]*)", outgoing=True))
@@ -316,16 +316,16 @@ async def _(event):
             return False
         else:
             im = Image.new(mode="RGB", size=(1280, 720), color=usercolor)
-            im.save("LEGEND.png", "PNG")
+            im.save("MYSTERIOUS.png", "PNG")
             input_str = input_str.replace("#", "#COLOR_")
             await event.client.send_file(
                 event.chat_id,
-                "LEGEND.png",
+                "MYSTERIOUS.png",
                 force_document=False,
                 caption=input_str,
                 reply_to=message_id,
             )
-            os.remove("LEGEND.png")
+            os.remove("MYSTERIOUS.png")
             await event.delete()
     else:
         await edit_or_reply(
@@ -338,7 +338,7 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    LEGENDevent = await edit_or_reply(event, "`processiong...........`")
+    MYSTERIOUSevent = await edit_or_reply(event, "`processiong...........`")
     input_str = event.pattern_match.group(1)
     xkcd_id = None
     if input_str:
@@ -375,9 +375,9 @@ Month: {}
 Year: {}""".format(
             img, input_str, xkcd_link, safe_title, alt, day, month, year
         )
-        await LEGENDevent.edit(output_str, link_preview=True)
+        await MYSTERIOUSevent.edit(output_str, link_preview=True)
     else:
-        await LEGENDevent.edit("xkcd n.{} not found!".format(xkcd_id))
+        await MYSTERIOUSevent.edit("xkcd n.{} not found!".format(xkcd_id))
 
 
 CmdHelp("tools").add_command(

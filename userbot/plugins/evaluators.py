@@ -18,15 +18,15 @@ async def _(event):
     cmd = "".join(event.text.split(maxsplit=1)[1:])
     if not cmd:
         return await edit_delete(event, "`What should i execute?..`")
-    LEGENDevent = await edit_or_reply(event, "`Executing.....`")
-    process = await asyncio.create_subprocess_sLEGEND(
+    MYSTERIOUSevent = await edit_or_reply(event, "`Executing.....`")
+    process = await asyncio.create_subprocess_sMYSTERIOUS(
         cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )
     stdout, stderr = await process.communicate()
     result = str(stdout.decode().strip()) + str(stderr.decode().strip())
-    LEGENDUser = await event.client.get_me()
-    if LEGENDUser.username:
-        curruser = LEGENDUser.username
+    MYSTERIOUSUser = await event.client.get_me()
+    if MYSTERIOUSUser.username:
+        curruser = MYSTERIOUSUser.username
     else:
         curruser = "MYSTERIOUSBOT"
     uid = os.geteuid()
@@ -55,7 +55,7 @@ async def _(event):
     cmd = "".join(event.text.split(maxsplit=1)[1:])
     if not cmd:
         return await edit_delete(event, "`What should i run ?..`")
-    LEGENDevent = await edit_or_reply(event, "`Running ...`")
+    MYSTERIOUSevent = await edit_or_reply(event, "`Running ...`")
     old_stderr = sys.stderr
     old_stdout = sys.stdout
     redirected_output = sys.stdout = io.StringIO()
@@ -80,7 +80,7 @@ async def _(event):
         evaluation = "Success"
     final_output = f"**•  Eval : **\n`{cmd}` \n\n**•  Result : **\n`{evaluation}` \n"
     await edit_or_reply(
-        LEGENDevent,
+        MYSTERIOUSevent,
         text=final_output,
         aslink=True,
         linktext=f"**•  Eval : **\n`{cmd}` \n\n**•  Result : **\n",

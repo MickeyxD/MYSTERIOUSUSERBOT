@@ -347,7 +347,7 @@ async def _(event):
         if (
             FBAN == "@MY5T3R10U5_X"
             or FBAN == "@MYSTERIOUS_EMPIRE"
-            or FBAN == "@LEGEND_CoOwnerr"
+            or FBAN == "@MYSTERIOUS_CoOwnerr"
         ):
             await event.edit("Something went wrong.")
             return

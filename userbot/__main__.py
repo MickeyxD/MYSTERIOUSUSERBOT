@@ -8,14 +8,14 @@ from var import Var
 from userbot.Config import Config
 from telethon.tl.functions.channels import InviteToChannelRequest, JoinChannelRequest
 from userbot.utils import load_module, start_assistant
-from userbot import LOAD_PLUG, LOGS, LEGENDversion
+from userbot import LOAD_PLUG, LOGS, MYSTERIOUSversion
 from pathlib import Path
 import asyncio
 import telethon.utils
 os.system("pip install -U telethon")
 
 l2= Config.SUDO_COMMAND_HAND_LER
-LEGEND_PIC = Config.ALIVE_PIC or "https://telegra.ph/file/75e1eda1498620f0030ea.jpg"
+MYSTERIOUS_PIC = Config.ALIVE_PIC or "https://telegra.ph/file/75e1eda1498620f0030ea.jpg"
 l1 = Config.COMMAND_HAND_LER
 
 
@@ -28,7 +28,7 @@ async def add_bot(bot_token):
         bot.me = await bot.get_me()
         bot.uid = telethon.utils.get_peer_id(bot.me)
     except Exception as e:
-        print(f"LEGEND_STRING - {str(e)}")
+        print(f"MYSTERIOUS_STRING - {str(e)}")
         sys.exit()
         
         
@@ -74,8 +74,8 @@ if LOAD_ASSISTANT == True:
 
 print(f"""
 ╔════❰MYSTERIOUSBOT❱═❍⊱❁۪۪
-║┣⪼ OWNER - LEGEND
-║┣⪼{LEGEND_PIC}
+║┣⪼ OWNER - MYSTERIOUS
+║┣⪼{MYSTERIOUS_PIC}
 ║┣⪼ CREATOR -@MY5T3R10U5_X
 ║┣⪼ TELETHON - 1.2.0
 ║┣⪼ ✨ 『🔱🇱 🇪 🇬 🇪 🇳 🇩 🔱』𝐔𝐬𝐞𝐫𝐛𝐨𝐭✨

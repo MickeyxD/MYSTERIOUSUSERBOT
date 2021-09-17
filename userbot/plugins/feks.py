@@ -6,7 +6,7 @@ from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 import random, re
 import asyncio
 from userbot.cmdhelp import CmdHelp
-from userbot import ALIVE_NAME, PM_MSG, LEGEND_ID
+from userbot import ALIVE_NAME, PM_MSG, MYSTERIOUS_ID
 from userbot import CMD_HELP
 
 

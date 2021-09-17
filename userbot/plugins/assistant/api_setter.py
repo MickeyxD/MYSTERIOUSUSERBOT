@@ -18,8 +18,8 @@ from userbot.cmdhelp import *
 from MYSTERIOUSBOT.utils import *
 from userbot.Config import Config
 from userbot import ALIVE_NAME
-LEGEND_row = Config.BUTTONS_IN_HELP
-LEGEND_emoji = Config.EMOJI_IN_HELP1
+MYSTERIOUS_row = Config.BUTTONS_IN_HELP
+MYSTERIOUS_emoji = Config.EMOJI_IN_HELP1
 
 from . import *
 # main menu for api setting

@@ -108,7 +108,7 @@ async def delete_legend(event, text, time=None, parse_mode=None, link_preview=No
             )
         )
     else:
-        LEGENDevent = await event.edit(
+        MYSTERIOUSevent = await event.edit(
             text, link_preview=link_preview, parse_mode=parse_mode
         )
     await asyncio.sleep(time)
