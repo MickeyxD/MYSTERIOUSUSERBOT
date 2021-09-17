@@ -20,7 +20,6 @@ l1 = Config.COMMAND_HAND_LER
 
 
 LOAD_USERBOT = os.environ.get("LOAD_USERBOT", True)
-LOAD_ASSISTANT = os.environ.get("LOAD_ASSISTANT", True)    
 
 async def add_bot(bot_token):
     try:
@@ -69,12 +68,15 @@ print(f"""
 ║┣⪼ ✨ MYSTERIOUSBOT
 ║╰━━━━━━━━━━━━━━━➣
 ╚══════════════════❍⊱""")
-
+async def legend_is_on():
     try:
         await bot(JoinChannelRequest("@Its_LegendBot"))
     except BaseException:
         pass
 
+    
+    
+bot.loop.create_task(legend_is_on())
 
 if len(sys.argv) not in (1, 3, 4):
     bot.disconnect()
