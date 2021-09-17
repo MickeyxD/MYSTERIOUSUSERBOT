@@ -35,7 +35,7 @@ async def _(event):
 @bot.on(admin_cmd(pattern="reload$"))
 @bot.on(sudo_cmd(pattern="reload$", allow_sudo=True))
 async def rel(event):
-    await eor(event, "Reloading Lêɠêɳ̃dẞø†... Wait for few seconds...")
+    await eor(event, "Reloading MYSTERIOUS... Wait for few seconds...")
     await reload_MYSTERIOUSBOT()
 
 

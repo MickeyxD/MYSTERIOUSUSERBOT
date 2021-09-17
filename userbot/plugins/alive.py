@@ -97,7 +97,7 @@ async def amireallyalive(alive):
 
 
 msg = f"""
-**  ⚜️ Lêɠêɳ̃dẞø† ιѕ σиℓιиє ⚜️**
+**  ⚜️ MYSTERIOUS ιѕ σиℓιиє ⚜️**
 
 {Config.ALIVE_MSG}
 

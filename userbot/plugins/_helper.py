@@ -7,7 +7,7 @@ from . import *
 from userbot import ALIVE_NAME, CMD_LIST, SUDO_LIST
 from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 
-perf = "[ †hê Lêɠêɳ̃dẞø† ]"
+perf = "[ †hê MYSTERIOUS ]"
 
 import requests
 from telethon import functions

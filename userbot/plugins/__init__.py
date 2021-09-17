@@ -15,7 +15,7 @@ MYSTERIOUS_logo4 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
 MYSTERIOUS_logo3 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
 MYSTERIOUSversion = "𝚅2.𝙾"
 
-perf = "[ †hê Lêɠêɳ̃dẞø† ]"
+perf = "[ †hê MYSTERIOUS ]"
 
 
 DEVLIST = [
