@@ -18,9 +18,9 @@ jobs:
 
         with:
 
-          find: "LEGEND-OS"
+          find: "LEGENDBOT"
 
-          replace: "MYSTERIOUS-OS"
+          replace: "MYSTERIOUSBOT"
 
       - name: Create Pull Request
 
