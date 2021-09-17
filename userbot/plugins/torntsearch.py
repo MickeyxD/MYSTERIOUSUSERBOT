@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup as bs
 import cfscrape  # https://github.com/Anorov/cloudflare-scrape
 
 from userbot.cmdhelp import CmdHelp
-from LEGENDBOT.utils import humanbytes, admin_cmd
+from MYSTERIOUSBOT.utils import humanbytes, admin_cmd
 
 
 def dogbin(magnets):

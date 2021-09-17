@@ -4,7 +4,7 @@ import cfscrape  # https://github.com/Anorov/cloudflare-scrape
 import requests
 from datetime import datetime
 from bs4 import BeautifulSoup
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd, humanbytes
+from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd, humanbytes
 
 
 @bot.on(admin_cmd(  # pylint:disable=E0602
