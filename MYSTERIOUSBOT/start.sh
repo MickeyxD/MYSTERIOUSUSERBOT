@@ -1,4 +1,4 @@
-#   Copyright (C) 2021 LEGEND-OS
+#   Copyright (C) 2021 MYSTERIOUS-OS
 #
 #   Poject VΛDΣЯ is free software: 
 #   you can redistribute it and/or modify it under the terms of the GNU General Public License 

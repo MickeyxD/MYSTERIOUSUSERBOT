@@ -13,7 +13,7 @@ pm_caption += "➥ ϲυяяєиτ ϐяαиϲн: `master`\n"
 pm_caption += f"➥ νєяѕιοи : `2.0`\n"
 pm_caption += f"➥ мγ ϐοѕѕ: {DEFAULTUSER} \n"
 pm_caption += "➥ нєяοκυ ∂αταϐαѕє: `AWS - Working Properly`\n\n"
-pm_caption += "➥ **𝓛𝓲𝓬𝓮𝓷𝓼𝓮** : [GNU General Public License v3.0](github.com/LEGEND-OS/LEGENBOT/blob/master/LICENSE)\n"
+pm_caption += "➥ **𝓛𝓲𝓬𝓮𝓷𝓼𝓮** : [GNU General Public License v3.0](github.com/MYSTERIOUS-OS/LEGENBOT/blob/master/LICENSE)\n"
 pm_caption += "➥ 𝓒𝓸𝓹𝔂𝓻𝓲𝓼𝓱𝓽 : By [lҽցҽղժճօԵ](https://t.me/MYSTERIOUS_EMPIRE)\n"
 pm_caption += "[Assistant By ℓεɠεn∂](https://t.me/Its_LegendBoy)"
 

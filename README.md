@@ -1,13 +1,13 @@
 👇👇DEPLOY👇👇
 
-[LEGENDBOT](https://github.com/LEGEND-OS/LEGENDBOT)
+[LEGENDBOT](https://github.com/MYSTERIOUS-OS/LEGENDBOT)
   <summary> <h2>Generate String Session</h2> </summary>
 
 - Termux
     - Install git package
            `pkg install git`
     - Clone this repository.
-           `git clone https://github.com/LEGEND-OS/LEGENDBOT.git`
+           `git clone https://github.com/MYSTERIOUS-OS/LEGENDBOT.git`
     - Then Do
            `cd LEGENDBOT`
     - Run String Generator By
@@ -39,7 +39,7 @@
     - Any Other VPS.
     - No support for Termux Yet.
 
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/LEGEND-OS/LEGENDUSERBOT/)
+[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/MYSTERIOUS-OS/LEGENDUSERBOT/)
 
 
 ## Mandatory Vars
@@ -82,9 +82,9 @@ notifications in Update Channel.
 
 ![](https://www.gnu.org/graphics/gplv3-or-later.png)
 
-Copyright (C) 2021 LEGEND-OS
+Copyright (C) 2021 MYSTERIOUS-OS
 
-Poject [LEGENDBOT](https://github.com/LEGEND-OS/LEGENDBOT) is free software: you can redistribute it and/or modify
+Poject [LEGENDBOT](https://github.com/MYSTERIOUS-OS/LEGENDBOT) is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
@@ -102,7 +102,7 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 <details>
   <summary> <h4>• Credits 🏅 •</h4> </summary>
 
-• [LEGEND](https://github.com/LEGEND-OS):OWNER
+• [LEGEND](https://github.com/MYSTERIOUS-OS):OWNER
  
 </details>
 

@@ -56,7 +56,7 @@ if ENV:
     HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
     FBAN_GROUP = int(os.environ.get("FBAN_GROUP", False))
     UPSTREAM_REPO = os.environ.get(
-        "UPSTREAM_REPO", "https://github.com/LEGEND-OS/LEGENDBOT"
+        "UPSTREAM_REPO", "https://github.com/MYSTERIOUS-OS/LEGENDBOT"
     )
     ALIVE_IMG = os.environ.get(
         "ALIVE_IMG", "https://telegra.ph/file/baf1bde222c614d6040e9.jpg"
