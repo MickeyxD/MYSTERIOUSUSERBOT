@@ -66,13 +66,10 @@ print(f"""
 ║┣⪼{MYSTERIOUS_PIC}
 ║┣⪼ CREATOR -@MY5T3R10U5_X
 ║┣⪼ TELETHON - 1.2.0
-║┣⪼ ✨ 『🔱🇱 🇪 🇬 🇪 🇳 🇩 🔱』𝐔𝐬𝐞𝐫𝐛𝐨𝐭✨
+║┣⪼ ✨ MYSTERIOUSBOT
 ║╰━━━━━━━━━━━━━━━➣
 ╚══════════════════❍⊱""")
 
-
-
-# 
     try:
         await bot(JoinChannelRequest("@Its_LegendBot"))
     except BaseException:
