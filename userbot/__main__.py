@@ -72,8 +72,7 @@ if LOAD_ASSISTANT == True:
             except Exception as er:
                 print(er)
 
-print(f"""『🔱🇱 🇪 🇬 🇪 🇳 🇩 B O T 🔱』➙𖤍࿐ IS ON!!! LEGEND VERSION :- {LEGENDversion}
-TYPE :- " .gpromote @MY5T3R10U5_X " OR .legend OR .ping CHECK IF I'M ON!
+print(f"""
 ╔════❰MYSTERIOUSBOT❱═❍⊱❁۪۪
 ║┣⪼ OWNER - LEGEND
 ║┣⪼{LEGEND_PIC}
@@ -83,16 +82,7 @@ TYPE :- " .gpromote @MY5T3R10U5_X " OR .legend OR .ping CHECK IF I'M ON!
 ║╰━━━━━━━━━━━━━━━➣
 ╚══════════════════❍⊱""")
 
-async def legend_is_on():
-    try:
-        if Config.LOGGER_ID != 0:
-            await bot.send_file(
-                Config.LOGGER_ID,
-                LEGEND_PIC,
-                caption=f"#START \n\nDeployed MYSTERIOUSBOT Successfully\n\n**MYSTERIOUSBOT- {LEGENDversion}**\n\nType `{l1}ping` or `{l1}alive` to check! \n\nJoin [LegendBot Channel](t.me/Its_LegendBot) for Updates & [LegendBot Chat](t.me/MYSTERIOUS_EMPIRE) for any query regarding LegendBot",
-            )
-    except Exception as e:
-        print(str(e))
+
 
 # Join LegndBot Channel after deploying 🤐😅
     try:
@@ -106,7 +96,7 @@ async def legend_is_on():
          pass
 
 
-bot.loop.create_task(legend_is_on())
+
 
 if len(sys.argv) not in (1, 3, 4):
     bot.disconnect()
