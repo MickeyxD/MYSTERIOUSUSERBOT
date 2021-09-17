@@ -1,4 +1,4 @@
-# by uniborg...Thanks @Its_LegendBoy
+# by uniborg...Thanks @MYSTERIOUS_SUPPORT
 # Now will be used in MYSTERIOUSBOT too....
 import asyncio
 import datetime

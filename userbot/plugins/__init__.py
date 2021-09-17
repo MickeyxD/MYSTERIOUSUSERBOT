@@ -6,8 +6,8 @@ import datetime
 from telethon import version
 from . import *
 MYSTERIOUS_USER = bot.me.first_name
-Its_LegendBoy = bot.uid
-legend_mention = f"[{MYSTERIOUS_USER}](tg://user?id={Its_LegendBoy})"
+MYSTERIOUS_SUPPORT = bot.uid
+legend_mention = f"[{MYSTERIOUS_USER}](tg://user?id={MYSTERIOUS_SUPPORT})"
 MYSTERIOUS_logo = "./userbot/resources/pics/-6163428037589314866_121.jpg"
 MYSTERIOUS_logo1 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
 MYSTERIOUS_logo2 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
