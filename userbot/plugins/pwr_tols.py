@@ -26,7 +26,7 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    await event.edit("**[ ! ]** `⚰️Turning off bot now ... Manually turn me on later or follow step of update in @Legend_Userbot` ಠ_ಠ")
+    await event.edit("**[ ! ]** `⚰️Turning off bot now ... Manually turn me on later or follow step of update in @MYSTERIOUS_EMPIRE` ಠ_ಠ")
     if HEROKU_APP is not None:
         HEROKU_APP.process_formation()["userbot"].scale(0)
     else:

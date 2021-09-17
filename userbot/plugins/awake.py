@@ -17,7 +17,7 @@ async def reply_id(event):
 DEFAULTUSER = ALIVE_NAME or "ℓєgєи∂ϐοτ"
 LEGEND_IMG = Config.AWAKE_PIC
 CUSTOM_ALIVE_TEXT = Config.ALIVE_MSG or "ℓєgєи∂ Choice ℓєgєи∂ϐοτ"
-CUSTOM_YOUR_GROUP =Config.YOUR_GROUP or "@Legend_Userbot"
+CUSTOM_YOUR_GROUP =Config.YOUR_GROUP or "@MYSTERIOUS_EMPIRE"
 
 USERID = bot.uid
 

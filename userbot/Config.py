@@ -147,7 +147,7 @@ if ENV:
         ALIVE_MSG = os.environ.get("ALIVE_MSG", None)
         PM_MSG = os.environ.get("PM_MSG", None)
         INSTANT_BLOCK = os.environ.get("INSTANT_BLOCK", "DISABLE")
-        YOUR_GROUP = os.environ.get("YOUR_GROUP", "@Legend_Userbot")
+        YOUR_GROUP = os.environ.get("YOUR_GROUP", "@MYSTERIOUS_EMPIRE")
         YOUR_CHANNEL = os.environ.get("YOUR_CHANNEL", "@Its_LegendBot.")
         BOT_PIC = os.environ.get("ALIVE_PIC", None)
         #auto bio

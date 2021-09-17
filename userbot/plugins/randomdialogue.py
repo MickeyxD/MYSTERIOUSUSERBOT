@@ -18,7 +18,7 @@ async def _(event):
     if x==1:
         await event.edit("Aaj mere paas gaadi hai, bungla hai, paisa hai... tumhare paas kya hai?\n\nMere paas, mere paas... Maa hai... \n\n **From : Deewar**")
     if x==2:
-        await event.edit("DON'T TRY TO KNOW ABUOT ME I M LEGEND✌️ @Its_LegendBoy\nfrom: @Legend_Userbot")
+        await event.edit("DON'T TRY TO KNOW ABUOT ME I M LEGEND✌️ @Its_LegendBoy\nfrom: @MYSTERIOUS_EMPIRE")
     if x==3:
         await event.edit("Amitabh Bachchan: 'Rishte mein to hum tumhare baap lagte hain,\n naam hai Shahenshah\nfrom: Shahenshah ")
     if x==4:

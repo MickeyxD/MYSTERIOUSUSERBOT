@@ -228,7 +228,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                     [
                         custom.Button.url("🔥 CHANNEL 🔥", "https://t.me/Its_LegendBot"),
                         custom.Button.url(
-                            "⚡ GROUP ⚡", "https://t.me/Legend_Userbot"
+                            "⚡ GROUP ⚡", "https://t.me/MYSTERIOUS_EMPIRE"
                         ),
                     ],
                     [

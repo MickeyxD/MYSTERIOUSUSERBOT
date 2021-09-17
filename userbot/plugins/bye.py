@@ -13,7 +13,7 @@ async def _(event):
 ┃╭━╮┣╮╭╯┃╭━━┫╰━╯┃┃╱╭┫┃╱╭╮
 ┃╰━╯┃┃┃╱┃╰━━┫╭━╮┃╰━╯┃╰━╯┃
 ╰━━━╯╰╯╱╰━━━┻╯╱╰┻━━━┻━━━╯
-       [⚡️»»»『†hê~Lêɠêɳ̃dẞø†』«««⚡️](https://t.me/Legend_Userbot)
+       [⚡️»»»『†hê~Lêɠêɳ̃dẞø†』«««⚡️](https://t.me/MYSTERIOUS_EMPIRE)
 """)
 CmdHelp("byeall").add_command(
 	'byeall', None, 'Say Bye to U all in anmation'
