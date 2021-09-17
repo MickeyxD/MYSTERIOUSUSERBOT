@@ -5,13 +5,13 @@ from datetime import datetime
 from pathlib import Path
 from telethon import events, functions, types
 from telethon.tl.types import InputMessagesFilterDocument
-from LEGENDBOT.utils import *
+from MYSTERIOUSBOT.utils import *
 from userbot import *
 from . import *
 DELETE_TIMEOUT = 5
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "『Lêɠêɳ̃dẞø†』"
 legend = bot.uid
-LEGEND = f"[{DEFAULTUSER}](tg://user?id={legend})"
+MYSTERIOUS = f"[{DEFAULTUSER}](tg://user?id={legend})"
 
 @bot.on(admin_cmd(pattern=r"send (?P<shortname>\w+)", outgoing=True))
 @bot.on(sudo_cmd(pattern=r"send (?P<shortname>\w+)", allow_sudo=True))
@@ -19,7 +19,7 @@ async def send(event):
     if event.fwd_from:
         return
     message_id = event.message.id
-    thumb = LEGEND_logo
+    thumb = MYSTERIOUS_logo
     input_str = event.pattern_match.group(1)
     omk = f"**⍟ 𝙿𝚕𝚞𝚐𝚒𝚗 𝚗𝚊𝚖𝚎 ≈** `{input_str}`\n**⍟ 𝚄𝚙𝚕𝚘𝚊𝚍𝚎𝚍 𝙱𝚢 ≈** {legend_mention}\n\n⚡ **[Lêɠêɳ̃dẞø†](https://t.me/Legend_Userbot)** ⚡"
     the_plugin_file = "./userbot/plugins/{}.py".format(input_str)
@@ -138,7 +138,7 @@ async def install(event):
     if event.reply_to_msg_id:
         reply_to_id = event.reply_to_msg_id
     cmd = "ls userbot/plugins"
-    thumb = LEGEND_logo1
+    thumb = MYSTERIOUS_logo1
     process = await asyncio.create_subprocess_shell(
         cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )
@@ -150,7 +150,7 @@ async def install(event):
     if len(OUTPUT) > 69:
         with io.BytesIO(str.encode(OUTPUT)) as out_file:
             out_file.name = "cmnds_list.text"
-            LEGEND_file = await bot.send_file(
+            MYSTERIOUS_file = await bot.send_file(
                 event.chat_id,
                 out_file,
                 force_document=True,
@@ -158,7 +158,7 @@ async def install(event):
                 thumb=thumb,
                 reply_to=reply_to_id,
             )
-            await edit_or_reply(LEGEND_file, f"**Output Too Large. This is the file for the list of plugins in ✞︎t͛ẞ̸ 𝖑𝖊ɠêɳ̃dẞø✞︎ .\n\n**BY :- {DEFAULTUSER}**")
+            await edit_or_reply(MYSTERIOUS_file, f"**Output Too Large. This is the file for the list of plugins in ✞︎t͛ẞ̸ 𝖑𝖊ɠêɳ̃dẞø✞︎ .\n\n**BY :- {DEFAULTUSER}**")
             await event.delete()
 
 
@@ -174,5 +174,5 @@ CmdHelp("core").add_command(
 ).add_command(
   "send", "<file name>", "Sends the given file from your userbot server, if any.", "send alive"
 ).add_command(
-  "cmds", None, "Gives out the list of modules in LEGENDBOT."
+  "cmds", None, "Gives out the list of modules in MYSTERIOUSBOT."
 ).add()

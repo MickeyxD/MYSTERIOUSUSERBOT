@@ -5,9 +5,9 @@ import asyncio
 from userbot.cmdhelp import CmdHelp
 
 from userbot import *
-from LEGENDBOT.utils import *
+from MYSTERIOUSBOT.utils import *
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "MYSTERIOUS User"
 
 
 @bot.on(admin_cmd(pattern="imp(|n) (.*)", outgoing=True))
@@ -58,42 +58,42 @@ async def _(event):
     stcr4 = await event.client.send_file(
         event.chat_id, "CAADAQADLwADnjOcH-wxu-ehy6NRAg"
     )
-    LEGENDevent = await event.reply(f"{name} is ejected.......🤐")
+    MYSTERIOUSevent = await event.reply(f"{name} is ejected.......🤐")
     await asyncio.sleep(2)
-    await LEGENDevent.edit("ඞㅤㅤㅤㅤ ㅤㅤㅤㅤ")
+    await MYSTERIOUSevent.edit("ඞㅤㅤㅤㅤ ㅤㅤㅤㅤ")
     await asyncio.sleep(0.5)
-    await LEGENDevent.edit("ㅤඞㅤㅤㅤㅤ ㅤㅤㅤ")
+    await MYSTERIOUSevent.edit("ㅤඞㅤㅤㅤㅤ ㅤㅤㅤ")
     await asyncio.sleep(0.5)
-    await LEGENDevent.edit("ㅤㅤ ඞㅤㅤㅤㅤㅤㅤ")
+    await MYSTERIOUSevent.edit("ㅤㅤ ඞㅤㅤㅤㅤㅤㅤ")
     await asyncio.sleep(0.5)
-    await LEGENDevent.edit("ㅤㅤㅤ ඞㅤㅤㅤㅤㅤ")
+    await MYSTERIOUSevent.edit("ㅤㅤㅤ ඞㅤㅤㅤㅤㅤ")
     await asyncio.sleep(0.5)
-    await LEGENDevent.edit("ㅤㅤㅤㅤ ඞㅤㅤㅤㅤ")
+    await MYSTERIOUSevent.edit("ㅤㅤㅤㅤ ඞㅤㅤㅤㅤ")
     await asyncio.sleep(0.5)
-    await LEGENDevent.edit("ㅤㅤㅤㅤㅤ ඞㅤㅤㅤ")
+    await MYSTERIOUSevent.edit("ㅤㅤㅤㅤㅤ ඞㅤㅤㅤ")
     await asyncio.sleep(0.5)
-    await LEGENDevent.edit("ㅤㅤㅤㅤㅤㅤ ඞㅤㅤ")
+    await MYSTERIOUSevent.edit("ㅤㅤㅤㅤㅤㅤ ඞㅤㅤ")
     await asyncio.sleep(0.5)
-    await LEGENDevent.edit("ㅤㅤㅤㅤㅤㅤㅤ ඞㅤ")
+    await MYSTERIOUSevent.edit("ㅤㅤㅤㅤㅤㅤㅤ ඞㅤ")
     await asyncio.sleep(0.5)
-    await LEGENDevent.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ඞ")
+    await MYSTERIOUSevent.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ඞ")
     await asyncio.sleep(0.5)
-    await LEGENDevent.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ㅤ")
+    await MYSTERIOUSevent.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ㅤ")
     await asyncio.sleep(0.2)
     await stcr4.delete()
     if cmd == "":
-        await LEGENDevent.edit(
+        await MYSTERIOUSevent.edit(
             f". 　　　。　　　　•　 　ﾟ　　。 　　.\n .　　　 　　.　　　　　。　　 。　. 　\n\n  . 　　 。   　     ඞ         。 . 　　 • 　　　　•\n\n  ﾟ{name} was an Imposter.      。　. 　 　       。　.                                        。　. \n                                   　.          。　  　. \n　'         0 Impostor remains    　 。　.  　　.                。　.        。 　     .          。 　            .               .         .    ,      。\n　　ﾟ　　　.　　.    ,　 　。　 　. 　 .     。"
         )
         await asyncio.sleep(4)
-        await LEGENDevent.delete()
+        await MYSTERIOUSevent.delete()
         await event.client.send_file(event.chat_id, "CAADAQADLQADnjOcH39IqwyR6Q_0Ag")
     elif cmd == "n":
-        await LEGENDevent.edit(
+        await MYSTERIOUSevent.edit(
             f". 　　　。　　　　•　 　ﾟ　　。 　　.\n .　　　 　　.　　　　　。　　 。　. 　\n\n  . 　　 。   　     ඞ         。 . 　　 • 　　　　•\n\n  ﾟ{name} was not an Imposter.      。　. 　 　       。　.                                        。　. \n                                   　.          。　  　. \n　'         1 Impostor remains    　 。　.  　　.                。　.        。 　     .          。 　            .               .         .    ,      。\n　　ﾟ　　　.　　.    ,　 　。　 　. 　 .     。"
         )
         await asyncio.sleep(4)
-        await LEGENDevent.delete()
+        await MYSTERIOUSevent.delete()
         await event.client.send_file(event.chat_id, "CAADAQADQAADnjOcH-WOkB8DEctJAg")
 
 
@@ -104,34 +104,34 @@ async def _(event):
         return
     name = event.pattern_match.group(2)
     cmd = event.pattern_match.group(1).lower()
-    LEGENDevent = await edit_or_reply(event, f"{name} is ejected.......")
+    MYSTERIOUSevent = await edit_or_reply(event, f"{name} is ejected.......")
     await asyncio.sleep(2)
-    await LEGENDevent.edit("ඞㅤㅤㅤㅤ ㅤㅤㅤㅤ")
+    await MYSTERIOUSevent.edit("ඞㅤㅤㅤㅤ ㅤㅤㅤㅤ")
     await asyncio.sleep(0.8)
-    await LEGENDevent.edit("ㅤඞㅤㅤㅤㅤ ㅤㅤㅤ")
+    await MYSTERIOUSevent.edit("ㅤඞㅤㅤㅤㅤ ㅤㅤㅤ")
     await asyncio.sleep(0.8)
-    await LEGENDevent.edit("ㅤㅤ ඞㅤㅤㅤㅤㅤㅤ")
+    await MYSTERIOUSevent.edit("ㅤㅤ ඞㅤㅤㅤㅤㅤㅤ")
     await asyncio.sleep(0.8)
-    await LEGENDevent.edit("ㅤㅤㅤ ඞㅤㅤㅤㅤㅤ")
+    await MYSTERIOUSevent.edit("ㅤㅤㅤ ඞㅤㅤㅤㅤㅤ")
     await asyncio.sleep(0.8)
-    await LEGENDevent.edit("ㅤㅤㅤㅤ ඞㅤㅤㅤㅤ")
+    await MYSTERIOUSevent.edit("ㅤㅤㅤㅤ ඞㅤㅤㅤㅤ")
     await asyncio.sleep(0.8)
-    await LEGENDevent.edit("ㅤㅤㅤㅤㅤ ඞㅤㅤㅤ")
+    await MYSTERIOUSevent.edit("ㅤㅤㅤㅤㅤ ඞㅤㅤㅤ")
     await asyncio.sleep(0.8)
-    await LEGENDevent.edit("ㅤㅤㅤㅤㅤㅤ ඞㅤㅤ")
+    await MYSTERIOUSevent.edit("ㅤㅤㅤㅤㅤㅤ ඞㅤㅤ")
     await asyncio.sleep(0.8)
-    await LEGENDevent.edit("ㅤㅤㅤㅤㅤㅤㅤ ඞㅤ")
+    await MYSTERIOUSevent.edit("ㅤㅤㅤㅤㅤㅤㅤ ඞㅤ")
     await asyncio.sleep(0.8)
-    await LEGENDevent.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ඞ")
+    await MYSTERIOUSevent.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ඞ")
     await asyncio.sleep(0.8)
-    await LEGENDevent.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ㅤ")
+    await MYSTERIOUSevent.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ㅤ")
     await asyncio.sleep(0.2)
     if cmd == "":
-        await LEGENDevent.edit(
+        await MYSTERIOUSevent.edit(
             f". 　　　。　　　　•　 　ﾟ　　。 　　.\n .　　　 　　.　　　　　。　　 。　. 　\n\n  . 　　 。   　     ඞ         。 . 　　 • 　　　　•\n\n  ﾟ {name} was an Imposter.      。　. 　 　       。　.                                        。　. \n                                   　.          。　  　. \n　'         0 Impostor remains    　 。　.  　　.                。　.        。 　     .          。 　            .               .         .    ,      。\n　　ﾟ　　　.　　.    ,　 　。　 　. 　 .     。"
         )
     elif cmd == "n":
-        await LEGENDevent.edit(
+        await MYSTERIOUSevent.edit(
             f". 　　　。　　　　•　 　ﾟ　　。 　　.\n .　　　 　　.　　　　　。　　 。　. 　\n\n  . 　　 。   　     ඞ         。 . 　　 • 　　　　•\n\n  ﾟ {name} was not an Imposter.      。　. 　 　       。　.                                        。　. \n                                   　.          。　  　. \n　'         1 Impostor remains    　 。　.  　　.                。　.        。 　     .          。 　            .               .         .    ,      。\n　　ﾟ　　　.　　.    ,　 　。　 　. 　 .     。"
         )
 

@@ -13,7 +13,7 @@ from time import sleep
 import asyncio
 import os
 import random
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
 #@bot.on(events.NewMessage(pattern=r"\.karb ", outgoing=True))
@@ -102,7 +102,7 @@ async def carbon_api(e):
    await e.client.send_file(
          e.chat_id,
          file,
-         caption="Carbonised by [LEGEND](https://github.com/LEGEND-OS/LEGENDBOT)",
+         caption="Carbonised by [MYSTERIOUS](https://github.com/MYSTERIOUS-OS/MYSTERIOUSBOT)",
          force_document=False,
          reply_to=e.message.reply_to_msg_id,
          )

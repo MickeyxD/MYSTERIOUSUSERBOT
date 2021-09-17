@@ -5,7 +5,7 @@ import re
 import requests
 
 from userbot import *
-from LEGENDBOT.utils import *
+from MYSTERIOUSBOT.utils import *
 from userbot.cmdhelp import CmdHelp
 
 

@@ -8,10 +8,10 @@ from selenium.webdriver.chrome.options import Options
 
 from userbot import ALIVE_NAME, CMD_HELP
 from userbot.helpers.functions import deEmojify
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "MYSTERIOUS User"
 
 CARBONLANG = "auto"
 LANG = "en"
@@ -33,7 +33,7 @@ async def carbon_api(e):
         pcode = str(textx.message)  # Importing message to module
     pcode = deEmojify(pcode)
     code = quote_plus(pcode)  # Converting to urlencoded
-    LEGEND = await edit_or_reply(e, "`Carbonizing...\n25%`")
+    MYSTERIOUS = await edit_or_reply(e, "`Carbonizing...\n25%`")
     url = CARBON.format(code=code, lang=CARBONLANG)
     chrome_options = Options()
     chrome_options.add_argument("--headless")
@@ -48,7 +48,7 @@ async def carbon_api(e):
         executable_path=Config.CHROME_DRIVER, options=chrome_options
     )
     driver.get(url)
-    await LEGEND.edit("`Be Patient...\n50%`")
+    await MYSTERIOUS.edit("`Be Patient...\n50%`")
     download_path = "./"
     driver.command_executor._commands["send_command"] = (
         "POST",
@@ -62,23 +62,23 @@ async def carbon_api(e):
     driver.find_element_by_xpath("//button[contains(text(),'Export')]").click()
     # driver.find_element_by_xpath("//button[contains(text(),'4x')]").click()
     # driver.find_element_by_xpath("//button[contains(text(),'PNG')]").click()
-    await LEGEND.edit("`Processing..\n75%`")
+    await MYSTERIOUS.edit("`Processing..\n75%`")
     # Waiting for downloading
     await asyncio.sleep(2)
-    await LEGEND.edit("`Done Dana Done...\n100%`")
+    await MYSTERIOUS.edit("`Done Dana Done...\n100%`")
     file = "./carbon.png"
-    await LEGEND.edit("`Uploading..`")
+    await MYSTERIOUS.edit("`Uploading..`")
     await e.client.send_file(
         e.chat_id,
         file,
-        caption="Here's your carbon, \n Carbonised by LEGENDBOT",
+        caption="Here's your carbon, \n Carbonised by MYSTERIOUSBOT",
         force_document=True,
         reply_to=e.message.reply_to_msg_id,
     )
     os.remove("./carbon.png")
     driver.quit()
     # Removing carbon.png after uploading
-    await LEGEND.delete()
+    await MYSTERIOUS.delete()
 
 
 @bot.on(admin_cmd(outgoing=True, pattern="krb"))
@@ -86,7 +86,7 @@ async def carbon_api(e):
 async def carbon_api(e):
     if e.fwd_from:
         return
-    LEGEND = await edit_or_reply(e, "`Processing....`")
+    MYSTERIOUS = await edit_or_reply(e, "`Processing....`")
     CARBON = "https://carbon.now.sh/?l={lang}&code={code}"
     textx = await e.get_reply_message()
     pcode = e.text
@@ -102,7 +102,7 @@ async def carbon_api(e):
         skeme = None  # Importing message to module
     pcode = deEmojify(pcode)
     code = quote_plus(pcode)  # Converting to urlencoded
-    await LEGEND.edit("`Meking Carbon...`\n`25%`")
+    await MYSTERIOUS.edit("`Meking Carbon...`\n`25%`")
     url = CARBON.format(code=code, lang=CARBONLANG)
     chrome_options = Options()
     chrome_options.add_argument("--headless")
@@ -117,7 +117,7 @@ async def carbon_api(e):
         executable_path=Config.CHROME_DRIVER, options=chrome_options
     )
     driver.get(url)
-    await LEGEND.edit("`Be Patient...\n50%`")
+    await MYSTERIOUS.edit("`Be Patient...\n50%`")
     download_path = "./"
     driver.command_executor._commands["send_command"] = (
         "POST",
@@ -144,15 +144,15 @@ async def carbon_api(e):
     driver.find_element_by_id("export-menu").click()
     driver.find_element_by_xpath("//button[contains(text(),'4x')]").click()
     driver.find_element_by_xpath("//button[contains(text(),'PNG')]").click()
-    await LEGEND.edit("`Processing..\n75%`")
+    await MYSTERIOUS.edit("`Processing..\n75%`")
     # Waiting for downloading
     await asyncio.sleep(2.5)
     color_name = driver.find_element_by_xpath(
         "/html/body/div[1]/main/div[3]/div[2]/div[1]/div[1]/div/span[2]/input"
     ).get_attribute("value")
-    await LEGEND.edit("`Done Dana Done...\n100%`")
+    await MYSTERIOUS.edit("`Done Dana Done...\n100%`")
     file = "./carbon.png"
-    await LEGEND.edit("`Uploading..`")
+    await MYSTERIOUS.edit("`Uploading..`")
     await e.client.send_file(
         e.chat_id,
         file,
@@ -162,7 +162,7 @@ async def carbon_api(e):
     )
     os.remove("./carbon.png")
     driver.quit()
-    await LEGEND.delete()
+    await MYSTERIOUS.delete()
 
 
 @bot.on(admin_cmd(pattern=f"kar1(?: |$)(.*)", outgoing=True))
@@ -171,7 +171,7 @@ async def carbon_api(e):
     if e.fwd_from:
         return
     """ A Wrapper for carbon.now.sh """
-    LEGEND = await edit_or_reply(e, "🔲🔲🔲🔲🔲")
+    MYSTERIOUS = await edit_or_reply(e, "🔲🔲🔲🔲🔲")
     CARBON = "https://carbon.now.sh/?bg=rgba(249%2C237%2C212%2C0)&t=synthwave-84&wt=none&l=application%2Fjson&ds=true&dsyoff=20px&dsblur=0px&wc=true&wa=true&pv=56px&ph=0px&ln=false&fl=1&fm=IBM%20Plex%20Mono&fs=14.5px&lh=153%25&si=false&es=4x&wm=false&code={code}"
     CARBONLANG = "en"
     textx = await e.get_reply_message()
@@ -191,7 +191,7 @@ async def carbon_api(e):
     chrome_options.add_argument("--disable-gpu")
     prefs = {"download.default_directory": "./"}
     chrome_options.add_experimental_option("prefs", prefs)
-    await LEGEND.edit("🔳🔳🔲🔲🔲")
+    await MYSTERIOUS.edit("🔳🔳🔲🔲🔲")
 
     driver = webdriver.Chrome(
         executable_path=Config.CHROME_DRIVER, options=chrome_options
@@ -210,11 +210,11 @@ async def carbon_api(e):
 
     driver.find_element_by_xpath("//button[contains(text(),'Export')]").click()
     await asyncio.sleep(2)
-    await LEGEND.edit("🔳🔳🔳🔲🔲")
+    await MYSTERIOUS.edit("🔳🔳🔳🔲🔲")
     await asyncio.sleep(2)
-    await LEGEND.edit("🔳🔳🔳🔳🔳")
+    await MYSTERIOUS.edit("🔳🔳🔳🔳🔳")
     file = "./carbon.png"
-    await LEGEND.edit("☣️Karbon1 Completed, Uploading Karbon☣️")
+    await MYSTERIOUS.edit("☣️Karbon1 Completed, Uploading Karbon☣️")
     await e.client.send_file(
         e.chat_id,
         file,
@@ -223,7 +223,7 @@ async def carbon_api(e):
     )
     os.remove("./carbon.png")
     # Removing carbon.png after uploading
-    await LEGEND.delete()  # Deleting msg
+    await MYSTERIOUS.delete()  # Deleting msg
 
 
 @bot.on(admin_cmd(pattern=f"kar2(?: |$)(.*)", outgoing=True))
@@ -232,7 +232,7 @@ async def carbon_api(e):
     if e.fwd_from:
         return
     """ A Wrapper for carbon.now.sh """
-    LEGEND = await edit_or_reply(e, "📛📛📛📛📛")
+    MYSTERIOUS = await edit_or_reply(e, "📛📛📛📛📛")
     CARBON = "https://carbon.now.sh/?bg=rgba(239%2C40%2C44%2C1)&t=one-light&wt=none&l=application%2Ftypescript&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=143%25&si=false&es=2x&wm=false&code={code}"
     CARBONLANG = "en"
     textx = await e.get_reply_message()
@@ -252,7 +252,7 @@ async def carbon_api(e):
     chrome_options.add_argument("--disable-gpu")
     prefs = {"download.default_directory": "./"}
     chrome_options.add_experimental_option("prefs", prefs)
-    await LEGEND.edit("🔘🔘📛📛📛")
+    await MYSTERIOUS.edit("🔘🔘📛📛📛")
     driver = webdriver.Chrome(
         executable_path=Config.CHROME_DRIVER, options=chrome_options
     )
@@ -269,11 +269,11 @@ async def carbon_api(e):
     driver.execute("send_command", params)
     driver.find_element_by_xpath("//button[contains(text(),'Export')]").click()
     await asyncio.sleep(2)
-    await LEGEND.edit("🔘🔘🔘📛📛")
+    await MYSTERIOUS.edit("🔘🔘🔘📛📛")
     await asyncio.sleep(2)  # Waiting for downloading
-    await LEGEND.edit("🔘🔘🔘🔘🔘")
+    await MYSTERIOUS.edit("🔘🔘🔘🔘🔘")
     file = "./carbon.png"
-    await LEGEND.edit("☣️Karbon2 Completed, Uploading Karbon☣️")
+    await MYSTERIOUS.edit("☣️Karbon2 Completed, Uploading Karbon☣️")
     await e.client.send_file(
         e.chat_id,
         file,
@@ -284,7 +284,7 @@ async def carbon_api(e):
 
     os.remove("./carbon.png")
     # Removing carbon.png after uploading
-    await LEGEND.delete()  # Deleting msg
+    await MYSTERIOUS.delete()  # Deleting msg
 
 
 @bot.on(admin_cmd(pattern=f"kar3(?: |$)(.*)", outgoing=True))
@@ -293,7 +293,7 @@ async def carbon_api(e):
     if e.fwd_from:
         return
     """ A Wrapper for carbon.now.sh """
-    LEGEND = await edit_or_reply(e, "🎛🎛🎛🎛🎛")
+    MYSTERIOUS = await edit_or_reply(e, "🎛🎛🎛🎛🎛")
     CARBON = "https://carbon.now.sh/?bg=rgba(74%2C144%2C226%2C1)&t=material&wt=none&l=auto&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Fira%20Code&fs=14px&lh=152%25&si=false&es=2x&wm=false&code={code}"
     CARBONLANG = "en"
     textx = await e.get_reply_message()
@@ -313,7 +313,7 @@ async def carbon_api(e):
     chrome_options.add_argument("--disable-gpu")
     prefs = {"download.default_directory": "./"}
     chrome_options.add_experimental_option("prefs", prefs)
-    await LEGEND.edit("🔵🔵🎛🎛🎛")
+    await MYSTERIOUS.edit("🔵🔵🎛🎛🎛")
 
     driver = webdriver.Chrome(
         executable_path=Config.CHROME_DRIVER, options=chrome_options
@@ -332,13 +332,13 @@ async def carbon_api(e):
 
     driver.find_element_by_xpath("//button[contains(text(),'Export')]").click()
     await asyncio.sleep(2)
-    await LEGEND.edit("🔵🔵🔵🎛🎛")
+    await MYSTERIOUS.edit("🔵🔵🔵🎛🎛")
     # driver.find_element_by_xpath("//button[contains(text(),'PNG')]").click()
     await asyncio.sleep(2)  # Waiting for downloading
 
-    await LEGEND.edit("🔵🔵🔵🔵🔵")
+    await MYSTERIOUS.edit("🔵🔵🔵🔵🔵")
     file = "./carbon.png"
-    await LEGEND.edit("☣️Karbon3 Completed, Uploading Karbon⬆️")
+    await MYSTERIOUS.edit("☣️Karbon3 Completed, Uploading Karbon⬆️")
     await e.client.send_file(
         e.chat_id,
         file,
@@ -349,7 +349,7 @@ async def carbon_api(e):
 
     os.remove("./carbon.png")
     # Removing carbon.png after uploading
-    await LEGEND.delete()  # Deleting msg
+    await MYSTERIOUS.delete()  # Deleting msg
 
 
 @bot.on(admin_cmd(pattern=f"kar4(?: |$)(.*)", outgoing=True))
@@ -358,7 +358,7 @@ async def carbon_api(e):
     if e.fwd_from:
         return
     """ A Wrapper for carbon.now.sh """
-    LEGEND = await edit_or_reply(e, "🌚🌚🌚🌚🌚")
+    MYSTERIOUS = await edit_or_reply(e, "🌚🌚🌚🌚🌚")
     CARBON = "https://carbon.now.sh/?bg=rgba(29%2C40%2C104%2C1)&t=one-light&wt=none&l=application%2Ftypescript&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=143%25&si=false&es=2x&wm=false&code={code}"
     CARBONLANG = "en"
     textx = await e.get_reply_message()
@@ -378,7 +378,7 @@ async def carbon_api(e):
     chrome_options.add_argument("--disable-gpu")
     prefs = {"download.default_directory": "./"}
     chrome_options.add_experimental_option("prefs", prefs)
-    await LEGEND.edit("🌝🌝🌚🌚🌚")
+    await MYSTERIOUS.edit("🌝🌝🌚🌚🌚")
 
     driver = webdriver.Chrome(
         executable_path=Config.CHROME_DRIVER, options=chrome_options
@@ -397,13 +397,13 @@ async def carbon_api(e):
 
     driver.find_element_by_xpath("//button[contains(text(),'Export')]").click()
     await asyncio.sleep(2)
-    await LEGEND.edit("🌝🌝🌝🌚🌚")
+    await MYSTERIOUS.edit("🌝🌝🌝🌚🌚")
     # driver.find_element_by_xpath("//button[contains(text(),'PNG')]").click()
     await asyncio.sleep(2)  # Waiting for downloading
 
-    await LEGEND.edit("🌝🌝🌝🌝🌝")
+    await MYSTERIOUS.edit("🌝🌝🌝🌝🌝")
     file = "./carbon.png"
-    await LEGEND.edit("✅Karbon4 Completed, Uploading Karbon✅")
+    await MYSTERIOUS.edit("✅Karbon4 Completed, Uploading Karbon✅")
     await e.client.send_file(
         e.chat_id,
         file,
@@ -414,7 +414,7 @@ async def carbon_api(e):
 
     os.remove("./carbon.png")
     # Removing carbon.png after uploading
-    await LEGEND.delete()  # Deleting msg
+    await MYSTERIOUS.delete()  # Deleting msg
 
 
 @bot.on(admin_cmd(pattern=f"rgbk2(?: |$)(.*)", outgoing=True))
@@ -426,7 +426,7 @@ async def carbon_api(e):
     GREEN = random.randint(0, 256)
     BLUE = random.randint(0, 256)
     OPC = random.random()
-    LEGEND = await edit_or_reply(e, "⬜⬜⬜⬜⬜")
+    MYSTERIOUS = await edit_or_reply(e, "⬜⬜⬜⬜⬜")
     CARBON = "https://carbon.now.sh/?bg=rgba({R}%2C{G}%2C{B}%2C{O})&t=material&wt=none&l=auto&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Fira%20Code&fs=14px&lh=152%25&si=false&es=2x&wm=false&code={code}"
     CARBONLANG = "en"
     textx = await e.get_reply_message()
@@ -446,7 +446,7 @@ async def carbon_api(e):
     chrome_options.add_argument("--disable-gpu")
     prefs = {"download.default_directory": "./"}
     chrome_options.add_experimental_option("prefs", prefs)
-    await LEGEND.edit("⬛⬛⬜⬜⬜")
+    await MYSTERIOUS.edit("⬛⬛⬜⬜⬜")
 
     driver = webdriver.Chrome(
         executable_path=Config.CHROME_DRIVER, options=chrome_options
@@ -467,13 +467,13 @@ async def carbon_api(e):
     await asyncio.sleep(2)  # this might take a bit.
     # driver.find_element_by_xpath("//button[contains(text(),'4x')]").click()
     # await asyncio.sleep(5)
-    await LEGEND.edit("⬛⬛⬛⬜⬜")
+    await MYSTERIOUS.edit("⬛⬛⬛⬜⬜")
     # driver.find_element_by_xpath("//button[contains(text(),'PNG')]").click()
     await asyncio.sleep(2)  # Waiting for downloading
 
-    await LEGEND.edit("⬛⬛⬛⬛⬛")
+    await MYSTERIOUS.edit("⬛⬛⬛⬛⬛")
     file = "./carbon.png"
-    await LEGEND.edit("✅RGB Karbon 2.0 Completed, Uploading Karbon✅")
+    await MYSTERIOUS.edit("✅RGB Karbon 2.0 Completed, Uploading Karbon✅")
     await e.client.send_file(
         e.chat_id,
         file,
@@ -483,7 +483,7 @@ async def carbon_api(e):
     )
     os.remove("./carbon.png")
     # Removing carbon.png after uploading
-    await LEGEND.delete()  # Deleting msg
+    await MYSTERIOUS.delete()  # Deleting msg
 
 
 @bot.on(admin_cmd(pattern=f"kargb(?: |$)(.*)", outgoing=True))
@@ -527,7 +527,7 @@ async def carbon_api(e):
     ]
     CUNTHE = random.randint(0, len(THEME) - 1)
     The = THEME[CUNTHE]
-    LEGEND = await edit_or_reply(e, "⬜⬜⬜⬜⬜")
+    MYSTERIOUS = await edit_or_reply(e, "⬜⬜⬜⬜⬜")
     CARBON = "https://carbon.now.sh/?bg=rgba({R}%2C{G}%2C{B}%2C1)&t={T}&wt=none&l=auto&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Fira%20Code&fs=14px&lh=152%25&si=false&es=2x&wm=false&code={code}"
     CARBONLANG = "en"
     textx = await e.get_reply_message()
@@ -547,7 +547,7 @@ async def carbon_api(e):
     chrome_options.add_argument("--disable-gpu")
     prefs = {"download.default_directory": "./"}
     chrome_options.add_experimental_option("prefs", prefs)
-    await LEGEND.edit("⬛⬛⬜⬜⬜")
+    await MYSTERIOUS.edit("⬛⬛⬜⬜⬜")
 
     driver = webdriver.Chrome(
         executable_path=Config.CHROME_DRIVER, options=chrome_options
@@ -567,12 +567,12 @@ async def carbon_api(e):
     await asyncio.sleep(2)  # this might take a bit.
     #  driver.find_element_by_xpath("//button[contains(text(),'4x')]").click()
     # await asyncio.sleep(5)
-    await LEGEND.edit("⬛⬛⬛⬜⬜")
+    await MYSTERIOUS.edit("⬛⬛⬛⬜⬜")
     # driver.find_element_by_xpath("//button[contains(text(),'PNG')]").click()
     await asyncio.sleep(2)  # Waiting for downloading
-    await LEGEND.edit("⬛⬛⬛⬛⬛")
+    await MYSTERIOUS.edit("⬛⬛⬛⬛⬛")
     file = "./carbon.png"
-    await LEGEND.edit("✅RGB Karbon Completed, Uploading Karbon✅")
+    await MYSTERIOUS.edit("✅RGB Karbon Completed, Uploading Karbon✅")
     await e.client.send_file(
         e.chat_id,
         file,
@@ -581,7 +581,7 @@ async def carbon_api(e):
         reply_to=e.message.reply_to_msg_id,
     )
     os.remove("./carbon.png")
-    await LEGEND.delete()  # Deleting msg
+    await MYSTERIOUS.delete()  # Deleting msg
 
 
 CmdHelp("carbon").add_command(

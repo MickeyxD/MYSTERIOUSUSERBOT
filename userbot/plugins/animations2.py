@@ -2,11 +2,11 @@ import asyncio
 from collections import deque
 
 from userbot import *
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 from userbot.Config import Config
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "MYSTERIOUS"
 
 
 @bot.on(admin_cmd(pattern=r"boxs$", outgoing=True))
@@ -44,7 +44,7 @@ async def _(event):
     animation_ttl = range(0, 12)
     event = await edit_or_reply(event, "`Deploying...`")
     animation_chars = [
-        "**Heroku Connecting To Latest [Github Build](LEGEND-OS/LEGENDBOT)**",
+        "**Heroku Connecting To Latest [Github Build](MYSTERIOUS-OS/MYSTERIOUSBOT)**",
         f"**Build started by user** {DEFAULT}",
         f"**Deploy** `535a74f0` **by user** **{DEFAULT}**",
         "**Restarting Heroku Server...**",
@@ -53,8 +53,8 @@ async def _(event):
         "**Process exited with** `status 143`",
         "**Starting process with command** `python3 -m stdborg`",
         "**State changed from starting to up**",
-        "__INFO:LEGENDBOT:Logged in as 557667062__",
-        "__INFO:LEGENDBOT:Successfully loaded all plugins__",
+        "__INFO:MYSTERIOUSBOT:Logged in as 557667062__",
+        "__INFO:MYSTERIOUSBOT:Successfully loaded all plugins__",
         "**Build Succeeded**",
     ]
     for i in animation_ttl:

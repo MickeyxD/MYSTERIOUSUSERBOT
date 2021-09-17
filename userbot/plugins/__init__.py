@@ -5,15 +5,15 @@ from userbot.cmdhelp import CmdHelp
 import datetime
 from telethon import version
 from . import *
-LEGEND_USER = bot.me.first_name
+MYSTERIOUS_USER = bot.me.first_name
 Its_LegendBoy = bot.uid
-legend_mention = f"[{LEGEND_USER}](tg://user?id={Its_LegendBoy})"
-LEGEND_logo = "./userbot/resources/pics/-6163428037589314866_121.jpg"
-LEGEND_logo1 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
-LEGEND_logo2 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
-LEGEND_logo4 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
-LEGEND_logo3 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
-LEGENDversion = "𝚅2.𝙾"
+legend_mention = f"[{MYSTERIOUS_USER}](tg://user?id={Its_LegendBoy})"
+MYSTERIOUS_logo = "./userbot/resources/pics/-6163428037589314866_121.jpg"
+MYSTERIOUS_logo1 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
+MYSTERIOUS_logo2 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
+MYSTERIOUS_logo4 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
+MYSTERIOUS_logo3 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
+MYSTERIOUSversion = "𝚅2.𝙾"
 
 perf = "[ †hê Lêɠêɳ̃dẞø† ]"
 

