@@ -12,7 +12,7 @@ from telethon.tl.functions.messages import GetFullChatRequest
 from telethon.tl.functions.channels import InviteToChannelRequest
 
 from userbot import CMD_HELP
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd, eor
+from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd, eor
 from userbot.cmdhelp import CmdHelp
 
 async def get_chatinfo(event):
@@ -73,31 +73,31 @@ async def get_users(event):
     sender = await event.get_sender()
     me = await event.client.get_me()
     if not sender.id == me.id:
-        LEGEND = await edit_or_reply(event, "`processing...`")
+        MYSTERIOUS = await edit_or_reply(event, "`processing...`")
     else:
-        LEGEND = await edit_or_reply(event, "`processing...`")
+        MYSTERIOUS = await edit_or_reply(event, "`processing...`")
     legend = await get_chatinfo(event)
     chat = await event.get_chat()
     if event.is_private:
-        return await LEGEND.edit("`Sorry, Cant add users here`")
+        return await MYSTERIOUS.edit("`Sorry, Cant add users here`")
     s = 0
     f = 0
     error = "None"
 
-    await LEGEND.edit("**⚜️[Ͳєямιиαℓ Տτατυѕ](https://t.me/Legend_Userbot)**\n\n`🔸Inviting Users.......`")
+    await MYSTERIOUS.edit("**⚜️[Ͳєямιиαℓ Տτατυѕ](https://t.me/Legend_Userbot)**\n\n`🔸Inviting Users.......`")
     async for user in event.client.iter_participants(legend.full_chat.id):
         try:
             await bot(
                 InviteToChannelRequest(channel=chat, users=[user.id])
             )
             s = s + 1
-            await LEGEND.edit(
+            await MYSTERIOUS.edit(
                 f"🤟**INVITING USERS.. **\n\n**💝Invited :**  `{s}` users \n**🙄Failed to Invite :**  `{f}` users.\n\n**×Error :**  `{error}`"
             )
         except Exception as e:
             error = str(e)
             f = f + 1
-    return await LEGEND.edit(
+    return await MYSTERIOUS.edit(
         f"[τєямנиαℓ ƒιиιѕнє∂](https://t.me/Legend_Userbot) \n\n🔸 Sυϲϲєѕѕƒυℓℓγ ιиνιτє∂ `{s}` ρєορℓє \n⚠️ ƒαιℓє∂ το ιиνιτє `{f}` ρєορℓє"
     )
 

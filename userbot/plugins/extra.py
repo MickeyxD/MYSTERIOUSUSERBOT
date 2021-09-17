@@ -5,7 +5,7 @@ from collections import deque
 from telethon.tl.functions.channels import LeaveChannelRequest
 
 from userbot.cmdhelp import CmdHelp
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from . import *
 
 @bot.on(admin_cmd("leave$"))

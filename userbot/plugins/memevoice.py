@@ -7,7 +7,7 @@
 import re
 
 from userbot import bot
-from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
+from MYSTERIOUSBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 from userbot.helpers.functions import deEmojify
 
@@ -15,8 +15,8 @@ from userbot.helpers.functions import deEmojify
 @bot.on(admin_cmd(pattern="mev(?: |$)(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="mev(?: |$)(.*)", allow_sudo=True))
 async def nope(legend):
-    LEGEND = legend.pattern_match.group(1)
-    if not LEGEND:
+    MYSTERIOUS = legend.pattern_match.group(1)
+    if not MYSTERIOUS:
         if legend.is_reply:
             (await legend.get_reply_message()).message
         else:
@@ -24,7 +24,7 @@ async def nope(legend):
             )
             return
 
-    troll = await bot.inline_query("TrollVoiceBot", f"{(deEmojify(LEGEND))}")
+    troll = await bot.inline_query("TrollVoiceBot", f"{(deEmojify(MYSTERIOUS))}")
 
     await troll[0].click(
         legend.chat_id,

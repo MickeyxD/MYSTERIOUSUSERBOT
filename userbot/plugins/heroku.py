@@ -5,7 +5,7 @@ import heroku3
 import requests
 from userbot.cmdhelp import CmdHelp
 from userbot.Config import Config
-from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
+from MYSTERIOUSBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 import urllib3
 from . import *
@@ -187,8 +187,8 @@ async def _(event):
     except BaseException:
         return await event.reply(f"Make Sure Your Heroku AppName & API Key are filled correct. Visit {my_group} for help.", link_preview=False)
    # event = await eor(dyno, "Downloading Logs...")
-    LEGEND_data = app.get_log()
-    await eor(event, LEGEND_data)
+    MYSTERIOUS_data = app.get_log()
+    await eor(event, MYSTERIOUS_data)
     
 
 

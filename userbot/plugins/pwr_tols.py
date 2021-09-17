@@ -1,11 +1,11 @@
-from userbot.helpers.runner import reload_LEGENDBOT 
+from userbot.helpers.runner import reload_MYSTERIOUSBOT 
 import os
 import sys
 import asyncio
 from os import execl
 from time import sleep
 
-from LEGENDBOT.utils import admin_cmd, sudo_cmd, eor
+from MYSTERIOUSBOT.utils import admin_cmd, sudo_cmd, eor
 from userbot.cmdhelp import CmdHelp
 from userbot import HEROKU_APP, bot
 
@@ -36,7 +36,7 @@ async def _(event):
 @bot.on(sudo_cmd(pattern="reload$", allow_sudo=True))
 async def rel(event):
     await eor(event, "Reloading Lêɠêɳ̃dẞø†... Wait for few seconds...")
-    await reload_LEGENDBOT()
+    await reload_MYSTERIOUSBOT()
 
 
 CmdHelp("pwr tools").add_command(

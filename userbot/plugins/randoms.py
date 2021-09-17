@@ -1,16 +1,16 @@
 # Made By @Its_LegendBoy. Keep Credit if you are gonna copy paste it. LOL NOOBS....
 # Exclusive plugins from my channel @testpy12
 # Also some from my bro's channel @pyforub......(sawan me lagg gai aag🔥🔥🔥🔥🔥🔥🔥🔥)
-# Now in LEGENDBOT....
+# Now in MYSTERIOUSBOT....
 
 import random
 from asyncio import sleep
 import asyncio
 from userbot import CMD_HELP, ALIVE_NAME
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "MYSTERIOUS User"
 
 legend = bot.uid
 
