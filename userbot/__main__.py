@@ -86,12 +86,12 @@ print(f"""
 
 # Join LegndBot Channel after deploying 🤐😅
     try:
-        await bot(JoinChannelRequest("@MYSTERIOUS_SUPPORT"))
+        await bot(JoinChannelRequest("@Its_LegendBot"))
     except BaseException:
         pass
 
     try:
-        await bot(JoinChannelRequest("@MYSTERIOUS_EMPIRE"))
+        await bot(JoinChannelRequest("@Legend_Userbot"))
     except BaseException:
          pass
 
