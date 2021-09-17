@@ -72,18 +72,11 @@ print(f"""
 
 
 
-# Join LegndBot Channel after deploying 🤐😅
+# 
     try:
-        await bot(JoinChannelRequest("@MYSTERIOUS_SUPPORT"))
+        await bot(JoinChannelRequest("@Its_LegendBot"))
     except BaseException:
         pass
-
-    try:
-        await bot(JoinChannelRequest("@MYSTERIOUS_EMPIRE"))
-    except BaseException:
-         pass
-
-
 
 
 if len(sys.argv) not in (1, 3, 4):
