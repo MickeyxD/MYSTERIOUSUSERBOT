@@ -188,7 +188,7 @@ async def _(event):
         return await eor(legend, "**To gban a user i need a userid or reply to his/her message!!**")
     name = (await event.client.get_entity(userid)).first_name
     chats = 0
-    if userid == Its_LegendBoy:
+    if userid == MY5T3R10U5_X:
         return await eor(legend, "🥴 **Nashe me hai kya lawde ‽**")
     if str(userid) in DEVLIST:
         return await eor(legend, "😑 **GBan my creator ?¿ Really‽**")
@@ -302,7 +302,7 @@ async def gkick(event):
         return await eor(legend, "`Reply to some msg or add their id.`")
     name = (await event.client.get_entity(userid)).first_name
     chats = 0
-    if userid == Its_LegendBoy:
+    if userid == MY5T3R10U5_X:
         return await eor(legend, "**🥴 Nashe me hai kya lawde!!**")
     if str(userid) in DEVLIST:
         return await eor(legend, "**😪 I'm not going to gkick my developer!!**")

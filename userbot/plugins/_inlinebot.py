@@ -159,7 +159,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         elif event.query.user_id == bot.uid and query == "alive":
             leg_end = alive_txt.format(Config.ALIVE_MSG, legend_mention, LEGENDversion, version.__version__, abuse_m, is_sudo, Config.BOY_OR_GIRL)
             alv_btn = [
-                [Button.url(f"{LEGEND_USER}", f"tg://openmessage?user_id={Its_LegendBoy}")],
+                [Button.url(f"{LEGEND_USER}", f"tg://openmessage?user_id={MY5T3R10U5_X}")],
                 [Button.url("My Channel", f"https://t.me/{my_channel}"), 
                 Button.url("My Group", f"https://t.me/{my_group}")],
             ]

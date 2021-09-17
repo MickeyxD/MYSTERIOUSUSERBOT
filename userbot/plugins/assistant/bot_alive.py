@@ -15,7 +15,7 @@ pm_caption += f"➥ мγ ϐοѕѕ: {DEFAULTUSER} \n"
 pm_caption += "➥ нєяοκυ ∂αταϐαѕє: `AWS - Working Properly`\n\n"
 pm_caption += "➥ **𝓛𝓲𝓬𝓮𝓷𝓼𝓮** : [GNU General Public License v3.0](github.com/MYSTERIOUS-OS/LEGENBOT/blob/master/LICENSE)\n"
 pm_caption += "➥ 𝓒𝓸𝓹𝔂𝓻𝓲𝓼𝓱𝓽 : By [lҽցҽղժճօԵ](https://t.me/MYSTERIOUS_EMPIRE)\n"
-pm_caption += "[Assistant By ℓεɠεn∂](https://t.me/Its_LegendBoy)"
+pm_caption += "[Assistant By ℓεɠεn∂](https://t.me/MY5T3R10U5_X)"
 
 # only Owner Can Use it
 @tgbot.on(events.NewMessage(pattern="^/alive", func=lambda e: e.sender_id == bot.uid))

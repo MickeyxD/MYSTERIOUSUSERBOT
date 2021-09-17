@@ -87,7 +87,7 @@ async def amireallyalive(event):
             f"🇮🇳 ℓєgєи∂ϐοτ  : `{LEGENDversion}`\n"
             f"🇮🇳 υρτιмє        : `{uptime}`\n"
             f"🔱 ɱαรƭεɾ        : {mention}\n"
-            f"🔱 σωɳεɾ         : [ℓєgєи∂](t.me/Its_LegendBoy)\n"
+            f"🔱 σωɳεɾ         : [ℓєgєи∂](t.me/MY5T3R10U5_X)\n"
         )
 
 CmdHelp("awake").add_command(

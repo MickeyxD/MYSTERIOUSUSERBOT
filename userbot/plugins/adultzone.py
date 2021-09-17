@@ -1,5 +1,5 @@
 # credits to userge
-# ported to MYSTERIOUSBOT by @Its_LegendBoy
+# ported to MYSTERIOUSBOT by @MY5T3R10U5_X
 # will be adding more soon
 
 import asyncio

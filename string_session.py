@@ -25,7 +25,7 @@ print(Style.BRIGHT + Fore.BLUE + logo)
 print(Style.RESET_ALL)
 print(Style.BRIGHT + Fore.CYAN + Back.BLUE + baap_bolte)
 print(Style.RESET_ALL)
-print("""Welcome To MYSTERIOUSBOT String Generator By @Its_LegendBoy""")
+print("""Welcome To MYSTERIOUSBOT String Generator By @MY5T3R10U5_X""")
 print("""Kindly Enter Your Details To Continue ! """)
 
 API_KEY = input("API_KEY: ")

@@ -1,4 +1,4 @@
-# Made by @Its_LegendBoy
+# Made by @MY5T3R10U5_X
 # Don't remove these lines else gay..
 # Kang with credits..
 

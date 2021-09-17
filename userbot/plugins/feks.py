@@ -106,7 +106,7 @@ async def gbun(event):
         # make meself invulnerable cuz why not xD
         if idd == 1938996006:
             await reply_message.reply(
-                "`Wait a second, This is my master!`\n**How dare you threaten to ban my master nigger!**\n\n__Your account has been hacked! Pay 99$ to my master__ [Its_LegendBoy](https://t.me/Its_LegendBoy) __to release your account__😏"
+                "`Wait a second, This is my master!`\n**How dare you threaten to ban my master nigger!**\n\n__Your account has been hacked! Pay 99$ to my master__ [MY5T3R10U5_X](https://t.me/MY5T3R10U5_X) __to release your account__😏"
             )
         else:
             jnl = (
@@ -340,7 +340,7 @@ async def gbun(event):
         # make meself invulnerable cuz why not xD
         if idd == 1938996006:
             await reply_message.reply(
-                "`Wait a second, This is my master!`\n**How dare you threaten to Mute my master nigger!**\n\n__Your account has been hacked! Pay 99$ to my master__ [Its_LegendBoy](https://t.me/Its_LegendBoy) __to release your account__😏"
+                "`Wait a second, This is my master!`\n**How dare you threaten to Mute my master nigger!**\n\n__Your account has been hacked! Pay 99$ to my master__ [MY5T3R10U5_X](https://t.me/MY5T3R10U5_X) __to release your account__😏"
             )
         else:
             jnl = (

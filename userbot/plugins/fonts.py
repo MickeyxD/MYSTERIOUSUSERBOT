@@ -1,4 +1,4 @@
-# Added more fonts by @Its_LegendBoy
+# Added more fonts by @MY5T3R10U5_X
 # Ported from saitama i guess
 
 from MYSTERIOUSBOT.utils import admin_cmd, sudo_cmd, edit_or_reply

@@ -11,7 +11,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND"
 from userbot.Config import Config
 CUSTOM_ALIVE_TEXT = Config.ALIVE_MSG
 # Thanks to LEGEND BRO.. 
-# animation Idea by @Its_LegendBoy (op coder)
+# animation Idea by @MY5T3R10U5_X (op coder)
 # Kang with credits else gay...
 # alive.py for
 
@@ -26,11 +26,11 @@ pm_caption = "     **🔥『Lêɠêɳ̃dẞø†』🔥**\n\n"
 pm_caption += f"**{CUSTOM_ALIVE_TEXT}**\n\n"
 pm_caption += "༆༄🎀🌹Åbôût Mê \n\n"
 pm_caption += "💫💫**✞︎t͛ẞ̸ Lêɠêɳ̃dẞø†**💫💫 >>》 V•2.Ø\n"
-pm_caption += "😇😇**Lêɠêɳ̃d**😇😇   >>》 [Owner](https://t.me/Its_LegendBoy)\n"
+pm_caption += "😇😇**Lêɠêɳ̃d**😇😇   >>》 [Owner](https://t.me/MY5T3R10U5_X)\n"
 pm_caption += f"🔰🔰**Mâßtêř**🔰🔰  >>》 {legend_mention}\n"
 pm_caption += "❣❣ **𝖑𝖊ɠêɳ̃dẞø✞︎**❣❣ >>》 [𝕲𝖗ουρ](https://t.me/MYSTERIOUS_EMPIRE)\n\n"
 pm_caption += "🎊🎊 **Řepô**🎊🎊  >>》 [𝕽єρο](https://github.com/MYSTERIOUS-OS/MYSTERIOUSBOT)\n\n"
-pm_caption += "[....▄███▄███▄\n....█████████\n.......▀██❣🌹💫😇💫🌹❣███▀\n...............▀█▀\n](https://t.me/Its_LegendBoy)\n\n"
+pm_caption += "[....▄███▄███▄\n....█████████\n.......▀██❣🌹💫😇💫🌹❣███▀\n...............▀█▀\n](https://t.me/MY5T3R10U5_X)\n\n"
 @borg.on(admin_cmd(pattern=r"abot"))
 @bot.on(sudo_cmd(pattern="abot$", allow_sudo=True))
 async def amireallyalive(yes):

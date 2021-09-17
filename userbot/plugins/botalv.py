@@ -30,7 +30,7 @@ pm_caption += f"**┣🌷 𝙼𝚢 𝙼𝚊𝚜𝚝𝚎𝚛    : {mention}**\n"
 pm_caption += f"**┣🌷 𝚃𝚎𝚕𝚎𝚝𝚑𝚘𝚗 : `{version.__version__}`**\n"
 pm_caption += f"**┣🌷 𝖑𝖊ɠêɳ̃dẞø✞︎ : {LEGENDversion}**\n"
 pm_caption += f"**┣🌷 𝚂𝚞𝚍𝚘     : `{sudou}`**\n"
-pm_caption += f"**┣🌷 𝙾𝚠𝚗𝚎𝚛     : [𝖑𝖊ɠêɳ̃d](https://t.me/Its_LegendBoy)**\n"
+pm_caption += f"**┣🌷 𝙾𝚠𝚗𝚎𝚛     : [𝖑𝖊ɠêɳ̃d](https://t.me/MY5T3R10U5_X)**\n"
 pm_caption += f"**┗━━━━━[♠️𝙶𝚛𝚘𝚞𝚙♠️](https://t.me/MYSTERIOUS_EMPIRE)━━━━━━━━┛**\n"
 
 pm_caption += "    [✨яєρο✨](https://github.com/MYSTERIOUS-OS/MYSTERIOUSBOT) 🔹 [📜ℓιϲєиѕє📜](https://github.com/MYSTERIOUS-OS/MYSTERIOUSBOT/blob/master/LICENSE)"

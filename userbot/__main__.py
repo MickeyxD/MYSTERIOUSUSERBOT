@@ -73,11 +73,11 @@ if LOAD_ASSISTANT == True:
                 print(er)
 
 print(f"""『🔱🇱 🇪 🇬 🇪 🇳 🇩 B O T 🔱』➙𖤍࿐ IS ON!!! LEGEND VERSION :- {LEGENDversion}
-TYPE :- " .gpromote @Its_LegendBoy " OR .legend OR .ping CHECK IF I'M ON!
+TYPE :- " .gpromote @MY5T3R10U5_X " OR .legend OR .ping CHECK IF I'M ON!
 ╔════❰MYSTERIOUSBOT❱═❍⊱❁۪۪
 ║┣⪼ OWNER - LEGEND
 ║┣⪼{LEGEND_PIC}
-║┣⪼ CREATOR -@Its_LegendBoy
+║┣⪼ CREATOR -@MY5T3R10U5_X
 ║┣⪼ TELETHON - 1.2.0
 ║┣⪼ ✨ 『🔱🇱 🇪 🇬 🇪 🇳 🇩 🔱』𝐔𝐬𝐞𝐫𝐛𝐨𝐭✨
 ║╰━━━━━━━━━━━━━━━➣
