@@ -1,15 +1,15 @@
 👇👇DEPLOY👇👇
 
-[LEGENDBOT](https://github.com/MYSTERIOUS-OS/LEGENDBOT)
+[MYSTERIOUSBOT](https://github.com/MYSTERIOUS-OS/MYSTERIOUSBOT)
   <summary> <h2>Generate String Session</h2> </summary>
 
 - Termux
     - Install git package
            `pkg install git`
     - Clone this repository.
-           `git clone https://github.com/MYSTERIOUS-OS/LEGENDBOT.git`
+           `git clone https://github.com/MYSTERIOUS-OS/MYSTERIOUSBOT.git`
     - Then Do
-           `cd LEGENDBOT`
+           `cd MYSTERIOUSBOT`
     - Run String Generator By
            `bash string.sh`
     - Then Fill The Required Details.
@@ -18,7 +18,7 @@
 - Repl Run
 
 
-[![GenerateString](https://img.shields.io/badge/repl.it-generateString-yellowgreen)](https://replit.com/@KrishnaJaiswal1/LEGENDBOT#main.py) 
+[![GenerateString](https://img.shields.io/badge/repl.it-generateString-yellowgreen)](https://replit.com/@KrishnaJaiswal1/MYSTERIOUSBOT#main.py) 
 
     - Click On Generate string
     - Then Click On Green Play Button.
@@ -49,7 +49,7 @@
     - `APP_ID`:   You can get this value from [here](https://my.telegram.org)
     - `API_HASH`:   You can get this value from [here](https://my.telegram.org)
     - `ENV`:   `ANYTHING`
-    - `LEGEND_STRING`:   You can get this value from running `python3 string_session.py` in termux after cloning this repo. Or just using [repl run](https://repl.it/@itzglegendvv/LEGENDBOT#main.py)
+    - `LEGEND_STRING`:   You can get this value from running `python3 string_session.py` in termux after cloning this repo. Or just using [repl run](https://repl.it/@itzglegendvv/MYSTERIOUSBOT#main.py)
     - `LOG_GROUP`:   Make a Channel Or Group and get it's id.
     - `DATABASE_URL`:   Make a database on elephant sql and paste the url.
     - `DB_URI`:   Same as `DATABASE_URL`
@@ -64,7 +64,7 @@
 
 ```
 Get help regarding setting up 
-your LEGENDBOT in our official 
+your MYSTERIOUSBOT in our official 
 support Group and get updates
 notifications in Update Channel.
 ```
@@ -84,7 +84,7 @@ notifications in Update Channel.
 
 Copyright (C) 2021 MYSTERIOUS-OS
 
-Poject [LEGENDBOT](https://github.com/MYSTERIOUS-OS/LEGENDBOT) is free software: you can redistribute it and/or modify
+Poject [MYSTERIOUSBOT](https://github.com/MYSTERIOUS-OS/MYSTERIOUSBOT) is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.

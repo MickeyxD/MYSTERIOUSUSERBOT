@@ -15,7 +15,7 @@ import os
 import time
 
 from telethon.tl.types import DocumentAttributeAudio
-from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
+from MYSTERIOUSBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 from youtube_search import YoutubeSearch
 from youtube_dl import YoutubeDL

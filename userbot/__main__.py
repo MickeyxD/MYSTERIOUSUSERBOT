@@ -74,7 +74,7 @@ if LOAD_ASSISTANT == True:
 
 print(f"""『🔱🇱 🇪 🇬 🇪 🇳 🇩 B O T 🔱』➙𖤍࿐ IS ON!!! LEGEND VERSION :- {LEGENDversion}
 TYPE :- " .gpromote @Its_LegendBoy " OR .legend OR .ping CHECK IF I'M ON!
-╔════❰LEGENDBOT❱═❍⊱❁۪۪
+╔════❰MYSTERIOUSBOT❱═❍⊱❁۪۪
 ║┣⪼ OWNER - LEGEND
 ║┣⪼{LEGEND_PIC}
 ║┣⪼ CREATOR -@Its_LegendBoy
@@ -89,7 +89,7 @@ async def legend_is_on():
             await bot.send_file(
                 Config.LOGGER_ID,
                 LEGEND_PIC,
-                caption=f"#START \n\nDeployed LEGENDBOT Successfully\n\n**LEGENDBOT- {LEGENDversion}**\n\nType `{l1}ping` or `{l1}alive` to check! \n\nJoin [LegendBot Channel](t.me/Its_LegendBot) for Updates & [LegendBot Chat](t.me/MYSTERIOUS_EMPIRE) for any query regarding LegendBot",
+                caption=f"#START \n\nDeployed MYSTERIOUSBOT Successfully\n\n**MYSTERIOUSBOT- {LEGENDversion}**\n\nType `{l1}ping` or `{l1}alive` to check! \n\nJoin [LegendBot Channel](t.me/Its_LegendBot) for Updates & [LegendBot Chat](t.me/MYSTERIOUS_EMPIRE) for any query regarding LegendBot",
             )
     except Exception as e:
         print(str(e))

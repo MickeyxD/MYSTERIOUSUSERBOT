@@ -18,43 +18,43 @@ from userbot.helpers.functions import (
     iphonex,
     lolice,
 )
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
 
 @bot.on(admin_cmd(pattern="mask$", outgoing=True))
 @bot.on(sudo_cmd(pattern="mask$", allow_sudo=True))
-async def _(LEGENDBOT):
-    reply_message = await LEGENDBOT.get_reply_message()
+async def _(MYSTERIOUSBOT):
+    reply_message = await MYSTERIOUSBOT.get_reply_message()
     if not reply_message.media or not reply_message:
-        await edit_or_reply(LEGENDBOT, "```reply to media message```")
+        await edit_or_reply(MYSTERIOUSBOT, "```reply to media message```")
         return
     chat = "@hazmat_suit_bot"
     if reply_message.sender.bot:
-        await edit_or_reply(LEGENDBOT, "```Reply to actual users message.```")
+        await edit_or_reply(MYSTERIOUSBOT, "```Reply to actual users message.```")
         return
-    event = await LEGENDBOT.edit("```Processing```")
-    async with LEGENDBOT.client.conversation(chat) as conv:
+    event = await MYSTERIOUSBOT.edit("```Processing```")
+    async with MYSTERIOUSBOT.client.conversation(chat) as conv:
         try:
             response = conv.wait_event(
                 events.NewMessage(incoming=True, from_users=905164246)
             )
-            await LEGENDBOT.client.send_message(chat, reply_message)
+            await MYSTERIOUSBOT.client.send_message(chat, reply_message)
             response = await response
         except YouBlockedUserError:
-            await edit_or_reply(LEGENDBOT, "`Please unblock` @hazmat_suit_bot `and try again`")
+            await edit_or_reply(MYSTERIOUSBOT, "`Please unblock` @hazmat_suit_bot `and try again`")
             return
         if response.text.startswith("Forward"):
-            await edit_or_reply(LEGENDBOT, "```can you kindly disable your forward privacy settings for good?```"
+            await edit_or_reply(MYSTERIOUSBOT, "```can you kindly disable your forward privacy settings for good?```"
             )
         else:
-            await LEGENDBOT.client.send_file(event.chat_id, response.message.media)
+            await MYSTERIOUSBOT.client.send_file(event.chat_id, response.message.media)
             await event.delete()
 
 
 @bot.on(admin_cmd(pattern="awooify$", outgoing=True))
 @bot.on(sudo_cmd(pattern="awooify$", allow_sudo=True))
-async def LEGENDBOT(LEGENDmemes):
+async def MYSTERIOUSBOT(LEGENDmemes):
     replied = await LEGENDmemes.get_reply_message()
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
@@ -105,7 +105,7 @@ async def LEGENDBOT(LEGENDmemes):
 
 @bot.on(admin_cmd(pattern="lolice$"))
 @bot.on(sudo_cmd(pattern="lolice$", allow_sudo=True))
-async def LEGENDBOT(LEGENDmemes):
+async def MYSTERIOUSBOT(LEGENDmemes):
     replied = await LEGENDmemes.get_reply_message()
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
@@ -156,7 +156,7 @@ async def LEGENDBOT(LEGENDmemes):
 
 @bot.on(admin_cmd(pattern="bun$"))
 @bot.on(sudo_cmd(pattern="bun$", allow_sudo=True))
-async def LEGENDBOT(LEGENDmemes):
+async def MYSTERIOUSBOT(LEGENDmemes):
     replied = await LEGENDmemes.get_reply_message()
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
@@ -207,7 +207,7 @@ async def LEGENDBOT(LEGENDmemes):
 
 @bot.on(admin_cmd(pattern="iphx$"))
 @bot.on(sudo_cmd(pattern="iphx$", allow_sudo=True))
-async def LEGENDBOT(LEGENDmemes):
+async def MYSTERIOUSBOT(LEGENDmemes):
     replied = await LEGENDmemes.get_reply_message()
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)

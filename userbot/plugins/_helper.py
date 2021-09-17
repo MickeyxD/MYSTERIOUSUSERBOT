@@ -5,7 +5,7 @@ import requests
 from telethon import functions
 from . import *
 from userbot import ALIVE_NAME, CMD_LIST, SUDO_LIST
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 perf = "[ †hê Lêɠêɳ̃dẞø† ]"
 
@@ -18,8 +18,8 @@ from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot, BotInl
 msg = f"""
 **⚜ 𝙻𝚎𝚐𝚎𝚗𝚍𝚊𝚛𝚢 𝙰𝚏 𝙻𝚎𝚐𝚎𝚗𝚍𝙱𝚘𝚝 ⚜**
 
-  •        [♥️ 𝚁𝚎𝚙𝚘 ♥️](https://github.com/MYSTERIOUS-OS/LEGENDBOT)
-  •        [♦️ Deploy ♦️](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FMYSTERIOUS-OS%2FLEGENDBOT&template=https%3A%2F%2Fgithub.com%2FMYSTERIOUS-OS%2FLEGENDBOT)
+  •        [♥️ 𝚁𝚎𝚙𝚘 ♥️](https://github.com/MYSTERIOUS-OS/MYSTERIOUSBOT)
+  •        [♦️ Deploy ♦️](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FMYSTERIOUS-OS%2FMYSTERIOUSBOT&template=https%3A%2F%2Fgithub.com%2FMYSTERIOUS-OS%2FMYSTERIOUSBOT)
 
   •  ©️ {Legend_channel} ™
 """

@@ -8,7 +8,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.types import DocumentAttributeFilename
 
 from userbot import CMD_HELP
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
 

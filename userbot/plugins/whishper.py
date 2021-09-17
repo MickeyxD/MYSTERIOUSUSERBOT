@@ -1,6 +1,6 @@
 # Made by @Its_LegendBoy for @LEGEND_Userbot
 
-from LEGENDBOT.utils import *
+from MYSTERIOUSBOT.utils import *
 from userbot.cmdhelp import CmdHelp
 
 

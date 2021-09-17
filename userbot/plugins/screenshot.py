@@ -8,7 +8,7 @@ from datetime import datetime
 
 from selenium import webdriver
 
-from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
+from MYSTERIOUSBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
 @bot.on(admin_cmd(pattern="screenshot (.*)", outgoing=True))
@@ -53,7 +53,7 @@ async def _(event):
         if event.reply_to_msg_id:
             message_id = event.reply_to_msg_id
         with io.BytesIO(im_png) as out_file:
-            out_file.name = "LEGENDBOT.ScreenCapture.PNG"
+            out_file.name = "MYSTERIOUSBOT.ScreenCapture.PNG"
             await borg.send_file(
                 event.chat_id,
                 out_file,
@@ -70,5 +70,5 @@ async def _(event):
         await edit_or_reply(event, traceback.format_exc())
 
 CmdHelp("screenshot").add_command(
-  "screenshot", "<link>", "Gives out the web screenshot of given link via Google Crome Bin in .png format", ".screenshot https://github.com/MYSTERIOUS-OS/LEGENDBOT"
+  "screenshot", "<link>", "Gives out the web screenshot of given link via Google Crome Bin in .png format", ".screenshot https://github.com/MYSTERIOUS-OS/MYSTERIOUSBOT"
 ).add()

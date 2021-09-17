@@ -1,7 +1,7 @@
 # Made By @Its_LegendBoy. Keep Credit if you are gonna copy paste it. LOL NOOBS....
 # Happy New Year plugin by Its_LegendBoy for Legendbot
 # Kangers keep credits...
-# Now in LEGENDBOT
+# Now in MYSTERIOUSBOT
 
 import random
 # credits to legend, john snow
@@ -11,7 +11,7 @@ import asyncio
 # credits to legend, john snow
 from userbot import CMD_HELP, ALIVE_NAME
 # credits to legend, john snow
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 # credits to legend, john snow
 from userbot.cmdhelp import CmdHelp
 # credits to legend, john snow

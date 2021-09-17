@@ -5,7 +5,7 @@ from datetime import datetime
 from pathlib import Path
 from telethon import events, functions, types
 from telethon.tl.types import InputMessagesFilterDocument
-from LEGENDBOT.utils import *
+from MYSTERIOUSBOT.utils import *
 from userbot import *
 from . import *
 DELETE_TIMEOUT = 5
@@ -174,5 +174,5 @@ CmdHelp("core").add_command(
 ).add_command(
   "send", "<file name>", "Sends the given file from your userbot server, if any.", "send alive"
 ).add_command(
-  "cmds", None, "Gives out the list of modules in LEGENDBOT."
+  "cmds", None, "Gives out the list of modules in MYSTERIOUSBOT."
 ).add()

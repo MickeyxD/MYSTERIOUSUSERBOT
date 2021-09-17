@@ -16,7 +16,7 @@ from pySmartDL import SmartDL
 from telethon.tl.types import DocumentAttributeVideo
 
 from userbot import CMD_HELP, LOGS, TMP_DOWNLOAD_DIRECTORY
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
 
@@ -416,7 +416,7 @@ async def uploadas(uas_event):
 
 
 CmdHelp("upld_dwl").add_command(
-  "download", "<reply to a file>", "Downloads the file to LEGENDBOT's server"
+  "download", "<reply to a file>", "Downloads the file to MYSTERIOUSBOT's server"
 ).add_command(
   "upload", "<path>", "Uploads a locally stored file to the chat"
 ).add_command(

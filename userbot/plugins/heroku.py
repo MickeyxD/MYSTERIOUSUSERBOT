@@ -5,7 +5,7 @@ import heroku3
 import requests
 from userbot.cmdhelp import CmdHelp
 from userbot.Config import Config
-from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
+from MYSTERIOUSBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 import urllib3
 from . import *

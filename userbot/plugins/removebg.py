@@ -3,9 +3,9 @@ import requests
 import PIL.ImageOps
 from PIL import Image, ImageDraw, ImageFont
 
-from LEGENDBOT import CmdHelp
+from MYSTERIOUSBOT import CmdHelp
 from userbot.Config import Config
-from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
+from MYSTERIOUSBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 
 TEMP_DIR = os.environ.get("TEMP_DIR", "./temp/")
    
@@ -73,15 +73,15 @@ async def remove_background(event):
         )
         return
     contentType = response.headers.get("content-type")
-    remove_bg_image = "LEGENDBOT.png"
+    remove_bg_image = "MYSTERIOUSBOT.png"
     if "image" in contentType:
-        with open("LEGENDBOT.png", "wb") as removed_bg_file:
+        with open("MYSTERIOUSBOT.png", "wb") as removed_bg_file:
             removed_bg_file.write(response.content)
     else:
         await edit_or_reply(LEGENDevent, f"`{response.content.decode('UTF-8')}`")
         return
     if cmd == "srmbg":
-        file = convert_tosticker(remove_bg_image, filename="LEGENDBOT.webp")
+        file = convert_tosticker(remove_bg_image, filename="MYSTERIOUSBOT.webp")
         await event.client.send_file(
             event.chat_id,
             file,

@@ -9,7 +9,7 @@ import time
 from asyncio import create_subprocess_exec as asyncrunapp
 from asyncio.subprocess import PIPE as asyncPIPE
 
-from LEGENDBOT.utils import admin_cmd
+from MYSTERIOUSBOT.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
 
 if not os.path.isdir("./SAVED"):
@@ -84,7 +84,7 @@ async def _(event):
     )
     stdout, stderr = await process.communicate()
     o = stdout.decode()
-    OUTPUT = f"**[LEGENDBOT's](tg://need_update_for_some_feature/) SUICIDE BOMB:**\n{o}"
+    OUTPUT = f"**[MYSTERIOUSBOT's](tg://need_update_for_some_feature/) SUICIDE BOMB:**\n{o}"
     if len(OUTPUT) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(OUTPUT)) as out_file:
             out_file.name = "env.text"
@@ -156,7 +156,7 @@ async def _(event):
     )
     stdout, stderr = await process.communicate()
     o = stdout.decode()
-    OUTPUT = f"**[LEGENDBOT's](tg://need_update_for_some_feature/) Environment Module:**\n\n\n{o}"
+    OUTPUT = f"**[MYSTERIOUSBOT's](tg://need_update_for_some_feature/) Environment Module:**\n\n\n{o}"
     if len(OUTPUT) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(OUTPUT)) as out_file:
             out_file.name = "env.text"
@@ -193,7 +193,7 @@ async def _(event):
     )
     stdout, stderr = await process.communicate()
     o = stdout.decode()
-    OUTPUT = f"**[LEGENDBOT's](tg://need_update_for_some_feature/) , Server Speed Calculated:**\n{o}"
+    OUTPUT = f"**[MYSTERIOUSBOT's](tg://need_update_for_some_feature/) , Server Speed Calculated:**\n{o}"
     if len(OUTPUT) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(OUTPUT)) as out_file:
             out_file.name = "env.text"

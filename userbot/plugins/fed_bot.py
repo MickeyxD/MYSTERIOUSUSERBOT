@@ -12,10 +12,10 @@ from telethon.tl.functions.messages import DeleteHistoryRequest
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
 from telethon import functions, types, events
-from LEGENDBOT import CmdHelp, bot as LEGENDBOT
-from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply as eor
-from LEGENDBOT.Config import Config
-from LEGENDBOT.plugins.sql_helper.fban_sql import (
+from MYSTERIOUSBOT import CmdHelp, bot as MYSTERIOUSBOT
+from MYSTERIOUSBOT.utils import admin_cmd, sudo_cmd, edit_or_reply as eor
+from MYSTERIOUSBOT.Config import Config
+from MYSTERIOUSBOT.plugins.sql_helper.fban_sql import (
     add_channel,
     get_all_channels,
     in_channels,
@@ -30,8 +30,8 @@ LEGEND_logo = "./LEGEND_logo.jpg"
 # modified by @Its_LegendBoy for fbans
 
 
-@LEGENDBOT.on(admin_cmd(pattern="fban ?(.*)"))
-@LEGENDBOT.on(sudo_cmd(pattern="fban ?(.*)", allow_sudo=True))
+@MYSTERIOUSBOT.on(admin_cmd(pattern="fban ?(.*)"))
+@MYSTERIOUSBOT.on(sudo_cmd(pattern="fban ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -144,8 +144,8 @@ async def _(event):
                 except BaseException:
                     await mssg.edit("Set up heroku var `FBAN_LOGGER_GROUP` for checking errors.")# Written by @HeisenbergTheDanger
 
-@LEGENDBOT.on(admin_cmd(pattern="unfban ?(.*)"))
-@LEGENDBOT.on(sudo_cmd(pattern="unfban ?(.*)", allow_sudo=True))
+@MYSTERIOUSBOT.on(admin_cmd(pattern="unfban ?(.*)"))
+@MYSTERIOUSBOT.on(sudo_cmd(pattern="unfban ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -259,8 +259,8 @@ async def _(event):
                     await mssg.edit("Set up heroku var `FBAN_LOGGER_GROUP` for checking errors.")
 
 
-@LEGENDBOT.on(admin_cmd(pattern=r"fadd ?(.*)"))
-@LEGENDBOT.on(sudo_cmd(pattern=r"fadd ?(.*)", allow_sudo=True))
+@MYSTERIOUSBOT.on(admin_cmd(pattern=r"fadd ?(.*)"))
+@MYSTERIOUSBOT.on(sudo_cmd(pattern=r"fadd ?(.*)", allow_sudo=True))
 async def add_ch(event):
     if event.fwd_from:
         return
@@ -300,8 +300,8 @@ async def add_ch(event):
         await event.delete()
 
 
-@LEGENDBOT.on(admin_cmd(pattern=r"fremove ?(.*)"))
-@LEGENDBOT.on(sudo_cmd(pattern=r"fremove ?(.*)", allow_sudo=True))
+@MYSTERIOUSBOT.on(admin_cmd(pattern=r"fremove ?(.*)"))
+@MYSTERIOUSBOT.on(sudo_cmd(pattern=r"fremove ?(.*)", allow_sudo=True))
 async def remove_ch(event):
     if event.fwd_from:
         return
@@ -329,8 +329,8 @@ async def remove_ch(event):
         await event.delete()
 
 
-@LEGENDBOT.on(admin_cmd(pattern="fgroups"))
-@LEGENDBOT.on(sudo_cmd(pattern="fgroups", allow_sudo=True))
+@MYSTERIOUSBOT.on(admin_cmd(pattern="fgroups"))
+@MYSTERIOUSBOT.on(sudo_cmd(pattern="fgroups", allow_sudo=True))
 async def list(event):
     if event.fwd_from:
         return
@@ -356,8 +356,8 @@ async def list(event):
         await eor(event, msg)
 
 
-@LEGENDBOT.on(admin_cmd(pattern="fsearch ?(.*)"))
-@LEGENDBOT.on(sudo_cmd(pattern="fsearch ?(.*)", allow_sudo=True))
+@MYSTERIOUSBOT.on(admin_cmd(pattern="fsearch ?(.*)"))
+@MYSTERIOUSBOT.on(sudo_cmd(pattern="fsearch ?(.*)", allow_sudo=True))
 async def search(event):
     if event.fwd_from:
         return
@@ -377,8 +377,8 @@ async def search(event):
 
 #----------------------------------------------------------------------------------------------------------------------------------------------
 
-@LEGENDBOT.on(admin_cmd(pattern="newfed ?(.*)", outgoing=True))
-@LEGENDBOT.on(sudo_cmd(pattern="newfed ?(.*)", allow_sudo=True))
+@MYSTERIOUSBOT.on(admin_cmd(pattern="newfed ?(.*)", outgoing=True))
+@MYSTERIOUSBOT.on(sudo_cmd(pattern="newfed ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -403,8 +403,8 @@ async def _(event):
             await eor(event, f"{response.message.message}")
 
 
-@LEGENDBOT.on(admin_cmd(pattern="renamefed ?(.*)"))
-@LEGENDBOT.on(sudo_cmd(pattern="renamefed ?(.*)", allow_sudo=True))
+@MYSTERIOUSBOT.on(admin_cmd(pattern="renamefed ?(.*)"))
+@MYSTERIOUSBOT.on(sudo_cmd(pattern="renamefed ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return 
@@ -424,8 +424,8 @@ async def _(event):
              await event.client.send_message(event.chat_id, response.message)
 
 
-@LEGENDBOT.on(admin_cmd(pattern="fstat ?(.*)"))
-@LEGENDBOT.on(sudo_cmd(pattern="fstat ?(.*)", allow_sudo=True))
+@MYSTERIOUSBOT.on(admin_cmd(pattern="fstat ?(.*)"))
+@MYSTERIOUSBOT.on(sudo_cmd(pattern="fstat ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -454,11 +454,11 @@ async def _(event):
                     await massive.click(0)
                     await asyncio.sleep(2)
                     massive = await conv.get_response()
-                    await LEGENDBOT.send_file(
+                    await MYSTERIOUSBOT.send_file(
                         event.chat_id,
                         massive,
                         thumb=thumb,
-                        caption=f"List of feds {user} has been banned in.\n\n**⚡ [Collected using LEGENDBOT](t.me/LEGEND_Userbot) ⚡**",
+                        caption=f"List of feds {user} has been banned in.\n\n**⚡ [Collected using MYSTERIOUSBOT](t.me/LEGEND_Userbot) ⚡**",
                     )
                 else:
                     await borg.send_message(event.chat_id, massive.text)
@@ -467,8 +467,8 @@ async def _(event):
                 await LEGEND.edit("`Please Unblock` @MissRose_Bot")
 
 
-@LEGENDBOT.on(admin_cmd(pattern="fedinfo ?(.*)"))
-@LEGENDBOT.on(sudo_cmd(pattern="fedinfo ?(.*)", allow_sudo=True))
+@MYSTERIOUSBOT.on(admin_cmd(pattern="fedinfo ?(.*)"))
+@MYSTERIOUSBOT.on(sudo_cmd(pattern="fedinfo ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -480,7 +480,7 @@ async def _(event):
             await conv.get_response()
             await conv.send_message("/fedinfo " + lavde)
             massive = await conv.get_response()
-            await LEGEND.edit(massive.text + "\n\n**LEGENDARY_AF_LEGENDBOT**")
+            await LEGEND.edit(massive.text + "\n\n**LEGENDARY_AF_MYSTERIOUSBOT**")
         except YouBlockedUserError:
             await LEGEND.edit("`Please Unblock` @MissRose_Bot")
             

@@ -14,7 +14,7 @@ import json
 from pathlib import Path
 from youtube_search import YoutubeSearch
 from telethon.errors.rpcerrorlist import YouBlockedUserError
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd, edit_or_reply
+from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd, edit_or_reply
 
 
 IF_EMOJI = re.compile(

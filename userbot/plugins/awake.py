@@ -2,7 +2,7 @@ import time
 
 from telethon import version
 from userbot import ALIVE_NAME, StartTime, LEGENDversion
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 from . import *
 async def reply_id(event):

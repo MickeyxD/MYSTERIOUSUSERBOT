@@ -12,7 +12,7 @@ from telethon.tl.functions.messages import GetFullChatRequest
 from telethon.tl.functions.channels import InviteToChannelRequest
 
 from userbot import CMD_HELP
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd, eor
+from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd, eor
 from userbot.cmdhelp import CmdHelp
 
 async def get_chatinfo(event):

@@ -1,7 +1,7 @@
 """
 credits to @mrconfused and @sandy1709
 """
-# Kang with credits. Using in LEGENDBOT...
+# Kang with credits. Using in MYSTERIOUSBOT...
 #    Copyright (C) 2020  sandeep.n(π.$)
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -29,14 +29,14 @@ from userbot.helpers.functions import (
     trap,
     trash,
 )
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 from . import *
 
 
 @bot.on(admin_cmd(pattern="threats(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="threats(?: |$)(.*)", allow_sudo=True))
-async def LEGENDBOT(LEGENDmemes):
+async def MYSTERIOUSBOT(LEGENDmemes):
     replied = await LEGENDmemes.get_reply_message()
     if not os.path.isdir("./temp/"):
         os.makedirs("./temp/")
@@ -89,7 +89,7 @@ async def LEGENDBOT(LEGENDmemes):
 
 @bot.on(admin_cmd(pattern="trash(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="trash(?: |$)(.*)", allow_sudo=True))
-async def LEGENDBOT(LEGENDmemes):
+async def MYSTERIOUSBOT(LEGENDmemes):
     replied = await LEGENDmemes.get_reply_message()
     if not os.path.isdir("./temp/"):
         os.makedirs("./temp/")
@@ -142,7 +142,7 @@ async def LEGENDBOT(LEGENDmemes):
 
 @bot.on(admin_cmd(pattern="trap(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="trap(?: |$)(.*)", allow_sudo=True))
-async def LEGENDBOT(LEGENDmemes):
+async def MYSTERIOUSBOT(LEGENDmemes):
     input_str = LEGENDmemes.pattern_match.group(1)
     input_str = deEmojify(input_str)
     if "-" in input_str:
@@ -205,7 +205,7 @@ async def LEGENDBOT(LEGENDmemes):
 
 @bot.on(admin_cmd(pattern="phc(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="phc(?: |$)(.*)", allow_sudo=True))
-async def LEGENDBOT(LEGENDmemes):
+async def MYSTERIOUSBOT(LEGENDmemes):
     input_str = LEGENDmemes.pattern_match.group(1)
     input_str = deEmojify(input_str)
     if "-" in input_str:

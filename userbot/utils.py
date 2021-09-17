@@ -151,12 +151,12 @@ def load_module(shortname):
         sys.modules["uniborg.util"] = userbot.utils
         mod.Config = Config
         mod.borg = bot
-        mod.LEGENDBOT = bot
+        mod.MYSTERIOUSBOT = bot
         mod.edit_or_reply = edit_or_reply
         mod.delete_LEGEND = delete_LEGEND
-        # support for LEGENDBOT originals
-        sys.modules["LEGENDBOT.utils"] = userbot.utils
-        sys.modules["LEGENDBOT"] = userbot
+        # support for MYSTERIOUSBOT originals
+        sys.modules["MYSTERIOUSBOT.utils"] = userbot.utils
+        sys.modules["MYSTERIOUSBOT"] = userbot
         # support for paperplaneextended
         sys.modules["userbot.events"] = userbot.utils
         spec.loader.exec_module(mod)

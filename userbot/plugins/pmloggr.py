@@ -11,7 +11,7 @@ from telethon import events
 
 from userbot import BOTLOG, BOTLOG_CHATID, bot
 from userbot.Config import Config
-from LEGENDBOT.utils import admin_cmd, register
+from MYSTERIOUSBOT.utils import admin_cmd, register
 from userbot.cmdhelp import CmdHelp
 
 logging.basicConfig(

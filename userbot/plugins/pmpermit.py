@@ -10,7 +10,7 @@ from telethon.tl.functions.users import GetFullUserRequest
 from . import *
 from userbot import ALIVE_NAME, PM_MSG, LEGEND_ID
 from userbot.Config import Config
-from LEGENDBOT.utils import admin_cmd
+from MYSTERIOUSBOT.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
 from userbot.plugins.sql_helper import pmpermit_sql as pm_sql
 

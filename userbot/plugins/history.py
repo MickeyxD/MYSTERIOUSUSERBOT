@@ -1,11 +1,11 @@
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
-from LEGENDBOT import bot, CmdHelp
-from LEGENDBOT.utils import admin_cmd, edit_or_reply as eor, sudo_cmd
+from MYSTERIOUSBOT import bot, CmdHelp
+from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply as eor, sudo_cmd
 
-@LEGENDBOT.on(admin_cmd(pattern="history ?(.*)"))
-@LEGENDBOT.on(sudo_cmd(pattern="history ?(.*)", allow_sudo=True))
+@MYSTERIOUSBOT.on(admin_cmd(pattern="history ?(.*)"))
+@MYSTERIOUSBOT.on(sudo_cmd(pattern="history ?(.*)", allow_sudo=True))
 async def _(LEGENDevent):
     if LEGENDevent.fwd_from:
         return 
@@ -37,8 +37,8 @@ async def _(LEGENDevent):
              await LEGENDevent.delete()
              await LEGENDevent.client.send_message(LEGENDevent.chat_id, response2.message)
 
-@LEGENDBOT.on(admin_cmd(pattern="unh ?(.*)"))
-@LEGENDBOT.on(sudo_cmd(pattern="unh ?(.*)", allow_sudo=True))
+@MYSTERIOUSBOT.on(admin_cmd(pattern="unh ?(.*)"))
+@MYSTERIOUSBOT.on(sudo_cmd(pattern="unh ?(.*)", allow_sudo=True))
 async def _(LEGENDevent):
     if LEGENDevent.fwd_from:
         return 

@@ -9,7 +9,7 @@ from datetime import datetime
 from PIL import Image, ImageDraw, ImageFont
 from userbot.cmdhelp import CmdHelp
 
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 import asyncio
 
@@ -82,7 +82,7 @@ from datetime import datetime
 
 from PIL import Image, ImageDraw, ImageFont
 
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
 import asyncio
@@ -156,7 +156,7 @@ from datetime import datetime
 
 from PIL import Image, ImageDraw, ImageFont
 
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 import asyncio
 
@@ -218,7 +218,7 @@ from datetime import datetime
 
 from PIL import Image, ImageDraw, ImageFont
 
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 import asyncio
 
@@ -327,7 +327,7 @@ import urllib , os
 from telethon.tl import functions
 from datetime import datetime
 from PIL import Image, ImageDraw, ImageFont
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 import asyncio
 from time import sleep
 
@@ -370,7 +370,7 @@ from datetime import datetime
 
 from PIL import Image, ImageDraw, ImageFont
 
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 import asyncio
 
@@ -435,7 +435,7 @@ from datetime import datetime
 from PIL import Image, ImageDraw, ImageFont
 from pySmartDL import SmartDL
 from telethon.tl import functions
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 import asyncio
 import shutil 
 import random, re
@@ -501,7 +501,7 @@ from datetime import datetime
 
 from PIL import Image, ImageDraw, ImageFont
 
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 import asyncio
 
@@ -576,7 +576,7 @@ from datetime import datetime
 
 from PIL import Image, ImageDraw, ImageFont
 
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 import asyncio
 
@@ -646,7 +646,7 @@ import urllib , os
 from telethon.tl import functions
 from datetime import datetime
 from PIL import Image, ImageDraw, ImageFont
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 import asyncio
 from time import sleep
 

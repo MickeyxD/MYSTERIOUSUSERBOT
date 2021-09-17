@@ -7,7 +7,7 @@ from userbot.plugins.sql_helper.welcome_sql import (
     rm_welcome_setting,
     update_previous_welcome,
 )
-from LEGENDBOT.utils import *
+from MYSTERIOUSBOT.utils import *
 from userbot.cmdhelp import CmdHelp
 
 
@@ -109,7 +109,7 @@ async def _(event):
         await edit_or_reply(event, "No Welcome Message found")
 
 CmdHelp("welcome").add_command(
-  "listwelcome", None, "Gets the saved welcome message of LEGENDBOT"
+  "listwelcome", None, "Gets the saved welcome message of MYSTERIOUSBOT"
 ).add_command(
   "clearwelcome", None, "Clears/Deletes the welcome message (if any)"
 ).add_command(

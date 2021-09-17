@@ -5,7 +5,7 @@ import random
 from telethon.tl.types import ChannelParticipantsAdmins
 
 from userbot import LOGS
-from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
+from MYSTERIOUSBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
 @bot.on(admin_cmd(pattern="join$", outgoing=True))

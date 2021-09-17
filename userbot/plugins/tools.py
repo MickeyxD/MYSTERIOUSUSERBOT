@@ -14,10 +14,10 @@ from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
 from userbot import CMD_HELP
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
-#==================LEGENDBOT==================
+#==================MYSTERIOUSBOT==================
 
 @bot.on(admin_cmd(pattern="scan ?(.*)"))
 @bot.on(sudo_cmd(pattern="scan ?(.*)", allow_sudo=True))
@@ -389,7 +389,7 @@ CmdHelp("tools").add_command(
 ).add_command(
   "currencies", None, "Shows you the some list of currencies"
 ).add_command(
-  "currency", "<amount> <from> <to>", "Currency converter for LEGENDBOT", ".currency 10 usd inr"
+  "currency", "<amount> <from> <to>", "Currency converter for MYSTERIOUSBOT", ".currency 10 usd inr"
 ).add_command(
   "cal", "<year ; month>", "Shows you the calendar of given month and year"
 ).add_command(

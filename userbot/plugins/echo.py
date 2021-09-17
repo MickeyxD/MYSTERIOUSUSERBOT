@@ -16,7 +16,7 @@ from userbot.plugins.sql_helper.echo_sql import (
     is_echo,
     remove_echo,
 )
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
 

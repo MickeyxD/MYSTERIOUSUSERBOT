@@ -6,7 +6,7 @@ import os
 import sys
 import traceback
 
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot import *
 from userbot.cmdhelp import CmdHelp
 
@@ -28,7 +28,7 @@ async def _(event):
     if LEGENDUser.username:
         curruser = LEGENDUser.username
     else:
-        curruser = "LEGENDBOT"
+        curruser = "MYSTERIOUSBOT"
     uid = os.geteuid()
     if uid == 0:
         cresult = f"`{curruser}:~#` `{cmd}`\n`{result}`"
@@ -148,7 +148,7 @@ async def _(event):
 CmdHelp("evaluators").add_command(
   'eval', '<expr>', 'Execute python script'
 ).add_command(
-  'exec', '<command>', 'Execute a Terminal command on LEGENDBOT server and shows details'
+  'exec', '<command>', 'Execute a Terminal command on MYSTERIOUSBOT server and shows details'
 ).add_command(
   'bash', '<query>', 'Bash your codes on linux and gives the output in current chat'
 ).add()

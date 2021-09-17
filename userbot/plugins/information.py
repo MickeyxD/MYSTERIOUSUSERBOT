@@ -8,7 +8,7 @@ from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 from telethon.utils import get_input_location
 
-from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
+from MYSTERIOUSBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 
 
 @bot.on(admin_cmd(pattern="info ?(.*)", outgoing=True))
@@ -61,7 +61,7 @@ async def _(event):
 <b>🤖 BOT</b>: {}
 <b>👥 Groups in Common</b>: {}
 
-<b>⚡ <a href='https://t.me/LEGEND_Userbot'>From DataBase of LEGENDBOT</a> ⚡ </b>
+<b>⚡ <a href='https://t.me/LEGEND_Userbot'>From DataBase of MYSTERIOUSBOT</a> ⚡ </b>
 """.format(
         user_id,
         user_id,

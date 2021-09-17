@@ -11,7 +11,7 @@ import asyncio
 import time
 from datetime import datetime
 
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd, sudo_cmd , edit_or_reply
+from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd, sudo_cmd , edit_or_reply
 from userbot.cmdhelp import CmdHelp
 from . import *
 @bot.on(admin_cmd(pattern=r"open", outgoing=True))

@@ -21,7 +21,7 @@ if ENV:
         # This is required for the hash to torrent file functionality to work.
         HASH_TO_TORRENT_API = os.environ.get("HASH_TO_TORRENT_API", "https://example.com/torrent/{}");
         # This is required for the @telegraph functionality.
-        TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", "LEGENDBOT")
+        TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", "MYSTERIOUSBOT")
         # Get a Free API Key from OCR.Space
         OCR_SPACE_API_KEY = os.environ.get("OCR_SPACE_API_KEY", None)
         # Send .get_id in any group with all your administration bots (added)
@@ -156,7 +156,7 @@ if ENV:
         LYDIA_API = os.environ.get("LYDIA_API",None)
         PLUGIN_CHANNEL = os.environ.get("PLUGIN_CHANNEL",None)
         UPSTREAM_REPO = os.environ.get(
-            "UPSTREAM_REPO", "https://github.com/MYSTERIOUS-OS/LEGENDBOT"
+            "UPSTREAM_REPO", "https://github.com/MYSTERIOUS-OS/MYSTERIOUSBOT"
         )
         LEGEND_STRING = os.environ.get("LEGEND_STRING", None)
         BOT_MODE = os.environ.get("BOT_MODE", "ON")
@@ -174,7 +174,7 @@ if ENV:
         if LOGGER_ID:
             LOGGER_ID = int(LOGGER_ID)
         FORCE_CHANNEL_ID = int(os.environ.get("FORCE_CHANNEL_ID", False))
-        EXTRA_LEGENDBOT = os.environ.get("EXTRA_LEGENDBOT", -1001221881562)
+        EXTRA_MYSTERIOUSBOT = os.environ.get("EXTRA_MYSTERIOUSBOT", -1001221881562)
         PM_DATA = os.environ.get("PM_DATA", "ENABLE")
 
 else:

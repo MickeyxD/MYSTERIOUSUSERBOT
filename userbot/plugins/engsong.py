@@ -4,7 +4,7 @@ from userbot.cmdhelp import CmdHelp
 import asyncio
 import random
 
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 
 @bot.on(admin_cmd(pattern=r"engsongs", outgoing=True))

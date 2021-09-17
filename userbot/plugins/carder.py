@@ -6,12 +6,12 @@ from telethon.tl.functions.messages import DeleteHistoryRequest
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
 
-from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
-from LEGENDBOT import CmdHelp, bot as LEGENDBOT
+from MYSTERIOUSBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
+from MYSTERIOUSBOT import CmdHelp, bot as MYSTERIOUSBOT
 
 
-@LEGENDBOT.on(admin_cmd("gencc$"))
-@LEGENDBOT.on(sudo_cmd("gencc$", allow_sudo=True))
+@MYSTERIOUSBOT.on(admin_cmd("gencc$"))
+@MYSTERIOUSBOT.on(sudo_cmd("gencc$", allow_sudo=True))
 async def _(LEGENDevent):
     if LEGENDevent.fwd_from:
         return
@@ -23,8 +23,8 @@ async def _(LEGENDevent):
     await edit_or_reply(LEGENDevent, f"__**👤 NAME :- **__\n`{LEGENDname}`\n\n__**🏡 ADDRESS :- **__\n`{LEGENDadre}`\n\n__**💸 CARD :- **__\n`{LEGENDcard}`")
     
 
-@LEGENDBOT.on(admin_cmd(pattern="bin ?(.*)"))
-@LEGENDBOT.on(sudo_cmd(pattern="bin ?(.*)", allow_sudo=True))
+@MYSTERIOUSBOT.on(admin_cmd(pattern="bin ?(.*)"))
+@MYSTERIOUSBOT.on(sudo_cmd(pattern="bin ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return 
@@ -44,8 +44,8 @@ async def _(event):
              await event.client.send_message(event.chat_id, response.message)
 
 
-@LEGENDBOT.on(admin_cmd(pattern="vbv ?(.*)"))
-@LEGENDBOT.on(sudo_cmd(pattern="vbv ?(.*)", allow_sudo=True))
+@MYSTERIOUSBOT.on(admin_cmd(pattern="vbv ?(.*)"))
+@MYSTERIOUSBOT.on(sudo_cmd(pattern="vbv ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return 
@@ -65,8 +65,8 @@ async def _(event):
              await event.client.send_message(event.chat_id, response.message)
     
     
-@LEGENDBOT.on(admin_cmd(pattern="key ?(.*)"))
-@LEGENDBOT.on(sudo_cmd(pattern="key ?(.*)", allow_sudo=True))
+@MYSTERIOUSBOT.on(admin_cmd(pattern="key ?(.*)"))
+@MYSTERIOUSBOT.on(sudo_cmd(pattern="key ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return 
@@ -86,8 +86,8 @@ async def _(event):
              await event.client.send_message(event.chat_id, response.message)
  
   
-@LEGENDBOT.on(admin_cmd(pattern="iban ?(.*)"))
-@LEGENDBOT.on(sudo_cmd(pattern="iban ?(.*)", allow_sudo=True))
+@MYSTERIOUSBOT.on(admin_cmd(pattern="iban ?(.*)"))
+@MYSTERIOUSBOT.on(sudo_cmd(pattern="iban ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return 
@@ -107,8 +107,8 @@ async def _(event):
              await event.client.send_message(event.chat_id, response.message)
 
     
-@LEGENDBOT.on(admin_cmd(pattern="ccheck ?(.*)"))
-@LEGENDBOT.on(sudo_cmd(pattern="ccheck ?(.*)", allow_sudo=True))
+@MYSTERIOUSBOT.on(admin_cmd(pattern="ccheck ?(.*)"))
+@MYSTERIOUSBOT.on(sudo_cmd(pattern="ccheck ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return 
@@ -128,8 +128,8 @@ async def _(event):
              await event.client.send_message(event.chat_id, response.message)
              
              
-@LEGENDBOT.on(admin_cmd(pattern="ccbin ?(.*)"))
-@LEGENDBOT.on(sudo_cmd(pattern="ccbin ?(.*)", allow_sudo=True))
+@MYSTERIOUSBOT.on(admin_cmd(pattern="ccbin ?(.*)"))
+@MYSTERIOUSBOT.on(sudo_cmd(pattern="ccbin ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return 

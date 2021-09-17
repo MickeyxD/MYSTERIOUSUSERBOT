@@ -12,7 +12,7 @@ from telethon.tl.types import MessageEntityMentionName
 from telethon.utils import get_input_location
 
 from .. import LOGS, TMP_DOWNLOAD_DIRECTORY
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
 # Copyright (C) 2019 The Raphielscape Company LLC.
@@ -127,7 +127,7 @@ async def fetch_info(replied_user, event):
     )
     username = "@{}".format(username) if username else ("This User has no Username")
     user_bio = "This User has no About" if not user_bio else user_bio
-    caption = "<b>USER INFO from LEGENDBOT's database :</b>\n\n"
+    caption = "<b>USER INFO from MYSTERIOUSBOT's database :</b>\n\n"
     caption += f"👤 First Name: {first_name} {last_name}\n"
     caption += f"🤵 Username: {username}\n"
     caption += f"🔖 ID: <code>{user_id}</code>\n"

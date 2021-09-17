@@ -11,9 +11,9 @@ import os
 from telethon import functions, types
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
-from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
+from MYSTERIOUSBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
-from LEGENDBOT.Config import Config
+from MYSTERIOUSBOT.Config import Config
 
 SUDO_WALA = Config.SUDO_USERS
 lg_id = Config.LOGGER_ID
@@ -36,9 +36,9 @@ async def spammer(e):
 async def bigspam(LEGEND):
     if not LEGEND.text[0].isalpha() and LEGEND.text[0] not in ("/", "#", "@", "!"):
         LEGEND_msg = LEGEND.text
-        LEGENDBOT_count = int(LEGEND_msg[9:13])
+        MYSTERIOUSBOT_count = int(LEGEND_msg[9:13])
         LEGEND_spam = str(LEGEND.text[13:])
-        for i in range(1, LEGENDBOT_count):
+        for i in range(1, MYSTERIOUSBOT_count):
             await LEGEND.respond(LEGEND_spam)
         await LEGEND.delete()
         if LOGGER:
@@ -100,5 +100,5 @@ CmdHelp("𝚜𝚙𝚊𝚖").add_command(
 ).add_command(
   "dspam", "<delay> <spam count> <text>", "Sends the text 'X' number of times in 'Y' seconds of delay", ".dspam 5 100 hello"
 ).add_command(
-  "bigspam", "<count> <text>", "Sends the text 'X' number of times. This what LEGENDBOT iz known for. The Best BigSpam Ever", ".bigspam 5000 hello"
+  "bigspam", "<count> <text>", "Sends the text 'X' number of times. This what MYSTERIOUSBOT iz known for. The Best BigSpam Ever", ".bigspam 5000 hello"
 ).add()

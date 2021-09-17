@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String
 
-from LEGENDBOT.plugins.sql_helper import BASE, SESSION
+from MYSTERIOUSBOT.plugins.sql_helper import BASE, SESSION
 
 
 class Users(BASE):

@@ -1,6 +1,6 @@
 import requests
 from userbot import CmdHelp
-from LEGENDBOT.utils import edit_or_reply, admin_cmd, sudo_cmd
+from MYSTERIOUSBOT.utils import edit_or_reply, admin_cmd, sudo_cmd
 import os
 
 
@@ -14,11 +14,11 @@ async def _(event):
     response = requests.get(url)
     await event.edit("`Creating a fake face...`")
     if response.status_code == 200:
-      with open("LEGENDBOT.jpg", 'wb') as f:
+      with open("MYSTERIOUSBOT.jpg", 'wb') as f:
         f.write(response.content)
     
-    captin = f"Fake Image By LEGENDBOT."
-    fole = "LEGENDBOT.jpg"
+    captin = f"Fake Image By MYSTERIOUSBOT."
+    fole = "MYSTERIOUSBOT.jpg"
     await borg.send_file(event.chat_id, fole, caption=captin)
     await event.delete()
-    os.system("rm /root/userbot/LEGENDBOT.jpg ")
+    os.system("rm /root/userbot/MYSTERIOUSBOT.jpg ")

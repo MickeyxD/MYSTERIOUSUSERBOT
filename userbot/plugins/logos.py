@@ -6,7 +6,7 @@ from PIL import Image, ImageDraw, ImageFont
 from telethon.tl.types import InputMessagesFilterPhotos, InputMessagesFilterDocument
 
 from userbot import *
-from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
+from MYSTERIOUSBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from userbot import CMD_HELP
@@ -58,7 +58,7 @@ async def lg1(LEGENDevent):
     draw.text(
         (w_, h_), text, font=font, fill="white", stroke_width=strik, stroke_fill="black"
     )
-    file_name = "LEGENDBOT.png"
+    file_name = "MYSTERIOUSBOT.png"
     img.save(file_name, "png")
     await bot.send_file(
         LEGENDevent.chat_id,

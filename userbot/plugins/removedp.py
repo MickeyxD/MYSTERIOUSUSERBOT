@@ -2,7 +2,7 @@ import asyncio
 from telethon import TelegramClient, sync,events
 from telethon.tl.functions.photos import DeletePhotosRequest
 from . import *
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MYSTERIOUSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 @borg.on(admin_cmd(pattern=r"rmvdp", outgoing=True))
 @borg.on(sudo_cmd(pattern=r"rmvdp$", allow_sudo=True))
