@@ -112,7 +112,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             for x in CMD_LIST.values():
                 for y in x:
                     apn.append(y)
-            help_msg = f"𓆩♥️{legend_mention}♥️𓆪\n\n**🕹️𝚃𝚘𝚝𝚊𝚕 𝙼𝚘𝚍𝚞𝚕𝚎𝚜 𝙸𝚗𝚜𝚝𝚊𝚕𝚕𝚎𝚍⭆ `{len(CMD_HELP)}`**\n**⌨️Tοταℓ Cοммαи∂ѕ⭆ `{len(apn)}`**\n**🎒Pαցҽ⭆ 1/{veriler[0]}** \n"
+            help_msg = f"𓆩♥️{ALIVE_NAME}♥️𓆪\n\n**🕹️𝚃𝚘𝚝𝚊𝚕 𝙼𝚘𝚍𝚞𝚕𝚎𝚜⭆ `{len(CMD_HELP)}`**\n**⌨️Tοταℓ Cοммαи∂ѕ⭆ `{len(apn)}`**\n**🎒Pαցҽ⭆ 1/{veriler[0]}** \n"
             if help_pic and help_pic.endswith((".jpg", ".png")):
                 result = builder.photo(
                     help_pic,
@@ -157,7 +157,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             ]
  
         elif event.query.user_id == bot.uid and query == "alive":
-            leg_end = alive_txt.format(Config.ALIVE_MSG, legend_mention, MYSTERIOUSversion, version.__version__, abuse_m, is_sudo, Config.BOY_OR_GIRL)
+            leg_end = alive_txt.format(Config.ALIVE_MSG, ALIVE_NAME, MYSTERIOUSversion, version.__version__, abuse_m, is_sudo, Config.BOY_OR_GIRL)
             alv_btn = [
                 [Button.url(f"{MYSTERIOUS_USER}", f"tg://openmessage?user_id={MYSTERIOUS_SUPPORT}")],
                 [Button.url("My Channel", f"https://t.me/{my_channel}"), 
@@ -204,7 +204,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         elif event.query.user_id == bot.uid and query == "repo":
             result = builder.article(
                 title="Repository",
-                text=f"**⚜ 𝙻𝚎𝚐𝚎𝚗𝚍𝚊𝚛𝚢 𝙰𝚏 𝙻𝚎𝚐𝚎𝚗𝚍𝙱𝚘𝚝 ⚜**",
+                text=f"**⚜ 𝙻𝚎𝚐𝚎𝚗𝚍𝚊𝚛𝚢 𝙰𝚏 MYSTERIOUSBOT⚜**",
                 buttons=[
                     [Button.url("♥️ 𝚁𝚎𝚙𝚘 ♥", "https://github.com/MYSTERIOUS-OS/MYSTERIOUSBOT")],
                     [Button.url("♦️ Deploy ♦️", "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FMYSTERIOUS-OS%2FMYSTERIOUSBOT&template=https%3A%2F%2Fgithub.com%2FMYSTERIOUS-OS%2FMYSTERIOUSBOT")],
@@ -223,7 +223,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         else:
             result = builder.article(
                 "@MYSTERIOUS_EMPIRE",
-                text="""**Hey! This is [MYSTERIOUS](https://t.me/its_LegendBot) \nYou can know more about me from the links given below 👇**""",
+                text="""**Hey! This is [MYSTERIOUS](https://t.me/MYSTERIOUS_SUPPORT) \nYou can know more about me from the links given below 👇**""",
                 buttons=[
                     [
                         custom.Button.url("🔥 CHANNEL 🔥", "https://t.me/MYSTERIOUS_SUPPORT"),
