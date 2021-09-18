@@ -69,14 +69,16 @@ async def amireallyalive(alive):
     if  MYSTERIOUS_IMG:
         MYSTERIOUS_caption = f"**{CUSTOM_ALIVE_TEXT}**\n"
         
-        MYSTERIOUS_caption += f"~~~~~~~~~~~~~~~~~~~~~~~\n"
+        MYSTERIOUS_caption += f"🔥🔥MysteriousBօt ɨs օռʟɨռɛ🔥🔥\n"
         MYSTERIOUS_caption += f"        **♥ẞø† ẞ✞︎α†µѕ** \n"
-        MYSTERIOUS_caption += f"•⚜️• **Øաղ̃ҽ̈ɾ**          : {mention}\n\n"
-        MYSTERIOUS_caption += f"•📍• **𝖑𝖊ɠêɳ̃dẞø†**   : {MYSTERIOUSversion}\n"
-        MYSTERIOUS_caption += f"•📍• **†ҽ̀lҽ́ƭhøղ̃**     : `{version.__version__}`\n"
-        MYSTERIOUS_caption += f"•📍• **𝚄ρƭเɱε**         : `{uptime}`\n"
-        MYSTERIOUS_caption += f"•📍• **𝙶𝚛𝚘𝚞𝚙**           : [𝙶𝚛𝚘𝚞𝚙](t.me/MYSTERIOUS_EMPIRE)\n"
-        MYSTERIOUS_caption += f"•📍• **𝙼𝚢 𝙶𝚛𝚘𝚞𝚙**  : {CUSTOM_YOUR_GROUP}\n"   
+        MYSTERIOUS_caption += f"╭──────────────\n"
+        MYSTERIOUS_caption += f"┣─•⚜️• **Øաղ̃ҽ̈ɾ**          : {legend_mention}\n"
+        MYSTERIOUS_caption += f"┣─•📍• **MysteriousBot**   : {MYSTERIOUSversion}\n"
+        MYSTERIOUS_caption += f"┣─•📍• **†ҽ̀lҽ́ƭhøղ̃**     : `{version.__version__}`\n"
+        MYSTERIOUS_caption += f"┣─•📍• **𝚄ρƭเɱε**         : `{uptime}`\n"
+        MYSTERIOUS_caption += f"┣─•📍• **𝙶𝚛𝚘𝚞𝚙**           : [𝙶𝚛𝚘𝚞𝚙](t.me/MYSTERIOUS_EMPIRE)\n"
+        MYSTERIOUS_caption += f"┣─•📍• **𝙼𝚢 𝙶𝚛𝚘𝚞𝚙**  : {CUSTOM_YOUR_GROUP}\n" 
+        MYSTERIOUS_caption += f"╰──────────────"  
 
         await alive.client.send_file(
             alive.chat_id, MYSTERIOUS_IMG, caption=MYSTERIOUS_caption, reply_to=reply_to_id
@@ -111,17 +113,6 @@ msg = f"""
 **•🌹•Bøt.      :** {Config.BOY_OR_GIRL}
 """
 botname = Config.BOT_USERNAME
-
-@bot.on(admin_cmd(pattern="alive$"))
-@bot.on(admin_cmd(pattern="alive$", allow_sudo=True))
-async def legend_a(event):
-    try:
-        legend = await bot.inline_query(botname, "alive")
-        await legend[0].click(event.chat_id)
-        if event.sender_id == MYSTERIOUS_SUPPORT:
-            await event.delete()
-    except (noin, dedbot):
-        await eor(event, msg)
 
 CmdHelp("alive").add_command(
     'bot', None, 'υѕє αи∂ ѕєє'
