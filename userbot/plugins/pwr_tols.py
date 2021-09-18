@@ -17,7 +17,7 @@ async def _(event):
     await event.edit("яєϐοοτιиg **[ █░░ ]** ...\nωαιτ ƒєω мιиυτє☣️")
     await event.edit("яєϐοοτιиg **[ ██░ ]** ...\nωαιτ ƒєω мιиυτє☢️")
     await event.edit("яєϐοοτιиg **[ ███ ]** ...\nωαιτ ƒєω мιиυτєѕ☢️")
-    await event.edit("Rєϐοοτє∂ 𝕷𝐞̂𝐠𝐞́𝐧̃𝐝𝕭ø𝖙 V2.ο**[ ✔️ ]** ...\nType `.ping` or `.legend` after 5min to check if I am working✔️")
+    await event.edit("Rєϐοοτє∂ MYSTERIOUSBOT**[ ✔️ ]** ...\nType `.ping` or `.legend` after 5min to check if I am working✔️")
     await bot.disconnect()
     os.execl(sys.executable, sys.executable, *sys.argv)
     quit()
