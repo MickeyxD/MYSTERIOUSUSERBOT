@@ -18,7 +18,7 @@ async def reply_id(event):
     return reply_to_id
 
 
-DEFAULTUSER = ALIVE_NAME or "✞︎t͛ẞ̸ 𝖑𝖊ɠêɳ̃dẞø✞︎ 🇮🇳"
+DEFAULTUSER = ALIVE_NAME or "✞︎t͛ẞ̸ Mysterious 🇮🇳"
 MYSTERIOUS_IMG = Config.ALIVE_PIC
 CUSTOM_ALIVE_TEXT = Config.ALIVE_MSG or "ℓєgєи∂ Choice 𝖑𝖊ɠêɳ̃dẞø✞︎"
 CUSTOM_YOUR_GROUP =Config.YOUR_GROUP or "@MYSTERIOUS_EMPIRE"
@@ -102,7 +102,7 @@ msg = f"""
 {Config.ALIVE_MSG}
 
 **    ♥️ ẞø✞︎ ẞ✞︎α✞︎µѕ ♥️**
-**•⚜️•Øաղ̃ҽ̈r     :** **{mention}**
+**•⚜️•Øաղ̃ҽ̈r     :** **{ALIVE_NAME}**
 
 **•🌹•𝖑𝖊ɠêɳ̃dẞø✞︎ :** {MYSTERIOUSversion}
 **•🌹•✞︎ҽ̀lҽ́ƭhøղ  :** {version.__version__}
