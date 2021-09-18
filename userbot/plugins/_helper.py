@@ -16,7 +16,7 @@ from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot, BotInl
 
 
 msg = f"""
-**⚜ 𝙻𝚎𝚐𝚎𝚗𝚍𝚊𝚛𝚢 𝙰𝚏 𝙻𝚎𝚐𝚎𝚗𝚍𝙱𝚘𝚝 ⚜**
+**⚜ 𝙻𝚎𝚐𝚎𝚗𝚍𝚊𝚛𝚢 𝙰𝚏 MysteriousBot ⚜**
 
   •        [♥️ 𝚁𝚎𝚙𝚘 ♥️](https://github.com/MYSTERIOUS-OS/MYSTERIOUSBOT)
   •        [♦️ Deploy ♦️](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FMYSTERIOUS-OS%2FMYSTERIOUSBOT&template=https%3A%2F%2Fgithub.com%2FMYSTERIOUS-OS%2FMYSTERIOUSBOT)
@@ -37,8 +37,8 @@ async def repo(event):
         await eor(event, msg)
 
 
-@bot.on(admin_cmd(pattern="op ?(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="op ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="help ?(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="help ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
