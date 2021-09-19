@@ -67,7 +67,7 @@ async def amireallyalive(alive):
     reply_to_id = await reply_id(alive)
 
     if  MYSTERIOUS_IMG:
-        MYSTERIOUS_caption += f"🔥🔥MysteriousBօt ɨs օռʟɨռɛ🔥🔥\n"
+        MYSTERIOUS_caption = f"🔥🔥MysteriousBօt ɨs օռʟɨռɛ🔥🔥\n"
         
         MYSTERIOUS_caption += f"        **♥ẞø† ẞ✞︎α†µѕ** \n"
         MYSTERIOUS_caption += f"╭──────────────\n"
