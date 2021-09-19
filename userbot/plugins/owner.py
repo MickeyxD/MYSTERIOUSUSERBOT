@@ -26,7 +26,7 @@ async def _(event):
     result = await borg(functions.help.GetConfigRequest())  # pylint:disable=E0602
     result = result.stringify()
     logger.info(result)  # pylint:disable=E0602
-    await event.edit("""This is my master @MYSTERIOUS_SUPPORT. Support group~@MYSTERIOUS_EMPIRE.  Channel~@MYSTERIOUS_SUPPORT""")
+    await event.edit("""This is my master @MY5T3R10U5_X. Support group~@MYSTERIOUS_EMPIRE.  Channel~@MYSTERIOUS_SUPPORT""")
 
 CmdHelp("owner").add_command(
   "dc", None, "Gets the DataCenter Number"
