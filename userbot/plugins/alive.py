@@ -76,7 +76,7 @@ async def amireallyalive(alive):
         MYSTERIOUS_caption += f"┣─•📍• **†ҽ̀lҽ́ƭhøղ̃**     : `{version.__version__}`\n"
         MYSTERIOUS_caption += f"┣─•📍• **𝚄ρƭเɱε**         : `{uptime}`\n"
         MYSTERIOUS_caption += f"┣─•📍• **𝚂𝚞𝚙𝚙𝚘𝚛𝚝**           : [𝙶𝚛𝚘𝚞𝚙](t.me/MYSTERIOUS_EMPIRE)\n"
-        MYSTERIOUS_caption += f"┣─•📍• **𝚄𝚙𝚍𝚊𝚝𝚎**  : [𝙲𝚑𝚊𝚗𝚗𝚎𝚕]{http://t.me//MYSTERIOUS_SUPPORT}\n" 
+        MYSTERIOUS_caption += f"┣─•📍• **𝚄𝚙𝚍𝚊𝚝𝚎**  : [𝙲𝚑𝚊𝚗𝚗𝚎𝚕]{t.me//MYSTERIOUS_SUPPORT}\n" 
         MYSTERIOUS_caption += f"╰──────────────"  
 
         await alive.client.send_file(
