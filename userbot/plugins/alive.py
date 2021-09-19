@@ -67,17 +67,16 @@ async def amireallyalive(alive):
     reply_to_id = await reply_id(alive)
 
     if  MYSTERIOUS_IMG:
-        MYSTERIOUS_caption = f"**{CUSTOM_ALIVE_TEXT}**\n"
-        
         MYSTERIOUS_caption += f"🔥🔥MysteriousBօt ɨs օռʟɨռɛ🔥🔥\n"
+        
         MYSTERIOUS_caption += f"        **♥ẞø† ẞ✞︎α†µѕ** \n"
         MYSTERIOUS_caption += f"╭──────────────\n"
         MYSTERIOUS_caption += f"┣─•⚜️• **Øաղ̃ҽ̈ɾ**          : {legend_mention}\n"
         MYSTERIOUS_caption += f"┣─•📍• **MysteriousBot**   : {MYSTERIOUSversion}\n"
         MYSTERIOUS_caption += f"┣─•📍• **†ҽ̀lҽ́ƭhøղ̃**     : `{version.__version__}`\n"
         MYSTERIOUS_caption += f"┣─•📍• **𝚄ρƭเɱε**         : `{uptime}`\n"
-        MYSTERIOUS_caption += f"┣─•📍• **𝙶𝚛𝚘𝚞𝚙**           : [𝙶𝚛𝚘𝚞𝚙](t.me/MYSTERIOUS_EMPIRE)\n"
-        MYSTERIOUS_caption += f"┣─•📍• **𝙼𝚢 𝙶𝚛𝚘𝚞𝚙**  : {CUSTOM_YOUR_GROUP}\n" 
+        MYSTERIOUS_caption += f"┣─•📍• **𝚂𝚞𝚙𝚙𝚘𝚛𝚝**           : [𝙶𝚛𝚘𝚞𝚙](t.me/MYSTERIOUS_EMPIRE)\n"
+        MYSTERIOUS_caption += f"┣─•📍• **𝚄𝚙𝚍𝚊𝚝𝚎**  : [𝙲𝚑𝚊𝚗𝚗𝚎𝚕]{http://t.me//MYSTERIOUS_SUPPORT}\n" 
         MYSTERIOUS_caption += f"╰──────────────"  
 
         await alive.client.send_file(
@@ -98,22 +97,8 @@ async def amireallyalive(alive):
         )
 
 
-msg = f"""
-**  ⚜️ MYSTERIOUS ιѕ σиℓιиє ⚜️**
-
-{Config.ALIVE_MSG}
-
-**    ♥️ ẞø✞︎ ẞ✞︎α✞︎µѕ ♥️**
-**•⚜️•Øաղ̃ҽ̈r     :** **{ALIVE_NAME}**
-
-**•🌹•𝖑𝖊ɠêɳ̃dẞø✞︎ :** {MYSTERIOUSversion}
-**•🌹•✞︎ҽ̀lҽ́ƭhøղ  :** {version.__version__}
-**•🌹•Ãbûßê     :**  {abuse_m}
-**•🌹•ßudø      :**  {is_sudo}
-**•🌹•Bøt.      :** {Config.BOY_OR_GIRL}
-"""
 botname = Config.BOT_USERNAME
 
 CmdHelp("alive").add_command(
-    'bot', None, 'υѕє αи∂ ѕєє'
+    'alive', None, 'υѕє αи∂ ѕєє'
 ).add()
