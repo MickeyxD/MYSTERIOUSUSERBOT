@@ -23,7 +23,7 @@ async def lg1(MYSTERIOUSevent):
         rply = await MYSTERIOUSevent.get_reply_message()
         logo_ = await rply.download_media()
     else:
-        async for i in bot.iter_messages("@MYSTERIOUS_MR_LOGOS", filter=InputMessagesFilterPhotos):
+        async for i in bot.iter_messages("@LEGEND_MR_LOGOS", filter=InputMessagesFilterPhotos):
     	    PICS_STR.append(i)
         pic = random.choice(PICS_STR)
         logo_ = await pic.download_media()
