@@ -18,9 +18,9 @@ jobs:
 
         with:
 
-          find: "𝕷𝐞̂𝐠𝐞́𝐧̃𝐝𝕭ø𝖙 V2.ο"
+          find: "OP_PIC"
 
-          replace: "MYSTERIOUSBOT"
+          replace: "HELP_PIC"
 
       - name: Create Pull Request
 
