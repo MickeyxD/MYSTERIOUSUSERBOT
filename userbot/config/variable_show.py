@@ -7,7 +7,7 @@ variable_list = [
     "YOUR_GROUP",
     "BUTTONS_IN_HELP",
     "PM_MSG",
-    "OP_PIC",
+    "HELP_PIC",
     "PMP_PIC",
     "YOUR_CHANNEL",
     "ALIVE_NAME",

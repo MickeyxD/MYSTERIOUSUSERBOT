@@ -143,7 +143,7 @@ if ENV:
         ALIVE_PIC = os.environ.get("ALIVE_PIC", None)
         PM_PIC = os.environ.get("PM_PIC", None)
         AWAKE_PIC = os.environ.get("AWAKE_PIC", None)
-        HELP_PIC = os.environ.get("OP_PIC", None)
+        HELP_PIC = os.environ.get("HELP_PIC", None)
         ALIVE_MSG = os.environ.get("ALIVE_MSG", None)
         PM_MSG = os.environ.get("PM_MSG", None)
         INSTANT_BLOCK = os.environ.get("INSTANT_BLOCK", "DISABLE")
