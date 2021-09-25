@@ -81,7 +81,7 @@ async def stats(
     response += f"🎒 υияєα∂ мємτιοиѕ: {unread_mentions} \n\n"
     response += f"🎒       __ιτ τοοκ:__ {stop_time:.02f}s \n"
     response += (
-        f"ƒɾσɱ ƭɦε ∂αƭαɓαรε σƒ:-[♥️✞︎t͛ẞ̸ 𝖑𝖊ɠêɳ̃dẞø✞︎♥️](https://t.me/MYSTERIOUS_EMPIRE)"
+        f"ƒɾσɱ ƭɦε ∂αƭαɓαรε σƒ:-[MysteriousBot](https://t.me/MYSTERIOUS_EMPIRE)"
     )
     await MYSTERIOUS.edit(response)
 
